@@ -33,7 +33,10 @@ app.on('ready', function appReady () {
     width: 980,
     height: 760,
     title: 'Git-it',
-    icon: iconPath
+    icon: iconPath,
+    webPreferences: {
+      nodeIntegration: true,
+    },
   })
 
   var appPath = app.getPath('userData')
