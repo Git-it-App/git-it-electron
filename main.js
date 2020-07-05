@@ -83,7 +83,7 @@ app.on('ready', function appReady () {
   })
 
   ipcMain.on('open-file-dialog', function (event) {
-    var files = dialog.showOpenDialog(mainWindow, { properties: [ 'openFile', 'openDirectory' ] })
+    var files = dialog.showOpenDialogSync(mainWindow, { properties: [ 'openFile', 'openDirectory' ] })
     if (files) {
       event.sender.send('selected-directory', files)
     }
@@ -96,9 +96,9 @@ app.on('ready', function appReady () {
       title: 'Confirm Clearing Statuses',
       message: 'Are you sure you want to clear the status for every challenge?'
     }
-    dialog.showMessageBox(options, function cb (response) {
-      event.sender.send('confirm-clear-response', response)
-    })
+    // TODO Change to promise-based showMessageBox (w/o sync)
+    const resp = dialog.showMessageBoxSync(options)
+    event.sender.send('confirm-clear-response', resp)
   })
 
   if (process.platform === 'darwin') {
