@@ -57,17 +57,19 @@ app.on('ready', function appReady () {
     setAllChallengesComplete(userDataPath)
   }
 
-  fs.exists(userDataPath, function (exists) {
-    if (!exists) {
-      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), function (err) {
+  // Create 'user-data.json', if not existing.
+  fs.access(userDataPath, (err) => {
+    if (err) {
+      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), (err) => {
         if (err) return console.log(err)
       })
     }
   })
 
-  fs.exists(userSavedDir, function (exists) {
-    if (!exists) {
-      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), function (err) {
+  // Create 'saved-dir.json', if not existing.
+  fs.access(userSavedDir, (err) => {
+    if (err) {
+      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), (err) => {
         if (err) return console.log(err)
       })
     }
