@@ -97,7 +97,7 @@ module.exports = function menu (app, mainWindow) {
         {
           label: 'Repository',
           click: function () {
-            require('shell').openExternal('http://github.com/jlord/git-it-electron')
+            require('electron').shell.openExternal('https://github.com/jlord/git-it-electron')
           }
         },
         {
