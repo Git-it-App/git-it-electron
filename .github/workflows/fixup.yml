@@ -1,6 +1,6 @@
 on: pull_request
 
-name: Fixupbot
+name: Fixup-check
 
 jobs:
   message-check:
