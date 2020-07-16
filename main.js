@@ -28,15 +28,15 @@ app.on('window-all-closed', function appQuit () {
 
 app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({
-    'minWidth': 800,
-    'minHeight': 600,
+    minWidth: 800,
+    minHeight: 600,
     width: 980,
     height: 760,
     title: 'Git-it',
     icon: iconPath,
     webPreferences: {
-      nodeIntegration: true,
-    },
+      nodeIntegration: true
+    }
   })
 
   var appPath = app.getPath('userData')
@@ -47,27 +47,29 @@ app.on('ready', function appReady () {
   // usage: electron . --none
   //        electron . --some
   //        electron . --all
-  if (process.argv[ 2 ] === '--none') {
+  if (process.argv[2] === '--none') {
     setAllChallengesUncomplete(userDataPath)
   }
-  if (process.argv[ 2 ] === '--some') {
+  if (process.argv[2] === '--some') {
     setSomeChallengesComplete(userDataPath)
   }
-  if (process.argv[ 2 ] === '--all') {
+  if (process.argv[2] === '--all') {
     setAllChallengesComplete(userDataPath)
   }
 
-  fs.exists(userDataPath, function (exists) {
-    if (!exists) {
-      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), function (err) {
+  // Create 'user-data.json', if not existing.
+  fs.access(userDataPath, (err) => {
+    if (err) {
+      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), (err) => {
         if (err) return console.log(err)
       })
     }
   })
 
-  fs.exists(userSavedDir, function (exists) {
-    if (!exists) {
-      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), function (err) {
+  // Create 'saved-dir.json', if not existing.
+  fs.access(userSavedDir, (err) => {
+    if (err) {
+      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), (err) => {
         if (err) return console.log(err)
       })
     }
@@ -83,7 +85,7 @@ app.on('ready', function appReady () {
   })
 
   ipcMain.on('open-file-dialog', function (event) {
-    var files = dialog.showOpenDialogSync(mainWindow, { properties: [ 'openFile', 'openDirectory' ] })
+    var files = dialog.showOpenDialogSync(mainWindow, { properties: ['openFile', 'openDirectory'] })
     if (files) {
       event.sender.send('selected-directory', files)
     }
@@ -92,7 +94,7 @@ app.on('ready', function appReady () {
   ipcMain.on('confirm-clear', function (event) {
     var options = {
       type: 'info',
-      buttons: [ 'Yes', 'No' ],
+      buttons: ['Yes', 'No'],
       title: 'Confirm Clearing Statuses',
       message: 'Are you sure you want to clear the status for every challenge?'
     }
@@ -117,7 +119,7 @@ app.on('ready', function appReady () {
 function setAllChallengesComplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
-    challenges[ key ].completed = true
+    challenges[key].completed = true
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }
@@ -125,7 +127,7 @@ function setAllChallengesComplete (path) {
 function setAllChallengesUncomplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
-    challenges[ key ].completed = false
+    challenges[key].completed = false
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }
@@ -135,7 +137,7 @@ function setSomeChallengesComplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
     counter++
-    challenges[ key ].completed = counter < 6
+    challenges[key].completed = counter < 6
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }

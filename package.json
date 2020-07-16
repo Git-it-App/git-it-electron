@@ -17,6 +17,7 @@
     "prestart": "npm run build-all",
     "start": "electron .",
     "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "test:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "clean": "rimraf built/*",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
