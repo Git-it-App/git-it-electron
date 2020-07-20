@@ -46,7 +46,7 @@
     "cheerio": "1.0.0-rc.3",
     "glob": "^7.1.6",
     "handlebars": "^4.7.6",
-    "request": "^2.88.2"
+    "axios": "^0.19.2"
   },
   "FileComments": {
     "cheerio": "change somewhen to v1.0.0? (Rc3 is now >1year)<"
