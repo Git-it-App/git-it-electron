@@ -16,6 +16,8 @@
   "scripts": {
     "prestart": "npm run build-all",
     "start": "electron .",
+    "debug": "env NODE_ENV=debug electron .",
+    "debug:none": "env NODE_ENV=debug electron . --none",
     "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "test:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "clean": "rimraf built/*",
