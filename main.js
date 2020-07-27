@@ -39,6 +39,11 @@ app.on('ready', function appReady () {
     }
   })
 
+  if (process.env.NODE_ENV === 'debug') {
+    mainWindow.maximize()
+    mainWindow.webContents.openDevTools()
+  }
+
   var appPath = app.getPath('userData')
   var userDataPath = path.join(appPath, 'user-data.json')
   var userSavedDir = path.join(appPath, 'saved-dir.json')
