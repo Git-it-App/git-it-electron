@@ -104,9 +104,9 @@ app.on('ready', function appReady () {
   ipcMain.on('confirm-clear', function (event) {
     var options = {
       type: 'info',
-      buttons: [i18n.t('Yes'), i18n.t('No')],
-      title: i18n.t('Confirm Clearing Statuses'),
-      message: i18n.t('Are you sure you want to clear the status for every challenge?')
+      buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
+      title: global.i18n.t('Confirm Clearing Statuses'),
+      message: global.i18n.t('Are you sure you want to clear the status for every challenge?')
     }
     // TODO Change to promise-based showMessageBox (w/o sync)
     const resp = dialog.showMessageBoxSync(options)
