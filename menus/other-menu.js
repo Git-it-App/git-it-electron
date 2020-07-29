@@ -1,15 +1,15 @@
 var locale = require('../lib/locale.js')
-module.exports = function menu (app, mainWindow) {
+module.exports = function menu (app, mainWindow, i18n) {
   var otherMenu = [
     {
-      label: '&File',
+      label: i18n.t('menu~&File'),
       submenu: [
         // {
         //     label: '&Open',
         //     accelerator: 'Ctrl+O'
         // },
         {
-          label: '&Quit',
+          label: i18n.t('menu~&Quit'),
           accelerator: 'Ctrl+Q',
           click: function () {
             app.quit()
@@ -18,24 +18,24 @@ module.exports = function menu (app, mainWindow) {
       ]
     },
     {
-      label: 'View',
+      label: i18n.t('menu~View'),
       submenu: [
         {
-          label: 'Reload',
+          label: i18n.t('menu~Reload'),
           accelerator: 'Command+R',
           click: function (item, focusedWindow) {
             focusedWindow.reload()
           }
         },
         {
-          label: 'Full Screen',
+          label: i18n.t('menu~Full Screen'),
           accelerator: 'Ctrl+Command+F',
           click: function (item, focusedWindow) {
             focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
           }
         },
         {
-          label: 'Minimize',
+          label: i18n.t('menu~Minimize'),
           accelerator: 'Command+M',
           selector: 'performMiniaturize:'
         },
@@ -43,14 +43,14 @@ module.exports = function menu (app, mainWindow) {
           type: 'separator'
         },
         {
-          label: 'Bring All to Front',
+          label: i18n.t('menu~Bring All to Front'),
           selector: 'arrangeInFront:'
         },
         {
           type: 'separator'
         },
         {
-          label: 'Toggle Developer Tools',
+          label: i18n.t('menu~Toggle Developer Tools'),
           accelerator: 'Alt+Command+I',
           click: function (item, focusedWindow) {
             focusedWindow.webContents.toggleDevTools()
@@ -59,10 +59,10 @@ module.exports = function menu (app, mainWindow) {
       ]
     },
     {
-      label: 'Window',
+      label: i18n.t('menu~Window'),
       submenu: [
         {
-          label: 'Home',
+          label: i18n.t('menu~Home'),
           click: function (item, focusedWindow) {
             if (focusedWindow) {
               var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'index.html')
@@ -72,7 +72,7 @@ module.exports = function menu (app, mainWindow) {
           }
         },
         {
-          label: 'Dictionary',
+          label: i18n.t('menu~Dictionary'),
           click: function (item, focusedWindow) {
             if (focusedWindow) {
               var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'dictionary.html')
@@ -81,7 +81,7 @@ module.exports = function menu (app, mainWindow) {
           }
         },
         {
-          label: 'Resources',
+          label: i18n.t('menu~Resources'),
           click: function (item, focusedWindow) {
             if (focusedWindow) {
               var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'resources.html')
@@ -92,22 +92,22 @@ module.exports = function menu (app, mainWindow) {
       ]
     },
     {
-      label: 'Help',
+      label: i18n.t('menu~Help'),
       submenu: [
         {
-          label: 'Repository',
+          label: i18n.t('menu~App Repository'),
           click: function () {
             require('electron').shell.openExternal('https://github.com/jlord/git-it-electron')
           }
         },
         {
-          label: 'Open Issue',
+          label: i18n.t('menu~Open Issue'),
           click: function () {
             require('electron').shell.openExternal('https://github.com/jlord/git-it-electron/issues/new')
           }
         },
         {
-          label: 'About App',
+          label: i18n.t('menu~About App'),
           click: function (item, focusedWindow) {
             if (focusedWindow) {
               var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'about.html')
