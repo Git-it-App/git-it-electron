@@ -135,10 +135,10 @@ app.on('ready', function appReady () {
 
 function buildMenus () {
   if (process.platform === 'darwin') {
-    menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow))
+    menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow, global.i18n))
     Menu.setApplicationMenu(menu)
   } else {
-    menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow))
+    menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow, global.i18n))
     mainWindow.setMenu(menu)
   }
 }
