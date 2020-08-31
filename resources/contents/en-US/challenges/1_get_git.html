@@ -1,70 +1,68 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Install Git on your computer and configure your name and email.</p>
+    <p i18n-data="ch01~Install Git on your computer and configure your name and email."></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Git</h2>
-    <p>Git is free <strong>open source software</strong> (the <a href="https://github.com/git/git">source code is
-        public</a>) written by Linus Torvalds who also wrote the Linux operating system's kernel. </p>
-    <p>Git is a program for keeping track of changes over time, known in programming as <strong>version control</strong>.
-        If you've used a track changes feature in a text editing software then you're already familiar with the concept!
-    </p>
+    <h2 i18n-data="ch01~Git"></h2>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~Git is free {/str/}open source software{/str_e/} (the {/lnk_git/}source code is public{/lnk_e/}) written by Linus Torvalds who also wrote the Linux operating system's kernel."
+        i18n-options='{
+            "lnk_git": "https://github.com/git/git"
+        }'></p>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~Git is a program for keeping track of changes over time, known in programming as {/str/}version control{/str_e/}. If you've used a track changes feature in a text editing software then you're already familiar with the concept!"></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Install Git</h3>
-    <p>We recommend installing Git on your computer by downloading the <a href="https://desktop.github.com">GitHub
-        Desktop</a> app. We'll not use the desktop app in Git-it (we're learning terminal!) but it includes Git and is
-        the easiest way to install Git on all platforms in the same way.</p>
+    <h3 i18n-data="ch01~Install Git"></h3>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~We recommend installing Git on your computer by downloading the {/lnk_desktop/}GitHub Desktop{/lnk_e/} app. We'll not use the desktop app in Git-it (we're learning terminal!) but it includes Git and is the easiest way to install Git on all platforms in the same way."
+        i18n-options='{
+            "lnk_desktop": "https://desktop.github.com"
+        }'></p>
 
     <ul>
-        <li><strong>Windows</strong>: Use the <strong>Git Shell</strong> for your terminal.</li>
-        <li><strong>Mac</strong>: Open GitHub Desktop and from Preferences, select the command line tools install. Use
-            the <strong>terminal</strong> app as your terminal.
-        </li>
+        <li i18n-type="standard_html" i18n-data="ch01~{/str/}Windows{/str_e/}: Use the {/str/}Git Shell{/str_e/} for your terminal."></li>
+        <li i18n-type="standard_html" i18n-data="ch01~{/str/}Mac{/str_e/}: Open GitHub Desktop and from Preferences, select the command line tools install. Use the {/str/}terminal{/str_e/} app as your terminal."></li>
     </ul>
 
-    <p>Already have Git or not sure? Type <code>git --version</code> in your terminal and if it returns a version number
-        higher than <code>1.7.10</code>, you're set! For more information, visit the <a href="http://git-scm.com">Git
-            website</a>.</p>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~Already have Git or not sure? Type {/cde/}git --version{/cde_e/} in your terminal and if it returns a version number higher than {/cde/}1.7.10{/cde_e/}, you're set! For more information, visit the {/lnk_git/}Git website{/lnk_e/}."
+        i18n-options='{
+            "lnk_git": "http://git-scm.com"
+        }'></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Git Software</h2>
-    <p>The GitHub Desktop app can do a lot of things with Git but not all, which is why learning the terminal is
-        important. But once you've got that down, you'll be glad to have the desktop app because it organizes your
-        project's information more visually, like the GitHub website.</p>
-
-    <p>Git on its own isn't like other programs on your computer. You'll likely not see an icon on your desktop, but it
-        will always be available to you and you'll be able to access it at anytime from your terminal or Git desktop
-        applications.</p>
+    <h2 i18n-data="ch01~Git Software"></h2>
+    <p i18n-data="ch01~The GitHub Desktop app can do a lot of things with Git but not all, which is why learning the terminal is important. But once you've got that down, you'll be glad to have the desktop app because it organizes your project's information more visually, like the GitHub website."></p>
+    <p i18n-data="ch01~Git on its own isn't like other programs on your computer. You'll likely not see an icon on your desktop, but it will always be available to you and you'll be able to access it at anytime from your terminal or Git desktop applications."></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Configure Git</h3>
-    <p>Once GitHub Desktop (and therefore Git) is installed, open your <strong>terminal</strong>.
-        You can verify that Git is really there by typing:</p>
+    <h3 i18n-data="ch01~Configure Git"></h3>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~Once GitHub Desktop (and therefore Git) is installed, open your {/str/}terminal{/str_e/}. You can verify that Git is really there by typing:"></p>
 
-    <p><code class="shell">git --version </code></p>
+    <p><code class="shell">git --version</code></p>
 
-    <p>This will return the version of Git on your computer and look something like this:</p>
+    <p i18n-data="ch01~This will return the version of Git on your computer and look something like this:"></p>
 
     <p><code class="comment">git version 1.9.1</code></p>
 
-    <p>Next, configure Git so it knows to associate your work to you:</p>
-    <p>Set your name:</p>
+    <p i18n-data="ch01~Next, configure Git so it knows to associate your work to you:"></p>
+    <p i18n-data="ch01~Set your name:"></p>
     <p><code class="shell">git config --global user.name "Your Name"</code></p>
-    <p>Now set your email:</p>
+    <p i18n-data="ch01~Now set your email:"></p>
     <p><code class="shell">git config --global user.email "youremail@example.com"</code></p>
 
-    <p>You're done with your first challenge! Click the 'Verify' button to check the challenge.</p>
+    <p i18n-data="ch01~You're done with your first challenge! Click the 'Verify' button to check the challenge."></p>
 </div>
 
 {{{ verify_button }}}
 
 <div class="chal-tip grey-border border-box">
-    <h3>Dollar Signs in Code Documentation</h3>
-    <p>Dollar signs <code>$</code> are often used in programming documentation to signify that the line is <strong>command
-        line</strong> code (see the code snippets above). You don't actually type the <code>$</code> in though, only
-        type what comes after.</p>
+    <h3 i18n-data="ch01~Dollar Signs in Code Documentation"></h3>
+    <p i18n-type="standard_html"
+        i18n-data="ch01~Dollar signs {/cde/}${/cde_e/} are often used in programming documentation to signify that the line is {/str/}command line{/str_e/} code (see the code snippets above). You don't actually type the {/cde/}${/cde_e/} in though, only type what comes after."></p>
 </div>
