@@ -1,0 +1,12 @@
+{
+  "Keep your file up to date by pulling in changes from collaborators.": "Keep your file up to date by pulling in changes from collaborators.",
+  "Pulling from a Remote": "Pulling from a Remote",
+  "If you're working on something with someone else you need to stay up to date with the latest changes. So you'll want to {/str/}pull{/str_e/} in any changes that may have been pushed to the central GitHub repository.": "If you're working on something with someone else you need to stay up to date with the latest changes. So you'll want to {/str/}pull{/str_e/} in any changes that may have been pushed to the central GitHub repository.",
+  "What has Reporobot been up to?": "What has Reporobot been up to?",
+  "See if Reporobot has made any changes to your branch by pulling in any changes from the remote named 'origin' on GitHub:": "See if Reporobot has made any changes to your branch by pulling in any changes from the remote named 'origin' on GitHub:",
+  "If nothing's changed, it will tell you 'Already up-to-date'. If there are changes, Git will merge those changes into your local version.": "If nothing's changed, it will tell you 'Already up-to-date'. If there are changes, Git will merge those changes into your local version.",
+  "Did Reporobot make changes? Git tells you where changes were made. You can open that file and see Reporobot's updates. Surprise, Reporobot is an artist!": "Did Reporobot make changes? Git tells you where changes were made. You can open that file and see Reporobot's updates. Surprise, Reporobot is an artist!",
+  "Check Git status": "Check Git status",
+  "Pull in changes from a remote branch": "Pull in changes from a remote branch",
+  "See changes to the remote before you pull in": "See changes to the remote before you pull in"
+}

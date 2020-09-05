@@ -1,0 +1,22 @@
+{
+  "Merge your branch locally, delete the branch and pull from upstream.": "Merge your branch locally, delete the branch and pull from upstream.",
+  "Cleaning up": "Cleaning up",
+  "Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.": "Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.",
+  "Merge Locally": "Merge Locally",
+  "Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.": "Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.",
+  "First, move into the branch you want to merge into — in this case, the branch 'gh-pages'.": "First, move into the branch you want to merge into — in this case, the branch 'gh-pages'.",
+  "Now tell Git what branch you want to merge in — in this case, your feature branch that begins with {/dqm/}add-{/dqm/}.": "Now tell Git what branch you want to merge in — in this case, your feature branch that begins with {/dqm/}add-{/dqm/}.",
+  "Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.": "Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.",
+  "You can also delete the branch from your remote on GitHub:": "You can also delete the branch from your remote on GitHub:",
+  "Pull from Upstream": "Pull from Upstream",
+  "And last but not least, the original has changed since your pull request was merged — Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.": "And last but not least, the original has changed since your pull request was merged — Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.",
+  "To pull from the original upstream:": "To pull from the original upstream:",
+  "Congratulations!": "Congratulations!",
+  "You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the millions of others developing and enriching open source!": "You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the millions of others developing and enriching open source!",
+  "Visit {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} to see your name incorporated! Looking to keep going? Checkout the {/lnk_next/}What Next{/lnk_e/} section on the resources page in this app.": "Visit {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} to see your name incorporated! Looking to keep going? Checkout the {/lnk_next/}What Next{/lnk_e/} section on the resources page in this app.",
+  "Merge a branch into current branch": "Merge a branch into current branch",
+  "Change the branch you're working on": "Change the branch you're working on",
+  "Delete a local branch": "Delete a local branch",
+  "Delete a remote branch": "Delete a remote branch",
+  "Pull from a remote branch": "Pull from a remote branch"
+}
