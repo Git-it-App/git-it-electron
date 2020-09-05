@@ -1,0 +1,19 @@
+{
+  "Change Directory": "Change Directory",
+  "Can't find committed changes.": "Can't find committed changes.",
+  "You're on GitHub!": "You're on GitHub!",
+  "Yes": "Yes",
+  "No": "No",
+  "Confirm Clearing Statuses": "Confirm Clearing Statuses",
+  "Are you sure you want to clear the status for every challenge?": "Are you sure you want to clear the status for every challenge?",
+  "Challenges": "Challenges",
+  "Git-it Challenges": "Git-it Challenges",
+  "About": "About",
+  "Dictionary": "Dictionary",
+  "Resources": "Resources",
+  "Open an Issue": "Open an Issue",
+  "Verify": "Verify",
+  "Clear completed status": "Clear completed status",
+  "Select directory": "Select directory",
+  "Please select your repository directory.": "Please select your repository directory."
+}
