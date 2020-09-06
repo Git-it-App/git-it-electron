@@ -1,0 +1,9 @@
+{
+  "About Git-it": "Über Git-it",
+  "Git-it teaches the essential, everyday Git commands developers use everyday along with the GitHub Flow, the way developers collaborate on GitHub.": "Git-it lehrt die essentiellen Git-Grundlagen, die Entwickler im täglichen Git-Verlauf nutzen um damit z.B. auf GitHub zusammenarbeiten.",
+  "Some challenges require an internet connection, so you'll need to be online to complete Git-it. But you can always open the app and view the challenges and resources offline.": "Manche Aufgaben benötigen eine Internetverbindung. Um Git-it also vollständig absolvieren zu können, solltest du online sein. Alle Aufgaben und Informationen sind aber immer offline in der App verfügbar.",
+  "Real Development Environment": "Reale Entwicklungsumgebung",
+  "Git-it uses the real terminal, Git and GitHub (rather than emmulating them). When you finish you'll have real repositories on your GitHub account and green squares on your contribution chart!": "Git-it verwendet das reale Terminal, Git und GitHub (anstatt sie zu emulieren). Wenn du Git-it beendet hast, sind Repositories auf deinem GitHub-Account verfügbar und deine Beitragsstatistik zeigt bereits erste grüne Kästchen!",
+  "The Code that Made Git-it": "Der Code, aus dem Git-it besteht",
+  "This app is built with HTML, CSS and JS and uses the {/lnk_electron/}Electron{/lnk_e/} library. All of the code for Git-it is online in its {/lnk_repo/}repository on GitHub{/lnk_e/}. Git-it is a labor of love by {/lnk_jlord/}@jlord{/lnk_e/} and kind contributors.": "Diese App ist in HTML, CSS und JS entwickelt und verwendet die {/lnk_electron/}Electron{/lnk_e/} Bibliothek. Der gesamte Code für Git-it ist im {/lnk_repo/}Repository auf GitHub{/lnk_e/} online verfügbar. Git-it ist ein Dienst aus Liebe von {/lnk_jlord/}@jlord{/lnk_e/} unter Mithlife von freundlichen Mitwirkenden."
+}
