@@ -45,10 +45,12 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "cheerio": "1.0.0-rc.3",
     "glob": "^7.1.6",
     "handlebars": "^4.7.6",
-    "axios": "^0.20.0"
+    "i18next": "^19.6.2",
+    "i18next-fs-backend": "^1.0.7"
   },
   "FileComments": {
     "cheerio": "change somewhen to v1.0.0? (Rc3 is now >1year)<"
