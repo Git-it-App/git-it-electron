@@ -21,7 +21,7 @@
 
         <div class="page-wrapper">
             <div id="progress-cirlces-section" class="progress-circles border-group-container full-width">
-                <span class="border-group-left">Challenges completed:</span>
+                <span class="border-group-left" i18n-data="index~Challenges completed:"></span>
                 <span class="border-group-middle">
                     <a href="../challenges/get_git.html"><div class="progress-circle" title="Get Git"></div></a>
                     <a href="../challenges/repository.html"><div class="progress-circle" title="Repository"></div></a>
@@ -39,24 +39,25 @@
             </div>
 
             <div id="show-first-run">
-                <h1>Welcome!</h1>
-                <p>Git-it teaches the basics of using Git and GitHub. These basics aren't merely beginner Git and GitHub
-                    skills, they are the commands and steps you'll use over and over as in your awesome social coding +
-                    version controlled future.</p>
+                <h1 i18n-data="index~Welcome!"></h1>
+                <p i18n-data="index~Git-it teaches the basics of using Git and GitHub. These basics aren't merely beginner Git and GitHub skills, they are the commands and steps you'll use over and over as in your awesome social coding + version controlled future."></p>
 
                 <div class="chal-background light-blue solid-box">
-                    <h3>But Wait—There's More</h3>
-                    <p>You can also complete Git-it in <strong>Traditional Chinese</strong>, <strong>Japanese</strong>, <strong>Korean</strong>, <strong>Portuguese (Brazil)</strong> and <strong>Ukrainian</strong>, 
-                        just select the language you want from the menu in the upper left.</p>
+                    <h3 i18n-data="index~But Wait – There's More!"></h3>
+                    <p i18n-type="standard_html" i18n-data="index~You can also complete Git-it in several other languages, just select the language you want from the menu in the upper left."></p>
 
-                    <p>The 'Window' option in the application menu will take you to the <strong><a
-                            href="dictionary.html">Dictionary</a></strong>, <strong><a
-                            href="resources.html">Resources</a></strong> and <strong><a
-                            href="about.html">About</a></strong> page.</p>
+                    <p i18n-type="html"
+                        i18n-data="index~The 'Window' option in the application menu will take you to the {/lnk_dictionary/}Dictionary{/lnk_e/}, {/lnk_resources/}Resources{/lnk_e/} and {/lnk_about/}About{/lnk_e/} page."
+                        i18n-options='{
+                            "lnk_dictionary": "&lt;strong&gt;&lt;a href=&#39;dictionary.html&#39;&gt;",
+                            "lnk_resources": "&lt;strong&gt;&lt;a href=&#39;resources.html&#39;&gt;",
+                            "lnk_about": "&lt;strong&gt;&lt;a href=&#39;about.html&#39;&gt;",
+                            "lnk_e": "&lt;/a&gt;&lt;/strong&gt;"
+                        }'></p>
                 </div>
 
                 <a href="../challenges/get_git.html" id="get-started">
-                    <button class="btn-primary">Start challenge one!</button>
+                    <button class="btn-primary" i18n-data="index~Start challenge one!"></button>
                 </a>
             </div>
 
@@ -78,10 +79,10 @@
                   </span>
                   <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
                 </div> -->
-                <h1>On your way!</h2>
-                    <p>You're making progress, keep going and pick up where you left off.</p>
+                <h1 i18n-data="index~On your way!"></h1>
+                    <p i18n-data="index~You're making progress, keep going and pick up where you left off."></p>
                     <a id="left-off-from">
-                        <button class="btn-primary">Pick up where you left off!</button>
+                        <button class="btn-primary" i18n-data="index~Pick up where you left off!"></button>
                     </a>
             </div>
 
@@ -103,12 +104,12 @@
                   </span>
                   <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
                 </div> -->
-                <h1>Congratulations!</h2>
-                    <p>You finished the challenges and are primed for social coding—so what's next?</p>
+                <h1 i18n-data="index~Congratulations!"></h1>
+                    <p i18n-data="index~You finished the challenges and are primed for social coding—so what's next?"></p>
                     <a href="resources.html">
-                        <button class="btn-primary">Ideas for beginner projects</button>
+                        <button class="btn-primary" i18n-data="index~Ideas for beginner projects"></button>
                     </a>
-                    <button class="btn-secondary js-clear-all-challenges">Clear and start over</button>
+                    <button class="btn-secondary js-clear-all-challenges" i18n-data="index~Clear and start over"></button>
             </div>
 
         </div>
