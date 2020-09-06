@@ -6,6 +6,7 @@
   "File not found in contributors folder.": "File not found in contributors folder.",
   "Changes have been pushed!": "Changes have been pushed!",
   "Changes not pushed.": "Changes not pushed.",
+  "Can't find committed changes.": "Can't find committed changes.",
   "Changes have been committed!": "Changes have been committed!",
   "Seems there are still changes to commit.": "Seems there are still changes to commit.",
   "Did not find 2 remotes set up.": "Did not find 2 remotes set up.",
