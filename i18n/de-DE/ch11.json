@@ -1,0 +1,22 @@
+{
+  "Merge your branch locally, delete the branch and pull from upstream.": "Führe deine Branches lokal zusammen, lösche den dann überflüssigen Branch und ziehe vom Remote 'upstream'.",
+  "Cleaning up": "Aufräumen",
+  "Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.": "Wenn du Branches nicht mehr benötigst kannst du sie sowohl lokal, als auch auf dem Remote löschen. Dies hilft dir nicht irgendwann mit einem Haufen alter Branches dazustehen.",
+  "Merge Locally": "Führe deine Branches lokal zusammen",
+  "Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.": "Dein Pull-Request wurde integriert! Dein Branch wurde in den Branch 'gh-pages' des originalen GitHub-Repository integriert (engl. merge). Du kannst nun deinen lokalen Branch auch im lokalen Repository integrieren.",
+  "First, move into the branch you want to merge into — in this case, the branch 'gh-pages'.": "Wähle dazu zuerst den Branch aus, in den du hinein integrieren möchtest. In unserem Fall der Branch 'gh-pages'.",
+  "Now tell Git what branch you want to merge in — in this case, your feature branch that begins with {/dqm/}add-{/dqm/}.": "Nun sage Git, welchen Branch du integrieren möchtest. In unserem Fall ist das dein Branch {/dqm/}add-{/dqm/}.",
+  "Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.": "Räume auf, indem du den jetzt integrierten Branch löschst. Da die Änderungen zusammengeführt wurden brauchst du den Branch nicht mehr, deine Änderungen sind jetzt im anderen Branch integriert.",
+  "You can also delete the branch from your remote on GitHub:": "Du kannst den Branch auch von deinem Remote-Repository auf GitHub löschen:",
+  "Pull from Upstream": "Vom Remote 'upstream' ziehen",
+  "And last but not least, the original has changed since your pull request was merged — Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.": "Letztlich hat sich auch das originale Repository verändert, da dein Pull-Request akzeptiert wurde. - Reporobot hat deinen Namen zur Webseite hinzugefügt! Wenn du diese Änderungen nun vom originalen Repository (Remote 'upstream') ziehst, wird dein Repository wieder aktuell sein und die Webseite die Version mit deinem Namen anzeigen. Du kannst die Webseite deines Repository unter der folgenden URL anschauen: DeinNutzerName.github.io/patchwork.",
+  "To pull from the original upstream:": "Um vom originalen Repository 'upstream' zu ziehen:",
+  "Congratulations!": "Herzlichen Glückwunsch!",
+  "You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the millions of others developing and enriching open source!": "Du hast lokale Repositorys und Remote-Repositorys erstellt, mit Mitarbeitern zusammen gearbeitet, Änderungen zum Server geschoben und von dort gezogen und bist der GitHub-Gemeinschaft von Millionen anderer Entwickler beigetreten, die Open-Source Software bereichern!",
+  "Visit {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} to see your name incorporated! Looking to keep going? Checkout the {/lnk_next/}What Next{/lnk_e/} section on the resources page in this app.": "Öffne {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} um die Aufnahme deines Namens in das Verzeichnis der Workshop-Absolventen zu sehen! Du willst weitermachen? Schau dir den Abschnitt {/lnk_next/}'Und was jetzt?'{/lnk_e/} auf der Ressourcen-Seite dieser App an!",
+  "Merge a branch into current branch": "Integriere einen Branch in den aktuellen Branch",
+  "Change the branch you're working on": "Wähle den Branch aus, auf dem du aktuell arbeitest",
+  "Delete a local branch": "Lösche den lokalen Branch",
+  "Delete a remote branch": "Lösche einen Remote-Branch",
+  "Pull from a remote branch": "Ziehe von einem Remote-Branch"
+}
