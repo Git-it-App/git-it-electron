@@ -8,6 +8,7 @@ var BrowserWindow = electron.BrowserWindow
 var Menu = electron.Menu
 var ipcMain = electron.ipcMain
 var dialog = electron.dialog
+const { i18nInit } = require('./lib/i18nInit.js')
 
 var darwinTemplate = require('./menus/darwin-menu.js')
 var otherTemplate = require('./menus/other-menu.js')
@@ -39,10 +40,14 @@ app.on('ready', function appReady () {
     }
   })
 
+  // Debug setup
   if (process.env.NODE_ENV === 'debug') {
     mainWindow.maximize()
     mainWindow.webContents.openDevTools()
   }
+
+  // Init i18next Module
+  i18nInit()
 
   var appPath = app.getPath('userData')
   var userDataPath = path.join(appPath, 'user-data.json')
@@ -99,9 +104,9 @@ app.on('ready', function appReady () {
   ipcMain.on('confirm-clear', function (event) {
     var options = {
       type: 'info',
-      buttons: ['Yes', 'No'],
-      title: 'Confirm Clearing Statuses',
-      message: 'Are you sure you want to clear the status for every challenge?'
+      buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
+      title: global.i18n.t('Confirm Clearing Statuses'),
+      message: global.i18n.t('Are you sure you want to clear the status for every challenge?')
     }
     // TODO Change to promise-based showMessageBox (w/o sync)
     const resp = dialog.showMessageBoxSync(options)
