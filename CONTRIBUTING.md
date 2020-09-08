@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Contributions are more than welcome! Checkout the [help wanted](https://github.com/jlord/git-it-electron/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted+✍%22) labels for ideas!
+Contributions are more than welcome! Checkout e.g. the [good first issue](https://github.com/jotoeri/git-it-electron/labels/good%20first%20issue) label for ideas!
 
 ---
 
@@ -22,7 +22,7 @@ If you want to build this locally you'll need [Node.js](https://nodejs.org) on y
 clone this repository, install dependencies and launch:
 
 ```bash
-$ git clone https://github.com/jlord/git-it-electron
+$ git clone https://github.com/jotoeri/git-it-electron
 $ cd git-it-electron
 $ npm install
 $ npm start
@@ -51,7 +51,7 @@ limits to file path lengths.
 Clone this repository and install the dependencies:
 
 ```bash
-$ git clone https://github.com/jlord/git-it-electron
+$ git clone https://github.com/jotoeri/git-it-electron
 $ cd git-it-electron
 $ npm install
 ```
