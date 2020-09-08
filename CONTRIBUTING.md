@@ -13,13 +13,13 @@ Contributions are more than welcome! Checkout e.g. the [good first issue](https:
 ---
 
 **Code style is [JS Standard](http://standardjs.com) and no ES6 syntax** :tada: but open to relevant new methods.
+Best run `npm run test` after you're done with your changes, to see if there is an error in the syntax.
 
-Changes to the content of the pages must be made in the `challenge-content` directory (for appropriate language). For more information on how the app works, **see the [documentation](docs.md)**.
+Changes to the content of the pages must be made in the `resources/contents` directory. For more information on how the app works, **see the [documentation](docs.md)**.
 
 ## Building Locally
 
-If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then
-clone this repository, install dependencies and launch:
+If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then clone this repository, install dependencies and launch the app:
 
 ```bash
 $ git clone https://github.com/jotoeri/git-it-electron
@@ -32,9 +32,9 @@ $ npm start
 
 Here's how to create a Git-it executable for Windows, OS X and Linux. You'll need [Node.js](https://nodejs.org) on your computer and [Wine](https://www.winehq.org/) if you're packaging for Windows from a non Windows machine (more on this below).
 
-#### Use npm 3
+#### Use Node.js 10
 
-To package a release you'll need **atleast npm version 3** on your computer.
+To package a release you'll need **at least Node.js version 10** on your computer.
 
 To check your version of npm:
 
@@ -42,11 +42,7 @@ To check your version of npm:
 $ npm -v
 ```
 
-This is because the newer version of npm flattens the dependency tree. This is
-essential for creating a version of Git-it that runs on Windows, which has
-limits to file path lengths.
-
-## Clone and Install Dependencies
+### Clone and Install Dependencies
 
 Clone this repository and install the dependencies:
 
@@ -56,7 +52,7 @@ $ cd git-it-electron
 $ npm install
 ```
 
-## Package
+### Package
 
 If you have made any changes to the code or you just cloned this project from github,
 you'll need to rebuild all of the challenges and/or pages.
@@ -98,58 +94,27 @@ installable via [Homebrew](http://brew.sh/).
 
 This will output the contents of the application to a folder at `../out/Git-it-win32-ia32`.
 
+## Extract content changes
+In case you changed some text within the english original content, don't forget to extract your changes. This will copy your stuff into the translation-files, so the content will be available on Transifex for translations.
+```bash
+npm run i18n:extract
+```
 
 ## Translations to other languages
-If you want to add a new language to this project, here are some step you need to do.
+If you want to add a new language to this project, here are some steps you need to do.
 
 ### Add locale code
-First, edit `locale.js` and add locale code in it. You can use any editor you like.
+First, edit `config/i18next.config.js` and add your Language to the `appLanguages` Object. You can use any editor you like.
 
 ```bash
-$ vim lib/locale.js
+$ vim config/i18next.config.js
 ```
 
-In `locale.js`, there must have a variable called 'available', and add your language in it.  
-For example, we have already had three languages, and wanted to add German(Germany):
+Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, e.g. for German 'de' is the language code. '\<location\>' is your location code, e.g. for Germany 'DE' is the location code. If you don't know what your language/location code is, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
+_The language code *MUST* be all lowercase, and location code *MUST* be all uppercase._
 
-```javascript
-var available = {
-  'en-US': 'English',
-  'ja-JP': '日本語',
-  'zh-TW': '中文(臺灣)',
-  'de-DE': 'Deutsch'
-}
-```
+**Then best create a pull-request with your change, so i know about your plans.**
 
-Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, in this case, 'de' is the language code of 'German'. '\<location\>' is your location code, in this case, 'DE' is the location code of 'Germany'. If you don't know what your language/location code, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
-
-> **The language code *MUST* be all lowercase, and location code *MUST* be all uppercase.**  
-
-
-If there are lots of locations using same language, you could add your language in variable 'aliases'.  App will auto-redirect to target language. For example, There are five locations using 'German' as their language (de-AT, de-CH, de-DE, de-LI and de-LU),  you can add 'de' into 'aliases' and let app using 'de-DE' for default 'de' language.
-
-```javascript
-var aliases = {
-  'en': 'en-US',
-  'ja': 'ja-JP',
-  'zh': 'zh-TW',
-  'de': 'de-DE'
-}
-```
-> **Locale in aliases *MUST* point to a locale existed in available.**
-
-### Translate files
-All files that translator should edit is in `resources/contents`. We suggest translator using 'en-US' as original language to translate.  
-
-```bash
-cd resources/contents
-cp en-US '<your-lang>-<your-location>'
-```
-> **Folder name in resources/contents *MUST* be the same as the locale you added in locale.js.**
-
-### Build
-Don't forget to build to generate built file.
-
-```bash
-npm run build-all
-```
+### Translate the content
+The Content of git-it is translated using i18next, which parses the text into json-files. A simple way to track and manage these translations is to use [Transifex](https://www.transifex.com), which allows for free subscriptions to open-source projects like Git-it.
+To translate the content into your language, head over to the [Git-it Project on Transifex](https://www.transifex.com/git-it/git-it-electron). It might be necessary to first request your language to be activated for our project, but once this is done, you can start translating. Once a resource is fully translated, Transifex will automatically push the content back to GitHub and with our next release you'll be live. :muscle::tada:
