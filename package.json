@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlord/git-it-electron.git"
+    "url": "https://github.com/jotoeri/git-it-electron.git"
   },
   "author": "Jessica Lord",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/jlord/git-it-electron/issues"
+    "url": "https://github.com/jotoeri/git-it-electron/issues"
   },
-  "homepage": "https://github.com/jlord/git-it-electron",
+  "homepage": "https://github.com/jotoeri/git-it-electron",
   "devDependencies": {
     "electron": "^9.2.1",
     "electron-packager": "^15.1.0",

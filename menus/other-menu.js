@@ -97,13 +97,13 @@ module.exports = function menu (app, mainWindow, i18n) {
         {
           label: i18n.t('menu~App Repository'),
           click: function () {
-            require('electron').shell.openExternal('https://github.com/jlord/git-it-electron')
+            require('electron').shell.openExternal('https://github.com/jotoeri/git-it-electron')
           }
         },
         {
           label: i18n.t('menu~Open Issue'),
           click: function () {
-            require('electron').shell.openExternal('https://github.com/jlord/git-it-electron/issues/new')
+            require('electron').shell.openExternal('https://github.com/jotoeri/git-it-electron/issues/new')
           }
         },
         {
