@@ -20,6 +20,7 @@
     "debug:none": "npm run build-all && env NODE_ENV=debug electron . --none",
     "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "test:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
+    "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
     "clean": "rimraf built/*",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
@@ -30,25 +31,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlord/git-it-electron.git"
+    "url": "https://github.com/jotoeri/git-it-electron.git"
   },
   "author": "Jessica Lord",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/jlord/git-it-electron/issues"
+    "url": "https://github.com/jotoeri/git-it-electron/issues"
   },
-  "homepage": "https://github.com/jlord/git-it-electron",
+  "homepage": "https://github.com/jotoeri/git-it-electron",
   "devDependencies": {
     "electron": "^9.2.1",
     "electron-packager": "^15.1.0",
     "rimraf": "^3.0.2",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "i18next-parser": "^2.1.3"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "cheerio": "1.0.0-rc.3",
     "glob": "^7.1.6",
     "handlebars": "^4.7.6",
-    "axios": "^0.20.0"
+    "i18next": "^19.6.2",
+    "i18next-fs-backend": "^1.0.7"
   },
   "FileComments": {
     "cheerio": "change somewhen to v1.0.0? (Rc3 is now >1year)<"
