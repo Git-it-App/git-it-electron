@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/jotoeri/git-it-electron.svg?branch=master)](https://travis-ci.com/jotoeri/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-![screen shot 2016-04-17 at 10 37 55 pm](https://raw.githubusercontent.com/jotoeri/git-it-electron/master/assets/screenshots/app.png)
+![The app](assets/screenshots/app.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
 
 **🚩The app includes translations in these languages: Spanish (ES), Spanish (CO), French, Portugese (BR), Ukrainian, Traditional Chinese, Japanese, and Korean. 🚩**
@@ -14,7 +14,7 @@ Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git
 
 This application contains challenges for learning Git and GitHub—by using _real_ Git and GitHub, not emulators. You'll be learning the awesome (and not so scary) command line and GitHub which means when you finish all of the challenges you'll have _real_ repositories on your GitHub account and green squares on your [contribution chart](https://github.com/blog/1360-introducing-contributions).
 
-![contributions](https://raw.githubusercontent.com/jotoeri/git-it-electron/master/assets/screenshots/ghcc.png)
+![contributions](assets/screenshots/ghcc.png)
 
 ## What to Install
 
@@ -36,7 +36,7 @@ I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text 
 
 You can view the [releases](http://github.com/jotoeri/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip the folder and run the Git-it executable. The executables for Mac, Windows and Linux:
 
-![executables](https://raw.githubusercontent.com/jotoeri/git-it-electron/master/assets/screenshots/install.png)
+![executables](assets/screenshots/install.png)
 
 - **Mac** Right (control) click the Git-it icon, select Open and then Open again. You can drag the icon into your Applications directory if you want, but it's not required. If needed, more [detailed installation instructions](https://github.com/jlord/git-it-electron/issues/121#issue-149747488) can be found in this issue.
 - **Windows** Double-click the executable.
