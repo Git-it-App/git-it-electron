@@ -1,6 +1,6 @@
 # Git-it (Desktop App)
 
-[![Build Status](https://travis-ci.com/jotoeri/git-it-electron.svg?branch=master)](https://travis-ci.com/jotoeri/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.com/jotoeri/git-it-electron.svg?branch=master)](https://travis-ci.com/jotoeri/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Translations missing](https://img.shields.io/badge/translations-missing%3A_fr_es_ja_ko_pt_uk_zh-critical)](https://www.transifex.com/git-it/git-it-electron)
 
 ![The app](assets/screenshots/app.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
@@ -63,3 +63,6 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 **Command line, terminal and bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
 
 You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
+
+## Translations
+You found some english text on the translated content? That might happen, if we changed some content on the english base but the appropriate translation is still missing. We are happy on every contribution, so feel free to head over to the [Transifex Project](https://www.transifex.com/git-it/git-it-electron) to insert the right translations there! The next release will then be a bit more complete! :relaxed::tada:

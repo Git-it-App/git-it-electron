@@ -101,7 +101,11 @@ npm run i18n:extract
 ```
 
 ## Translations to other languages
-If you want to add a new language to this project, here are some steps you need to do.
+
+### Wrong or missing Translations
+The [Git-it Project on Transifex](https://www.transifex.com/git-it/git-it-electron) is the place to manage our translations. Just login there (with your GitHub Account) and you'll be able to help improving and adding translations.
+
+If you want to add a completely new language to this project, here are some steps you need to do:
 
 ### Add locale code
 First, edit `config/i18next.config.js` and add your Language to the `appLanguages` Object. You can use any editor you like.
