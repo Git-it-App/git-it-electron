@@ -35,23 +35,6 @@
   color: rgba(51, 57, 53, 0.83);
 }
 
-
-.chal-no-pass.border-box::before {
-  content: "Didn't Pass?";
-}
-
-.chal-tip.border-box::before {
-  content: "Tips";
-}
-
-.chal-step.border-box::before {
-  content: "Step";
-}
-
-.chal-goal.border-box::before {
-  content: "Goal";
-}
-
 .blue-border.border-box code {
   background: rgba(136, 204, 255, 0.15);
   color: #4F6375;
