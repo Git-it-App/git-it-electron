@@ -84,13 +84,8 @@ app.on('ready', function appReady () {
       })
     }
   })
-
-  buildMenus()
   mainWindow.loadURL('file://' + locale.getLocaleBuiltPath(language) + '/pages/index.html')
 
-  /*
-   * Create ipc listeners
-   */
   ipcMain.on('getUserDataPath', function (event) {
     event.returnValue = userDataPath
   })
@@ -118,22 +113,6 @@ app.on('ready', function appReady () {
     event.sender.send('confirm-clear-response', resp)
   })
 
-  /*
-   * Create i18n Listener
-   */
-  global.i18n.on('languageChanged', () => {
-    buildMenus()
-  })
-
-  /*
-   * MainWindow Listener
-   */
-  mainWindow.on('closed', function winClosed () {
-    mainWindow = null
-  })
-})
-
-function buildMenus () {
   if (process.platform === 'darwin') {
     menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow, global.i18n))
     Menu.setApplicationMenu(menu)
@@ -141,7 +120,11 @@ function buildMenus () {
     menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow, global.i18n))
     mainWindow.setMenu(menu)
   }
-}
+
+  mainWindow.on('closed', function winClosed () {
+    mainWindow = null
+  })
+})
 
 function setAllChallengesComplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
