@@ -1,19 +1,13 @@
-var locale = require('../lib/locale.js')
+const path = require('path')
+
 module.exports = function menu (app, mainWindow, i18n) {
-  var otherMenu = [
+  const otherMenu = [
     {
       label: i18n.t('menu~&File'),
       submenu: [
-        // {
-        //     label: '&Open',
-        //     accelerator: 'Ctrl+O'
-        // },
         {
           label: i18n.t('menu~&Quit'),
-          accelerator: 'Ctrl+Q',
-          click: function () {
-            app.quit()
-          }
+          role: 'quit'
         }
       ]
     },
@@ -22,39 +16,22 @@ module.exports = function menu (app, mainWindow, i18n) {
       submenu: [
         {
           label: i18n.t('menu~Reload'),
-          accelerator: 'Command+R',
-          click: function (item, focusedWindow) {
-            focusedWindow.reload()
-          }
+          role: 'reload'
         },
         {
           label: i18n.t('menu~Full Screen'),
-          accelerator: 'Ctrl+Command+F',
-          click: function (item, focusedWindow) {
-            focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
-          }
+          role: 'togglefullscreen'
         },
         {
           label: i18n.t('menu~Minimize'),
-          accelerator: 'Command+M',
-          selector: 'performMiniaturize:'
-        },
-        {
-          type: 'separator'
-        },
-        {
-          label: i18n.t('menu~Bring All to Front'),
-          selector: 'arrangeInFront:'
+          role: 'minimize'
         },
         {
           type: 'separator'
         },
         {
           label: i18n.t('menu~Toggle Developer Tools'),
-          accelerator: 'Alt+Command+I',
-          click: function (item, focusedWindow) {
-            focusedWindow.webContents.toggleDevTools()
-          }
+          role: 'toggleDevTools'
         }
       ]
     },
@@ -63,30 +40,23 @@ module.exports = function menu (app, mainWindow, i18n) {
       submenu: [
         {
           label: i18n.t('menu~Home'),
-          click: function (item, focusedWindow) {
-            if (focusedWindow) {
-              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'index.html')
-              focusedWindow.loadURL(path)
-              // console.log(focusedWindow)
-            }
+          click: function () {
+            const filepath = path.normalize(path.join(__dirname, '..', 'built', 'pages', 'index.html'))
+            mainWindow.loadFile(filepath)
           }
         },
         {
           label: i18n.t('menu~Dictionary'),
-          click: function (item, focusedWindow) {
-            if (focusedWindow) {
-              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'dictionary.html')
-              focusedWindow.loadURL(path)
-            }
+          click: function () {
+            const filepath = path.normalize(path.join(__dirname, '..', 'built', 'pages', 'dictionary.html'))
+            mainWindow.loadFile(filepath)
           }
         },
         {
           label: i18n.t('menu~Resources'),
-          click: function (item, focusedWindow) {
-            if (focusedWindow) {
-              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'resources.html')
-              focusedWindow.loadURL(path)
-            }
+          click: function () {
+            const filepath = path.normalize(path.join(__dirname, '..', 'built', 'pages', 'resources.html'))
+            mainWindow.loadFile(filepath)
           }
         }
       ]
@@ -108,11 +78,9 @@ module.exports = function menu (app, mainWindow, i18n) {
         },
         {
           label: i18n.t('menu~About App'),
-          click: function (item, focusedWindow) {
-            if (focusedWindow) {
-              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'about.html')
-              focusedWindow.loadURL(path)
-            }
+          click: function () {
+            const filepath = path.normalize(path.join(__dirname, '..', 'built', 'pages', 'about.html'))
+            mainWindow.loadFile(filepath)
           }
         }
       ]
