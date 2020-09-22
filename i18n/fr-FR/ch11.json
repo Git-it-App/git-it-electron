@@ -1,0 +1,22 @@
+{
+  "Merge your branch locally, delete the branch and pull from upstream.": "Fusionnez votre branche localement, supprimez la branche et tirez depuis 'upstream'.",
+  "Cleaning up": "Nettoyage",
+  "Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.": "Une fois que vous n'avez plus besoin de branches, vous pouvez les supprimer localement et à distance. Ceci est utile pour que l'on ne se retrouvent avec une pile de vieilles branches devenues inutiles.",
+  "Merge Locally": "Fusionner localement",
+  "Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.": "Votre pull request a été fusionnée! Votre branche a été fusionnée dans la branche 'gh-pages' de l'original sur GitHub. Vous pouvez également fusionner votre branche localement.",
+  "First, move into the branch you want to merge into — in this case, the branch 'gh-pages'.": "Tout d'abord, passez sur la branche avec laquelle vous souhaitez fusionner, dans ce cas la branche 'gh-pages'.",
+  "Now tell Git what branch you want to merge in — in this case, your feature branch that begins with {/dqm/}add-{/dqm/}.": "Maintenant, dites à Git quelle branche vous souhaitez fusionner, dans ce cas, votre branche de fonctionnalité qui commence par {/dqm/}add-{/dqm/}.",
+  "Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.": "Nettoyer en supprimant la branche de fonctionnalité. Maintenant qu'elle a été fusionné, vous n'en avez plus vraiment besoin.",
+  "You can also delete the branch from your remote on GitHub:": "Vous pouvez également supprimer la branche de votre remote sur GitHub:",
+  "Pull from Upstream": "Tirer depuis Upstream",
+  "And last but not least, the original has changed since your pull request was merged — Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.": "Last but not least, l'original a changé depuis que votre pull request a été fusionnée : Reporobot a ajouté votre nom au site Web! Si vous tirez ces changements depuis le remote 'upstream', vous serez à jour et disposerez également de cette version. Vous pourrez le voir en live sur la page dont l'adresse est de cette forme : yourusername.github.io/patchwork.",
+  "To pull from the original upstream:": "Pour tirer depuis le dépôt original sur le remote upstream:",
+  "Congratulations!": "Félicitations!",
+  "You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the millions of others developing and enriching open source!": "Vous avez créé des dépôts locaux, des dépôts à distance, travaillé avec un collaborateur, poussé, tiré et joint les millions d'autres personnes qui développent et enrichissent l'open source!",
+  "Visit {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} to see your name incorporated! Looking to keep going? Checkout the {/lnk_next/}What Next{/lnk_e/} section on the resources page in this app.": "Visitez {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} pour voir votre nom incorporé! Vous voulez continuer et aller plus loin? Regardez la section {/lnk_next/}What Next{/lnk_e/} dans les ressources de cette application.",
+  "Merge a branch into current branch": "Fusionner une branche dans la branche courante",
+  "Change the branch you're working on": "Changer la branche sur laquelle vous travaillez",
+  "Delete a local branch": "Supprimer une branche locale",
+  "Delete a remote branch": "Supprimer une branche distante",
+  "Pull from a remote branch": "Tirer depuis une branche distante"
+}
