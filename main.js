@@ -36,7 +36,8 @@ app.on('ready', function appReady () {
     title: 'Git-it',
     icon: iconPath,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true
     }
   })
 
