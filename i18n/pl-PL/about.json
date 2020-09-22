@@ -1,0 +1,9 @@
+{
+  "About Git-it": "O Git-it",
+  "Git-it teaches the essential, everyday Git commands developers use everyday along with the GitHub Flow, the way developers collaborate on GitHub.": "Git-it uczy podstawowych komend Gita używanych codziennie przez deweloperów, wraz z GitHub Flow, sposobem w jaki deweloperzy współpracują na GitHubie.",
+  "Some challenges require an internet connection, so you'll need to be online to complete Git-it. But you can always open the app and view the challenges and resources offline.": "Część wyzwań wymaga połączenia z internetem, więc by ukończyć Git-it będziesz potrzebować połączenia z siecią. Zawsze jednak możesz otworzyć aplikację i przeglądać wyzwania i zasoby bez łączenia się z Internetem.",
+  "Real Development Environment": "Rzeczywiste środowisko deweloperskie",
+  "Git-it uses the real terminal, Git and GitHub (rather than emulating them). When you finish you'll have real repositories on your GitHub account and green squares on your contribution chart!": "Git-it używa prawdziwego terminala, Gita i GitHuba (bez potrzeby emulowania ich). Kiedy ukończysz wszystkie wyzwania, na Twoim koncie GitHub znajdą się rzeczywiste repozytoria oraz zielone kwadraciki na grafie współpracy.",
+  "The Code that Made Git-it": "Kod, który tworzy Git-it",
+  "This app is built with HTML, CSS and JS and uses the {/lnk_electron/}Electron{/lnk_e/} library. All of the code for Git-it is online in its {/lnk_repo/}repository on GitHub{/lnk_e/}. Git-it is a labor of love, originally created by Jessica Lord ({/lnk_jlord/}@jlord{/lnk_e/}) and kind contributors.": "Ta aplikacja została zbudowana przy użyciu HTML, CSS i JS oraz wykorzystuje bibliotekę {/lnk_electron/}Electron{/lnk_e/}. Pełen kod aplikacji Git-it jest dostępny online w {/lnk_repo/}repozytorium GitHub{/lnk_e/}. Git-it jest owocem pasji, oryginalnie stworzony przez Jessicę Lord ({/lnk_jlord/}@jlord{/lnk_e/}) i życzliwych współtwórców."
+}
