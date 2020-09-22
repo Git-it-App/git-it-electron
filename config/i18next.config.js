@@ -4,8 +4,7 @@
 const appLanguages = {
   'en-US': 'English',
   'de-DE': 'Deutsch',
-  'es-CO': 'Español (Colombia)',
-  'es-ES': 'Español (España)',
+  'es-ES': 'Español',
   'fr-FR': 'Français',
   'ja-JP': '日本語',
   'ko-KR': '한국어',
