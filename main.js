@@ -123,6 +123,7 @@ app.on('ready', function appReady () {
    */
   global.i18n.on('languageChanged', () => {
     buildMenus()
+    mainWindow.reload()
   })
 
   /*
