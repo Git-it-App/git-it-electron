@@ -25,9 +25,9 @@
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
     "build-all": "npm run clean && npm run build-chals && npm run build-pages",
-    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github --ignore=resources/ --ignore=assets/PortableGit",
-    "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github --ignore=resources/ --ignore=assets/PortableGit",
-    "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github --ignore=resources/"
+    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/ --ignore=assets/PortableGit",
+    "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/ --ignore=assets/PortableGit",
+    "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/"
   },
   "repository": {
     "type": "git",
