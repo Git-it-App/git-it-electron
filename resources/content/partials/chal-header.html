@@ -1,16 +1,11 @@
 <header id="challenge-header" class="site-header">
     <div class="lang-select">
         <select id="lang-select" class="btn-outline lang-select">
-            {{ localemenu }}
+            {{ localeMenu }}
         </select>
     </div>
     <a class="filledblock" href="../pages/index.html">
         Git-it
     </a>
-    <span class="challenge-title">{{ challengetitle }}</span>
+    <span class="challenge-title">{{ challengeTitle }}</span>
 </header>
-
-<script>
-    var selector = document.getElementById('lang-select');
-    selector.value = "{{ lang }}"
-</script>
