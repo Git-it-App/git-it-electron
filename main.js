@@ -87,7 +87,7 @@ app.on('ready', function appReady () {
   })
 
   buildMenus()
-  mainWindow.loadURL('file://' + locale.getLocaleBuiltPath(language) + '/pages/index.html')
+  mainWindow.loadFile(path.normalize(path.join(__dirname, 'built', 'pages', 'index.html')))
 
   /*
    * Create ipc listeners
