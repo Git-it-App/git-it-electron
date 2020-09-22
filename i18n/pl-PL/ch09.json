@@ -1,0 +1,12 @@
+{
+  "Keep your file up to date by pulling in changes from collaborators.": "Dbanie o aktualność plików poprzez pobieranie zmian od współpracowników.",
+  "Pulling from a Remote": "Pobieranie z repozytorium zdalnego",
+  "If you're working on something with someone else you need to stay up to date with the latest changes. So you'll want to {/str/}pull{/str_e/} in any changes that may have been pushed to the central GitHub repository.": "Jeśli pracujesz nad czymś z kimś innym musisz posiadać aktualną wersję projektu. Będziesz  zatem {/str/}pobierać{/str_e/} zmiany które mogły zostać wypchnięte do centralnego repozytorium GitHub.",
+  "What has Reporobot been up to?": "Co zrobił Reporobot?",
+  "See if Reporobot has made any changes to your branch by pulling in any changes from the remote named 'origin' on GitHub:": "Sprawdź czy Reporobot dokonał zmian na Twojej gałęzi próbując pobrać zmiany z 'origin' na GitHub:",
+  "If nothing's changed, it will tell you 'Already up-to-date'. If there are changes, Git will merge those changes into your local version.": "Jeśli nic się nie zmieniło, otrzymasz komunikat 'Already up-to-date'. Jeśli jednak pojawiły się zmiany, Git scali je do Twojej wersji lokalnej.",
+  "Did Reporobot make changes? Git tells you where changes were made. You can open that file and see Reporobot's updates. Surprise, Reporobot is an artist!": "Czy Reporobot zrobił jakieś zmiany? Git powie Ci gdzie zostały one zrobione. Możesz otworzyć ten plik i zobaczyć poprawki Reporobota. Niespodzianka, Reporobot jest artystą!",
+  "Check Git status": "Sprawdzenie statusu repozytorium",
+  "Pull in changes from a remote branch": "Pobieranie zmian z gałęzi zdalnej",
+  "See changes to the remote before you pull in": "Podgląd zmian zanim zostaną pobrane"
+}
