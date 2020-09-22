@@ -15,7 +15,7 @@ Contributions are more than welcome! Checkout e.g. the [good first issue](https:
 **Code style is [JS Standard](http://standardjs.com) and no ES6 syntax** :tada: but open to relevant new methods.
 Best run `npm run test` after you're done with your changes, to see if there is an error in the syntax.
 
-Changes to the content of the pages must be made in the `resources/contents` directory. For more information on how the app works, **see the [documentation](docs.md)**.
+Changes to the content of the pages must be made in the `resources/content` directory. For more information on how the app works, **see the [documentation](docs.md)**.
 
 ## Building Locally
 
