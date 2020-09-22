@@ -35,7 +35,7 @@ const i18nextConfig = {
   initImmediate: false,
   backend: {
     // path where resources get loaded from
-    loadPath: './i18n/{/lng/}/{/ns/}.json',
+    loadPath: './resources/i18n/{/lng/}/{/ns/}.json',
     // jsonIndent to use when storing json files
     jsonIndent: 2
   },
