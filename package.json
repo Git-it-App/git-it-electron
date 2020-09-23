@@ -1,7 +1,21 @@
 {
   "name": "git-it-electron",
+  "productName": "Git-it",
   "version": "5.0.0-beta.2",
   "description": "An open source desktop app for learning Git and GitHub",
+  "author": "Jessica Lord",
+  "contributors": [
+    "Jonas Rittershofer"
+  ],
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jotoeri/git-it-electron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jotoeri/git-it-electron/issues"
+  },
+  "homepage": "https://github.com/jotoeri/git-it-electron",
   "keywords": [
     "Git",
     "GitHub",
@@ -11,50 +25,32 @@
     "learn",
     "desktop"
   ],
-  "productName": "Git-it",
   "main": "main.js",
   "scripts": {
-    "prestart": "npm run build-all",
+    "prestart": "npm run build",
     "start": "electron .",
-    "debug": "npm run build-all && env NODE_ENV=debug electron .",
-    "debug:none": "npm run build-all && env NODE_ENV=debug electron . --none",
-    "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
-    "test:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
+    "debug": "npm run build && env NODE_ENV=debug electron .",
+    "debug:none": "npm run build && env NODE_ENV=debug electron . --none",
+    "lint": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "lint:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
-    "clean": "rimraf built/*",
-    "build-chals": "node lib/build-challenges.js",
-    "build-pages": "node lib/build-pages.js",
-    "build-all": "npm run clean && npm run build-chals && npm run build-pages",
+    "build": "rimraf built/* && node lib/build-challenges.js && node lib/build-pages.js",
+    "pack": "npm run build && npm run pack-mac && npm run pack-lin && npm run pack-win",
     "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/ --ignore=assets/PortableGit",
     "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/ --ignore=assets/PortableGit",
     "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jotoeri/git-it-electron.git"
-  },
-  "author": "Jessica Lord",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/jotoeri/git-it-electron/issues"
-  },
-  "homepage": "https://github.com/jotoeri/git-it-electron",
   "devDependencies": {
     "electron": "^10.1.1",
     "electron-packager": "^15.1.0",
+    "handlebars": "^4.7.6",
+    "i18next-parser": "^3.3.0",
     "rimraf": "^3.0.2",
-    "standard": "^14.3.4",
-    "i18next-parser": "^3.3.0"
+    "standard": "^14.3.4"
   },
   "dependencies": {
     "axios": "^0.20.0",
-    "cheerio": "1.0.0-rc.3",
-    "glob": "^7.1.6",
-    "handlebars": "^4.7.6",
     "i18next": "^19.6.2",
     "i18next-fs-backend": "^1.0.7"
-  },
-  "FileComments": {
-    "cheerio": "change somewhen to v1.0.0? (Rc3 is now >1year)<"
   }
 }
