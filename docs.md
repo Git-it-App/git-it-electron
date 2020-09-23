@@ -15,7 +15,6 @@ How does this thing work? Below are general descriptions of directories and cont
         - **partials** HTML bits that are shared between either challenges or non-challenges pages, to be used in order to generate full HTML for pages.
     - **i18n** The translation-json-files. Translations are managed on Transifex.
     - **layouts** Handlebars templates to compile pages.
-- **tests** App's test files.
 - **empty-data.json** The starter file that is duplicated and stored on the user's computer with their challenge completed statuses as they go through the lessons.
 - **main.js** App's main process file which spins up the renderer view for the pages.
 - **package.json** App's details and dependencies.
