@@ -2,7 +2,6 @@ var fs = require('fs')
 var path = require('path')
 
 var electron = require('electron')
-var locale = require('./lib/locale.js')
 var app = electron.app
 var BrowserWindow = electron.BrowserWindow
 var Menu = electron.Menu
@@ -53,7 +52,6 @@ app.on('ready', function appReady () {
   var appPath = app.getPath('userData')
   var userDataPath = path.join(appPath, 'user-data.json')
   var userSavedDir = path.join(appPath, 'saved-dir.json')
-  var language = locale.getLocale(app.getLocale())
   // tools for development to prefill challenge completion
   // usage: electron . --none
   //        electron . --some

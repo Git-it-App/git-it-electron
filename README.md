@@ -5,9 +5,10 @@
 ![The app](assets/screenshots/app.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
 
-**🚩The app includes translations in these languages: Spanish (ES), Spanish (CO), French, Portugese (BR), Ukrainian, Traditional Chinese, Japanese, and Korean. 🚩**
+**🚩The app includes translations in several languages: English, German, Spanish, French, Japanese, Korean, Polish, Portuguese, Ukrainian and traditional Chinese. 🚩**
+_Due to Code-Changes on handling translations, some translations are currently not visible as translated. The translations still need to be copied over to transifex, contributions are welcome! (see section 'Translations' and [#77](https://github.com/jotoeri/git-it-electron/issues/77))_
 
-**The app was originally created by Jessica Lord ([jlord](https://github.com/jlord)) and it's current state is still strongly dependent on her Repositories and the operation of Reporobot on her servers. As the app seemed to be unmaintained, i (jotoeri) took it over to update dependencies and content, as it would have been a pity to see such a great tutorial die. However, i am willing to transfer it back to Jessica if she wants.**
+**The app was originally created by Jessica Lord ([jlord](https://github.com/jlord)) and it's current state is still strongly dependent on her Repositories and the operation of Reporobot on her servers. As the app seemed to be unmaintained, i ([jotoeri](https://github.com/jotoeri)) took it over to update dependencies and content, as it would have been a pity to see such a great tutorial die. However, i am willing to transfer it back to Jessica if she wants.**
 
 ---
 ## Hello future Forkers, Branchers and Pull Requesters!
