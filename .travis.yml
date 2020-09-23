@@ -4,6 +4,8 @@ node_js:
   - '12'
   - '14'
 
+script: npm run build
+
 cache:
   timeout: 600
   directories:
