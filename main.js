@@ -105,7 +105,7 @@ app.on('ready', function appReady () {
     }
   })
 
-  ipcMain.on('confirm-clear', function (event) {
+  ipcMain.on('dialog-clearAll', function (event) {
     var options = {
       type: 'info',
       buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
@@ -114,7 +114,9 @@ app.on('ready', function appReady () {
     }
     // TODO Change to promise-based showMessageBox (w/o sync)
     const resp = dialog.showMessageBoxSync(options)
-    event.sender.send('confirm-clear-response', resp)
+    if (resp === 0) {
+      event.sender.send('confirm-clearAll')
+    }
   })
 
   /*
