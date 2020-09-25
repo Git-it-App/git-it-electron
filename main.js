@@ -98,10 +98,10 @@ app.on('ready', function appReady () {
     event.returnValue = userSavedDir
   })
 
-  ipcMain.on('open-file-dialog', function (event) {
+  ipcMain.on('dialog-selectDir', function (event) {
     var files = dialog.showOpenDialogSync(mainWindow, { properties: ['openFile', 'openDirectory'] })
     if (files) {
-      event.sender.send('selected-directory', files)
+      event.sender.send('confirm-selectDir', files[0])
     }
   })
 
