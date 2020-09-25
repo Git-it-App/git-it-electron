@@ -12,7 +12,7 @@ const { i18nInit } = require('./lib/i18nInit.js')
 var darwinTemplate = require('./menus/darwin-menu.js')
 var otherTemplate = require('./menus/other-menu.js')
 
-var emptyData = require('./empty-data.json')
+var emptyUserData = require('./empty-user-data.json')
 var emptySavedDir = require('./empty-saved-dir.json')
 
 var mainWindow = null
@@ -69,7 +69,7 @@ app.on('ready', function appReady () {
   // Create 'user-data.json', if not existing.
   fs.access(userDataPath, (err) => {
     if (err) {
-      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), (err) => {
+      fs.writeFile(userDataPath, JSON.stringify(emptyUserData, null, ' '), (err) => {
         if (err) return console.log(err)
       })
     }
