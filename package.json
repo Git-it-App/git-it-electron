@@ -31,6 +31,8 @@
     "start": "electron .",
     "debug": "npm run build && env NODE_ENV=debug electron .",
     "debug:none": "npm run build && env NODE_ENV=debug electron . --none",
+    "debug:some": "npm run build && env NODE_ENV=debug electron . --some",
+    "debug:all": "npm run build && env NODE_ENV=debug electron . --all",
     "lint": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "lint:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
