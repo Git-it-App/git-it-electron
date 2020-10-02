@@ -1,4 +1,6 @@
 {
+  "Change Directory": "Verzeichnis wechseln",
+  "Select directory": "Verzeichnis auswählen",
   "Path is not a directory.": "Dieser Pfad ist kein Ordner.",
   "Found branch as expected!": "Branch wie erwartet gefunden!",
   "Branch name expected: {/expectedBranch/}": "Erwarteter Branchname: {/expectedBranch/}",
@@ -24,8 +26,8 @@
   "Username added to Git config!": "Nutzername zur Git-Config hinzugefügt!",
   "You're on GitHub!": "Du bist auf GitHub!",
   "GitHub account matching stored Git-username was not found.": "Kein GitHub-account passend zum gespeicherten Git-Nutzernamen gefunden.",
-  "Username identical on GitHub and Git config!": "Nutzername auf GitHub und in der Git-Config identisch.",
-  "GitHub & Git config usernames do not match.": "GitHub & Git-config Nutzername stimmen nicht überein.",
+  "Username capitalisation identical on GitHub and Git config!": "Groß-/Kleinschreibung des Nutzernamen auf GitHub und in der Git-Config identisch.",
+  "GitHub & Git config usernames do not match (Take care on capitalisation!).": "GitHub & Git-config Nutzername stimmen nicht überein (Achte auf die Groß-/Kleinschreibung!).",
   "Reporobot has been added!": "Reporobot wurde hinzugefügt!",
   "Reporobot seems not to have access to your fork.": "Reporobot scheint keinen Zugriff auf dein Fork zu haben.",
   "Your branch has been merged!": "Dein Branch wurde integriert!",
@@ -45,6 +47,6 @@
   "No merged pull request found for username {/username/}. If you created a pull request on github, return there to see if reporobot left some comments.": "Keinen integrierten Pull-Request gefunden zum Nutzernamen {/username/}. Wenn du auf Github einen Pull-Request erstellt hast, schau dort einmal, ob Reporobot Kommentare hinterlassen hat.",
   "Verify!": "Prüfen!",
   "Clear status": "Status zurücksetzen",
-  "Select directory": "Verzeichnis auswählen",
-  "Please select your repository directory.": "Bitte wähle dein Repository-Verzeichnis aus."
+  "Please select your repository directory.": "Bitte wähle dein Repository-Verzeichnis aus.",
+  "Selected directory: ": "Ausgewähltes Verzeichnis:"
 }
