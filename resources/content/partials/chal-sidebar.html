@@ -3,7 +3,7 @@
         <h3 i18n-data="Challenges"></h3>
         {{#each allChallenges}}
         <li>
-            <a id="{{ this.shortName }}" data-id="{{ @index }}" href="{{ this.shortName }}.html"
+            <a id="sidebar-{{ this.shortName }}" data-id="{{ @index }}" href="{{ this.shortName }}.html"
                class="challenge-item{{#if this.currentChallenge}} current{{/if }}">
                 <div class="current-arrow">▶️</div>
                 {{ this.titleName }}

@@ -15,8 +15,7 @@ How does this thing work? Below are general descriptions of directories and cont
         - **partials** HTML bits that are shared between either challenges or non-challenges pages, to be used in order to generate full HTML for pages.
     - **i18n** The translation-json-files. Translations are managed on Transifex.
     - **layouts** Handlebars templates to compile pages.
-- **tests** App's test files.
-- **empty-data.json** The starter file that is duplicated and stored on the user's computer with their challenge completed statuses as they go through the lessons.
+- **empty-user-data.json** The starter file that is duplicated and stored on the user's computer with their challenge completed statuses as they go through the lessons.
 - **main.js** App's main process file which spins up the renderer view for the pages.
 - **package.json** App's details and dependencies.
 
@@ -33,4 +32,4 @@ The pages that the app displays are HTML, just like a website. The `assets` dire
 The `lib` directory contains scripts that each page uses. Inside of `lib/verify` are scripts for each challenge that tell it how to verify that challenge. The scripts `helpers.js` and `user-data.js` are shared between scripts.
 
 **Templating**
-There are scripts, templates and partials involved with generating the HTML pages. The main content for the challenges and non-challenge pages are within `resources/content/challenges` and `resources/content/pages`. The directory `resources/layouts` contains the templates, `resources/partials` the partials that are combined with the main content files according to the template. The scripts `lib/build-page.js` and `lib/build-challenges.js` put it all in motion to generate the final HTML output which is placed inside a `built`-folder. You can run these scripts from the command line.
+There are scripts, templates and partials involved with generating the HTML pages. The main content for the challenges and non-challenge pages are within `resources/content/challenges` and `resources/content/pages`. The directory `resources/layouts` contains the templates, `resources/partials` the partials that are combined with the main content files according to the template. The scripts `lib/build/build-pages.js` and `lib/build/build-challenges.js` put it all in motion to generate the final HTML output which is placed inside a `built`-folder. You can run these scripts from the command line.

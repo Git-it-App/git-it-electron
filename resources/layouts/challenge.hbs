@@ -21,14 +21,13 @@
     </div>
 
     <script>
-      const challengeStatus = require('../../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
       // currentChallenge still var, as it needs global scope to be used in challenge.js
       var currentChallenge = '{{{ shortName }}}'
-      challengeStatus.completed(currentChallenge)
     </script>
 
-    <script>require('../../lib/challenge.js')</script>
+    <script>require('../../lib/challenge-sidebar-handler.js')</script>
+    <script>require('../../lib/challenge-verify-handler.js')</script>
     <script>require('../../lib/i18n-translate.js')</script>
     <script>require('../../lib/handle-external-links.js')</script>
   </body>

@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = function menu (app, mainWindow, i18n) {
+module.exports = function (mainWindow, i18n) {
   const otherMenu = [
     {
       label: i18n.t('menu~&File'),

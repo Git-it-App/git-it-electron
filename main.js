@@ -1,170 +1,173 @@
-var fs = require('fs')
-var path = require('path')
+const fs = require('fs')
+const path = require('path')
 
-var electron = require('electron')
-var app = electron.app
-var BrowserWindow = electron.BrowserWindow
-var Menu = electron.Menu
-var ipcMain = electron.ipcMain
-var dialog = electron.dialog
+const electron = require('electron')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
+const Menu = electron.Menu
+const ipcMain = electron.ipcMain
+const dialog = electron.dialog
+
 const { i18nInit } = require('./lib/i18nInit.js')
+const darwinTemplate = require('./menus/darwin-menu.js')
+const otherTemplate = require('./menus/other-menu.js')
 
-var darwinTemplate = require('./menus/darwin-menu.js')
-var otherTemplate = require('./menus/other-menu.js')
+const emptyUserData = require('./empty-user-data.json')
+const emptySavedDir = require('./empty-saved-dir.json')
+const GititIcon = path.join(__dirname, '/assets/git-it.png')
 
-var emptyData = require('./empty-data.json')
-var emptySavedDir = require('./empty-saved-dir.json')
+const userDataPath = app.getPath('userData')
+const userDataFile = path.join(userDataPath, 'user-data.json')
+const savedDirFile = path.join(userDataPath, 'saved-dir.json')
 
-var mainWindow = null
-var menu = null
+let mainWindow = null
 
-var iconPath = path.join(__dirname, '/assets/git-it.png')
-
-app.on('window-all-closed', function appQuit () {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-app.on('ready', function appReady () {
+app.on('ready', () => {
+  // Create main-window and set listener to remove reference after it got closed
   mainWindow = new BrowserWindow({
     minWidth: 800,
     minHeight: 600,
     width: 980,
     height: 760,
     title: 'Git-it',
-    icon: iconPath,
+    icon: GititIcon,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true
     }
   })
-
-  // Debug setup
-  if (process.env.NODE_ENV === 'debug') {
-    mainWindow.maximize()
-    mainWindow.webContents.openDevTools()
-  }
-
-  // Init i18next Module
-  i18nInit()
-
-  var appPath = app.getPath('userData')
-  var userDataPath = path.join(appPath, 'user-data.json')
-  var userSavedDir = path.join(appPath, 'saved-dir.json')
-  // tools for development to prefill challenge completion
-  // usage: electron . --none
-  //        electron . --some
-  //        electron . --all
-  if (process.argv[2] === '--none') {
-    setAllChallengesUncomplete(userDataPath)
-  }
-  if (process.argv[2] === '--some') {
-    setSomeChallengesComplete(userDataPath)
-  }
-  if (process.argv[2] === '--all') {
-    setAllChallengesComplete(userDataPath)
-  }
-
-  // Create 'user-data.json', if not existing.
-  fs.access(userDataPath, (err) => {
-    if (err) {
-      fs.writeFile(userDataPath, JSON.stringify(emptyData, null, ' '), (err) => {
-        if (err) return console.log(err)
-      })
-    }
-  })
-
-  // Create 'saved-dir.json', if not existing.
-  fs.access(userSavedDir, (err) => {
-    if (err) {
-      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), (err) => {
-        if (err) return console.log(err)
-      })
-    }
-  })
-
-  buildMenus()
-  mainWindow.loadFile(path.normalize(path.join(__dirname, 'built', 'pages', 'index.html')))
-
-  /*
-   * Create ipc listeners
-   */
-  ipcMain.on('getUserDataPath', function (event) {
-    event.returnValue = userDataPath
-  })
-
-  ipcMain.on('getUserSavedDir', function (event) {
-    event.returnValue = userSavedDir
-  })
-
-  ipcMain.on('open-file-dialog', function (event) {
-    var files = dialog.showOpenDialogSync(mainWindow, { properties: ['openFile', 'openDirectory'] })
-    if (files) {
-      event.sender.send('selected-directory', files)
-    }
-  })
-
-  ipcMain.on('confirm-clear', function (event) {
-    var options = {
-      type: 'info',
-      buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
-      title: global.i18n.t('Confirm Clearing Statuses'),
-      message: global.i18n.t('Are you sure you want to clear the status for every challenge?')
-    }
-    // TODO Change to promise-based showMessageBox (w/o sync)
-    const resp = dialog.showMessageBoxSync(options)
-    event.sender.send('confirm-clear-response', resp)
-  })
-
-  /*
-   * Create i18n Listener
-   */
-  global.i18n.on('languageChanged', () => {
-    buildMenus()
-    mainWindow.reload()
-  })
-
-  /*
-   * MainWindow Listener
-   */
   mainWindow.on('closed', function winClosed () {
     mainWindow = null
   })
+
+  // Init App-Components
+  initUserData()
+  i18nInit(buildMenus, mainWindow)
+  buildMenus()
+
+  // Debugging-Settings if required
+  checkDebugSettings()
+
+  // Open Index-page
+  mainWindow.loadFile(path.normalize(path.join(__dirname, 'built', 'pages', 'index.html')))
 })
 
+/*
+ * Quit app
+ */
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+/*
+ * Provide userDataPath to Renderer (resp. to lib/user-data.js)
+ */
+ipcMain.on('getUserDataPath', event => {
+  event.returnValue = userDataPath
+})
+
+/*
+ * Select-Directory Window if called
+ */
+ipcMain.on('dialog-selectDir', event => {
+  const path = dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] })
+  if (path) {
+    event.sender.send('confirm-selectDir', path[0])
+  }
+})
+
+/*
+ * ClearAll Dialog
+ */
+ipcMain.on('dialog-clearAll', event => {
+  const dialogOptions = {
+    type: 'info',
+    title: global.i18n.t('Confirm Clearing Statuses'),
+    message: global.i18n.t('Are you sure you want to clear the status for every challenge?'),
+    buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
+    defaultId: 0,
+    cancelId: 1
+  }
+
+  const resp = dialog.showMessageBoxSync(dialogOptions)
+  if (resp === 0) {
+    event.sender.send('confirm-clearAll')
+  }
+})
+
+/*
+ * Create 'user-data.json' and 'saved-dir.json', if not existing.
+ */
+function initUserData () {
+  fs.access(userDataFile, (err) => {
+    if (err) {
+      fs.writeFile(userDataFile, JSON.stringify(emptyUserData, null, 2), (err) => {
+        if (err) return console.log(err)
+      })
+    }
+  })
+  fs.access(savedDirFile, (err) => {
+    if (err) {
+      fs.writeFile(savedDirFile, JSON.stringify(emptySavedDir, null, 2), (err) => {
+        if (err) return console.log(err)
+      })
+    }
+  })
+}
+
+/*
+ * Build the menu from template and set it on application.
+ */
 function buildMenus () {
   if (process.platform === 'darwin') {
-    menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow, global.i18n))
+    const menu = Menu.buildFromTemplate(darwinTemplate(mainWindow, global.i18n))
     Menu.setApplicationMenu(menu)
   } else {
-    menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow, global.i18n))
+    const menu = Menu.buildFromTemplate(otherTemplate(mainWindow, global.i18n))
     mainWindow.setMenu(menu)
   }
 }
 
-function setAllChallengesComplete (path) {
-  var challenges = JSON.parse(fs.readFileSync(path))
-  for (var key in challenges) {
-    challenges[key].completed = true
-  }
-  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
-}
+/*
+ * Tools for development
+ * - Preset challenge completion
+ *   usage: electron . --none
+ *          electron . --some
+ *          electron . --all
+ * - Show devtools in maximized Window
+ *   usage: NODE_ENV=debug
+ */
+function checkDebugSettings () {
+  const debugArguments = ['--none', '--some', '--all']
 
-function setAllChallengesUncomplete (path) {
-  var challenges = JSON.parse(fs.readFileSync(path))
-  for (var key in challenges) {
-    challenges[key].completed = false
-  }
-  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
-}
+  // Preset challenges
+  if (process.argv[2] && debugArguments.includes(process.argv[2])) {
+    const userData = JSON.parse(fs.readFileSync(userDataFile))
 
-function setSomeChallengesComplete (path) {
-  var counter = 0
-  var challenges = JSON.parse(fs.readFileSync(path))
-  for (var key in challenges) {
-    counter++
-    challenges[key].completed = counter < 6
+    if (process.argv[2] === '--none') {
+      Object.keys(userData).forEach(challenge => {
+        userData[challenge].completed = false
+      })
+    }
+    if (process.argv[2] === '--some') {
+      Object.keys(userData).forEach((challenge, index) => {
+        userData[challenge].completed = index < 6
+      })
+    }
+    if (process.argv[2] === '--all') {
+      Object.keys(userData).forEach(challenge => {
+        userData[challenge].completed = true
+      })
+    }
+
+    fs.writeFileSync(userDataFile, JSON.stringify(userData, null, 2))
   }
-  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
+
+  // Show devtools
+  if (process.env.NODE_ENV === 'debug') {
+    mainWindow.maximize()
+    mainWindow.webContents.openDevTools()
+  }
 }

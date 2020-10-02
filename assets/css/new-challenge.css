@@ -125,16 +125,8 @@ gre7-border.border-box code {
    padding-right: 12px;
  }
 
- #directory-path:empty {
-   display: none;
- }
-
- #directory-path:before {
-   content: 'Verifying: ';
- }
-
  #path-required-warning,
- #directory-path {
+ #div-selected-dir{
    padding: 6px 12px 6px 10px;
    vertical-align: middle;
    margin-bottom: 0;
@@ -144,18 +136,6 @@ gre7-border.border-box code {
    white-space: nowrap;
    margin-left: -3px;
    color: #8cf;
- }
-
- #path-required-warning {
-   display: none;
- }
-
- #path-required-warning.show {
-   display: inline;
- }
-
- #path-required-warning.show + #directory-path {
-   display: none;
  }
 
  .verify-fail:before {
