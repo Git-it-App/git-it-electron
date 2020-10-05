@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Contributions are more than welcome! Checkout e.g. the [good first issue](https://github.com/jotoeri/git-it-electron/labels/good%20first%20issue) label for ideas!
+Contributions are more than welcome! Checkout e.g. the [good first issue](https://github.com/Git-it-App/git-it-electron/labels/good%20first%20issue) label for ideas!
 
 ---
 
@@ -22,7 +22,7 @@ Changes to the content of the pages must be made in the `resources/content` dire
 If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then clone this repository, install dependencies and launch the app:
 
 ```bash
-$ git clone https://github.com/jotoeri/git-it-electron
+$ git clone https://github.com/Git-it-App/git-it-electron
 $ cd git-it-electron
 $ npm install
 $ npm start
@@ -47,7 +47,7 @@ $ npm -v
 Clone this repository and install the dependencies:
 
 ```bash
-$ git clone https://github.com/jotoeri/git-it-electron
+$ git clone https://github.com/Git-it-App/git-it-electron
 $ cd git-it-electron
 $ npm install
 ```

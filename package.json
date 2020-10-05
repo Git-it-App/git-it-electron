@@ -10,12 +10,12 @@
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jotoeri/git-it-electron.git"
+    "url": "https://github.com/Git-it-App/git-it-electron.git"
   },
   "bugs": {
-    "url": "https://github.com/jotoeri/git-it-electron/issues"
+    "url": "https://github.com/Git-it-App/git-it-electron/issues"
   },
-  "homepage": "https://github.com/jotoeri/git-it-electron",
+  "homepage": "https://github.com/Git-it-App/git-it-electron",
   "keywords": [
     "Git",
     "GitHub",

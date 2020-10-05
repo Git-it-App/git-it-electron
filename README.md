@@ -1,14 +1,14 @@
 # Git-it (Desktop App)
 
-[![Build Status](https://travis-ci.com/jotoeri/git-it-electron.svg?branch=master)](https://travis-ci.com/jotoeri/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Translations missing](https://img.shields.io/badge/translations-missing%3A_fr_es_ja_ko_pt_uk_zh-critical)](https://www.transifex.com/git-it/git-it-electron)
+[![Build Status](https://travis-ci.org/Git-it-App/git-it-electron.svg?branch=master)](https://travis-ci.org/Git-it-App/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Translations missing](https://img.shields.io/badge/translations-missing%3A_fr_es_ja_ko_pt_uk_zh-critical)](https://www.transifex.com/git-it/git-it-electron)
 
 ![The app](assets/screenshots/app.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
 
 **🚩The app includes translations in several languages: English, German, Spanish, French, Japanese, Korean, Polish, Portuguese, Ukrainian and traditional Chinese. 🚩**
-_Due to Code-Changes on handling translations, some translations are currently not visible as translated. The translations still need to be copied over to transifex, contributions are welcome! (see section 'Translations' and [#77](https://github.com/jotoeri/git-it-electron/issues/77))_
+_Due to Code-Changes on handling translations, some translations are currently not visible as translated. The translations still need to be copied over to transifex, contributions are welcome! (see section 'Translations' and [#77](https://github.com/Git-it-App/git-it-electron/issues/77))_
 
-**The app was originally created by Jessica Lord ([jlord](https://github.com/jlord)) and it's current state is still strongly dependent on her Repositories and the operation of Reporobot on her servers. As the app seemed to be unmaintained, i ([jotoeri](https://github.com/jotoeri)) took it over to update dependencies and content, as it would have been a pity to see such a great tutorial die. However, i am willing to transfer it back to Jessica if she wants.**
+**The app was originally created by Jessica Lord ([jlord](https://github.com/jlord)) and it's current state is still strongly dependent on her Repositories and the operation of Reporobot on her servers. As the app seemed to be unmaintained, i ([jotoeri](https://github.com/jotoeri)) took it over and moved it to this organisation to update dependencies and content. It would just have been a pity to see such a great tutorial die. However, i am willing to transfer the Repository back to Jessica if she wants.**
 
 ---
 ## Hello future Forkers, Branchers and Pull Requesters!
@@ -35,7 +35,7 @@ I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text 
 
 #### Git-it
 
-You can view the [releases](http://github.com/jotoeri/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip the folder and run the Git-it executable. The executables for Mac, Windows and Linux:
+You can view the [releases](http://github.com/Git-it-App/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip the folder and run the Git-it executable. The executables for Mac, Windows and Linux:
 
 ![executables](assets/screenshots/install.png)
 
@@ -49,7 +49,7 @@ Open Git-it and click the button to begin the first challenge. Have your termina
 
 When you've completed the steps in a challenge click 'Verify'. Depending on the challenge you may need to also select the folder you did your work in for Git-it to verify.
 
-**Questions?** [Open an issue](http://github.com/jotoeri/git-it-electron/issues/new) on this repository.
+**Questions?** [Open an issue](http://github.com/Git-it-App/git-it-electron/issues/new) on this repository.
 
 **Want to contribute or build locally?** See the [contributing documentation](CONTRIBUTING.md)
 
