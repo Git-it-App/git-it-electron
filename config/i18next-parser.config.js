@@ -27,7 +27,11 @@ module.exports = {
 
   /* see below for more details */
   lexers: {
-  //   hbs: ['HandlebarsLexer'],
+    hbs: [{ // Use HTML-Lexer here, translations will be done on final built html-code, but not on handlebars-build.
+      lexer: 'HTMLLexer',
+      attr: 'i18n-data', // Attribute for the keys
+      optionAttr: 'i18n-options' // Attribute for the options
+    }],
   //   handlebars: ['HandlebarsLexer'],
     htm: [{
       lexer: 'HTMLLexer',
@@ -66,7 +70,7 @@ module.exports = {
   /* An array of globs that describe where to look for source files
    * relative to the location of the configuration file
    */
-  input: ['../main.js', '../lib/**/*.js', '../menus/*.js', '../resources/**/*.html'],
+  input: ['../main.js', '../lib/**/*.js', '../menus/*.js', '../resources/**/*.hbs'],
 
   /* For react file, extract the defaultNamespace - https://react.i18next.com/latest/withtranslation-hoc
    * Ignored when parsing a `.jsx` file and namespace is extracted from that file.
