@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Git-it</title>
+    <meta name="currentChallenge" content="{{{ shortName }}}">
     <link rel="stylesheet" href="../../assets/css/2-double-bounce.css">
     <link rel="stylesheet" href="../../assets/css/new-style.css">
     <link rel="stylesheet" href="../../assets/css/new-challenge.css">
@@ -19,12 +20,6 @@
         {{{ footer }}}
       </div>
     </div>
-
-    <script>
-      // TODO Get this from the DOM and don't do template in JS
-      // currentChallenge still var, as it needs global scope to be used in challenge.js
-      var currentChallenge = '{{{ shortName }}}'
-    </script>
 
     <script>require('../../lib/challenge-sidebar-handler.js')</script>
     <script>require('../../lib/challenge-verify-handler.js')</script>
