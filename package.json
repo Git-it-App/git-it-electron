@@ -51,7 +51,7 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.0",
     "i18next": "^19.8.2",
     "i18next-fs-backend": "^1.0.7"
   }
