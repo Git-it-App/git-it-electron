@@ -48,7 +48,7 @@
     "handlebars": "^4.7.6",
     "i18next-parser": "^3.3.0",
     "rimraf": "^3.0.2",
-    "standard": "^14.3.4"
+    "standard": "^15.0.0"
   },
   "dependencies": {
     "axios": "^0.21.0",
