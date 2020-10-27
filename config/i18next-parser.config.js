@@ -42,9 +42,12 @@ module.exports = {
       lexer: 'HTMLLexer',
       attr: 'i18n-data', // Attribute for the keys
       optionAttr: 'i18n-options' // Attribute for the options
-    }]
-  //   mjs: ['JavascriptLexer'],
-  //   js: ['JavascriptLexer'], // if you're writing jsx inside .js files, change this to JsxLexer
+    }],
+    //   mjs: ['JavascriptLexer'],
+    js: [{
+      lexer: 'JavascriptLexer',
+      functions: ['t', 'addToVerifyList'], // Array of functions to match
+    }],
   //   ts: ['JavascriptLexer'],
   //   jsx: ['JsxLexer'],
   //   tsx: ['JsxLexer'],
