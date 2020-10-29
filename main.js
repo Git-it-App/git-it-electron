@@ -148,17 +148,17 @@ function checkDebugSettings () {
 
     if (process.argv[2] === '--none') {
       Object.keys(userData).forEach(challenge => {
-        userData[challenge].completed = false
+        userData[challenge].challengeComplete = false
       })
     }
     if (process.argv[2] === '--some') {
       Object.keys(userData).forEach((challenge, index) => {
-        userData[challenge].completed = index < 6
+        userData[challenge].challengeComplete = index < 6
       })
     }
     if (process.argv[2] === '--all') {
       Object.keys(userData).forEach(challenge => {
-        userData[challenge].completed = true
+        userData[challenge].challengeComplete = true
       })
     }
 

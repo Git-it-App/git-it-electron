@@ -1,46 +1,57 @@
 {
   "get_git": {
     "challengeId": 1,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "repository": {
     "challengeId": 2,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "commit_to_it": {
     "challengeId": 3,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "githubbin": {
     "challengeId": 4,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "remote_control": {
     "challengeId": 5,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "forks_and_clones": {
     "challengeId": 6,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "branches_arent_just_for_birds": {
     "challengeId": 7,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "its_a_small_world": {
     "challengeId": 8,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "pull_never_out_of_date": {
     "challengeId": 9,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "requesting_you_pull_please": {
     "challengeId": 10,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   },
   "merge_tada": {
     "challengeId": 11,
-    "completed": false
+    "challengeComplete": false, 
+    "verifyList": []
   }
 }
