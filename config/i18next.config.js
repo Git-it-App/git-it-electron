@@ -8,6 +8,7 @@ const appLanguages = {
   'fr-FR': 'Français',
   'ja-JP': '日本語',
   'ko-KR': '한국어',
+  'ku': 'Kurdish',
   'pl-PL': 'Polski',
   'pt-BR': 'Português Brasileiro',
   'uk-UA': 'Українська',
