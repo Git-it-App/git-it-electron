@@ -1,0 +1,22 @@
+{
+  "Merge your branch locally, delete the branch and pull from upstream.": "لقەکەت لە ناوخۆدا یەکبخە، لقەکە بسڕەوە و لە upstreamـەوە pull بکە.",
+  "Cleaning up": "خاوێنکردنەوە",
+  "Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.": "هەرکە پێویستیت نەما بە لقەکان چیدیکە ئەتوانی لە ناوخۆ و لە remoteـدا بیانسڕیتەوە. ئەمە یارمەتیدەرە تا کۆمەڵێ لقی کۆنت بەسەرەوە کەڵەکە نەبێ.",
+  "Merge Locally": "یەکخستنی ناوخۆیی",
+  "Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.": "pull requestـەکەت یەکخرا! لقەکەر یەکخرا لەگەڵ لقی 'gh-pages'ـە ڕەسەنەکە لەسەر GitHub. ئەتوانی لقەکەت لە ناوخۆشدا یەکبخەیت.",
+  "First, move into the branch you want to merge into — in this case, the branch 'gh-pages'.": "سەرەتا، بڕۆ ئەو لقەی کە ئەتەوێ یەکخستنی لەگەڵ بکەیت — لەم حاڵەتەدا، لقی 'gh-pages'ـە.",
+  "Now tell Git what branch you want to merge in — in this case, your feature branch that begins with {/dqm/}add-{/dqm/}.": "ئێستا بە Git بڵێ دەتەوێ کام لقی لەگەڵ یەکبخەی — لەم حاڵەتەدا لقی تایبەتمەندییەکەت کە بە {/dqm/}add-{/dqm/} دەست پێ دەکات.",
+  "Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.": "خاوێنی بکەوە بە سڕینەوەی لقی تایبەتمەندییەکەت. ئێستا کە یەکخراوە چیتر پێویستت پێی نابێ.",
+  "You can also delete the branch from your remote on GitHub:": "هەروەها ئەتوانیت لقەکە لەسەر remoteـەکەشت بسڕیتەوە لەسەر GitHub:",
+  "Pull from Upstream": "ڕابکێشە لە Upstreamـەوە",
+  "And last but not least, the original has changed since your pull request was merged — Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.": "دواهەمین بەڵام گرنگ، ڕەسەنەکە گۆڕاوە دوای ئەوەی pull requestـەکەت یەکخرا — Reporobot ناوەکەتی زیادکرد بۆ ماڵپەڕەکە! ئەگەر لە upstreamـەوە pull بکەیت ئەوە نوێترین ئەبیت و ئەو وەشانەشت ئەبێت. بەڕاستی بەهەمان شێوە ئەتوانی بیبینیت کە ئەژی لە: yourusername.github.io/patchwork.",
+  "To pull from the original upstream:": "بۆ pull کردن لە upstreamـە ڕەسەنەکەوە:",
+  "Congratulations!": "پیرۆزە!",
+  "You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the millions of others developing and enriching open source!": "کۆگای ناوخۆیی و کۆگای remoteـت درووست کردووە، لەگەڵ هاوکارێکدا کارت کردووە، pushـت کردووە، pullـت کردووە و چوویتە پاڵ ملیۆنانی دیکە کە سەرچاوە کراوە گەشەپێ دەدەن و دەوڵەمەند دەکەن!",
+  "Visit {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} to see your name incorporated! Looking to keep going? Checkout the {/lnk_next/}What Next{/lnk_e/} section on the resources page in this app.": "سەردانی {/lnk_patchwork/}jlord.github.io/patchwork{/lnk_e/} بکە بۆ بینینی ناوەکەت کە زیادکراوە! ئەتەوێت بەردەوام بیت؟ بەشی {/lnk_next/}دواتر چی{/lnk_e/} ببینە لە پەڕەی سەرچاوەکان لەم ئەپەدا.",
+  "Merge a branch into current branch": "لقێک یەکبخە لەگەڵ لقی ئێستا",
+  "Change the branch you're working on": "ئەو لقە بگۆڕە کە کاری لەسەر دەکەیت",
+  "Delete a local branch": "لقێکی ناوخۆیی بسڕەوە",
+  "Delete a remote branch": "لقێکی remote بسڕەوە",
+  "Pull from a remote branch": "pull بکە لە لقێکی remoteـەوە"
+}
