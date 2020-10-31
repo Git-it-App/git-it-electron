@@ -1,18 +1,22 @@
 /** Configuration Settings for i18next */
 
-// Available appLanguages
+/* Available appLanguages
+ * Each language is defined as an object per languageKey:
+ * The Object MUST contain a name-property, which will be shown in the dropdown-menu
+ * Optional Property "direction: 'rtl'" is used to mark right-to-left lanugages.
+ */
 const appLanguages = {
-  'en-US': 'English',
-  'de-DE': 'Deutsch',
-  'es-ES': 'Español',
-  'fr-FR': 'Français',
-  'ja-JP': '日本語',
-  'ko-KR': '한국어',
-  'ku': 'کوردی',
-  'pl-PL': 'Polski',
-  'pt-BR': 'Português Brasileiro',
-  'uk-UA': 'Українська',
-  'zh-TW': '中文(臺灣)',
+  'en-US': { name: 'English' },
+  'de-DE': { name: 'Deutsch' },
+  'es-ES': { name: 'Español' },
+  'fr-FR': { name: 'Français' },
+  'ja-JP': { name: '日本語' },
+  'ko-KR': { name: '한국어' },
+  'ku':    { name: 'کوردی', direction: 'rtl' },
+  'pl-PL': { name: 'Polski' },
+  'pt-BR': { name: 'Português Brasileiro' },
+  'uk-UA': { name: 'Українська' },
+  'zh-TW': { name: '中文(臺灣)' },
 }
 const appLanguageKeys = Object.keys(appLanguages)
 
