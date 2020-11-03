@@ -1,108 +1,110 @@
-<p i18n-data="dictionary~Below are the terminal and Git commands used in the Git-it challenges."></p>
+<div class="page-wrapper content">
+    <p i18n-data="dictionary~Below are the terminal and Git commands used in the Git-it challenges."></p>
 
-<h2 i18n-data="dictionary~Bash/Terminal Basics"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Make a new folder (aka make directory)"></strong></li>
-        <div class='code'><code class="shell">mkdir &#60;FOLDERNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~Navigate into an existing folder (aka 'change directory')"></strong></li>
-        <div class='code'><code class="shell">cd &#60;FOLDERNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~List the items in a folder"></strong></li>
-        <div class='code'><code class="shell">ls </code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Bash/Terminal Basics"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Make a new folder (aka make directory)"></strong></li>
+            <div class='code'><code class="shell">mkdir &#60;FOLDERNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~Navigate into an existing folder (aka 'change directory')"></strong></li>
+            <div class='code'><code class="shell">cd &#60;FOLDERNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~List the items in a folder"></strong></li>
+            <div class='code'><code class="shell">ls </code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Configuring Git"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Check Git version"></strong></li>
-        <div class='code'><code>git --version</code></div>
-        <li><strong i18n-data="dictionary~Set your name"></strong></li>
-        <div class='code'><code>git config --global user.name "Your Name"</code></div>
-        <li><strong i18n-data="dictionary~Set your email"></strong></li>
-        <div class='code'><code>git config --global user.email youremail@example.com</code></div>
-        <li><strong i18n-data="dictionary~Set your Github account (case sensitive)"></strong></li>
-        <div class='code'><code>git config --global user.username uSeRnAmE</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Configuring Git"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Check Git version"></strong></li>
+            <div class='code'><code>git --version</code></div>
+            <li><strong i18n-data="dictionary~Set your name"></strong></li>
+            <div class='code'><code>git config --global user.name "Your Name"</code></div>
+            <li><strong i18n-data="dictionary~Set your email"></strong></li>
+            <div class='code'><code>git config --global user.email youremail@example.com</code></div>
+            <li><strong i18n-data="dictionary~Set your Github account (case sensitive)"></strong></li>
+            <div class='code'><code>git config --global user.username uSeRnAmE</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Git Basics"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Turn Git on for a folder"></strong></li>
-        <div class='code'><code class="shell">git init</code></div>
-        <li><strong i18n-data="dictionary~Check status of changes to a repository"></strong></li>
-        <div class='code'><code class="shell">git status</code></div>
-        <li><strong i18n-data="dictionary~View changes to files"></strong></li>
-        <div class='code'><code class="shell">git diff</code></div>
-        <li><strong i18n-data="dictionary~Add a file's changes to be committed"></strong></li>
-        <div class='code'><code class="shell">git add &#60;FILENAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~To add all files changes"></strong></li>
-        <div class='code'><code class="shell">git add .</code></div>
-        <li><strong i18n-data="dictionary~To commit (aka save) the changes you've added with a short message describing the changes"></strong>
-        </li>
-        <div class='code'><code class="shell">git commit -m "your commit message"</code></div>
-        <li><strong i18n-data="dictionary~Copy a repository to your computer"></strong></li>
-        <div class='code'><code class="shell">git clone &#60;URL&#62;</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Git Basics"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Turn Git on for a folder"></strong></li>
+            <div class='code'><code class="shell">git init</code></div>
+            <li><strong i18n-data="dictionary~Check status of changes to a repository"></strong></li>
+            <div class='code'><code class="shell">git status</code></div>
+            <li><strong i18n-data="dictionary~View changes to files"></strong></li>
+            <div class='code'><code class="shell">git diff</code></div>
+            <li><strong i18n-data="dictionary~Add a file's changes to be committed"></strong></li>
+            <div class='code'><code class="shell">git add &#60;FILENAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~To add all files changes"></strong></li>
+            <div class='code'><code class="shell">git add .</code></div>
+            <li><strong i18n-data="dictionary~To commit (aka save) the changes you've added with a short message describing the changes"></strong>
+            </li>
+            <div class='code'><code class="shell">git commit -m "your commit message"</code></div>
+            <li><strong i18n-data="dictionary~Copy a repository to your computer"></strong></li>
+            <div class='code'><code class="shell">git clone &#60;URL&#62;</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Git Branches"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Create a new branch"></strong></li>
-        <div class='code'><code class="shell">git branch &#60;BRANCHNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~Move onto a branch"></strong></li>
-        <div class='code'><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~You can create and switch to a branch in one line"></strong></li>
-        <div class='code'><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~List the branches"></strong></li>
-        <div class='code'><code class="shell">git branch</code></div>
-        <li><strong i18n-data="dictionary~Rename a branch you're currently on"></strong></li>
-        <div class='code'><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Git Branches"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Create a new branch"></strong></li>
+            <div class='code'><code class="shell">git branch &#60;BRANCHNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~Move onto a branch"></strong></li>
+            <div class='code'><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~You can create and switch to a branch in one line"></strong></li>
+            <div class='code'><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~List the branches"></strong></li>
+            <div class='code'><code class="shell">git branch</code></div>
+            <li><strong i18n-data="dictionary~Rename a branch you're currently on"></strong></li>
+            <div class='code'><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Git Remotes"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Add remote connections"></strong></li>
-        <div class='code'><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
-        <li><strong i18n-data="dictionary~Set a URL to a remote"></strong></li>
-        <div class='code'><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
-        <li><strong i18n-data="dictionary~View remote connections"></strong></li>
-        <div class='code'><code class="shell">git remote -v</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Git Remotes"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Add remote connections"></strong></li>
+            <div class='code'><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
+            <li><strong i18n-data="dictionary~Set a URL to a remote"></strong></li>
+            <div class='code'><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
+            <li><strong i18n-data="dictionary~View remote connections"></strong></li>
+            <div class='code'><code class="shell">git remote -v</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Pulling in Git"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Pull in changes"></strong></li>
-        <div class='code'><code class="shell">git pull</code></div>
-        <li><strong i18n-data="dictionary~Pull in changes from a remote branch"></strong></li>
-        <div class='code'><code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code></div>
-        <li><strong i18n-data="dictionary~See changes to the remote before you pull in"></strong></li>
-        <div class='code'><code class="shell">git fetch --dry-run</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Pulling in Git"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Pull in changes"></strong></li>
+            <div class='code'><code class="shell">git pull</code></div>
+            <li><strong i18n-data="dictionary~Pull in changes from a remote branch"></strong></li>
+            <div class='code'><code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code></div>
+            <li><strong i18n-data="dictionary~See changes to the remote before you pull in"></strong></li>
+            <div class='code'><code class="shell">git fetch --dry-run</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Push &#38; Merge in Git"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Push changes"></strong></li>
-        <div class='code'><code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~Merge a branch into current branch"></strong></li>
-        <div class='code'><code class="shell">git merge &#60;BRANCHNAME&#62;</code></div>
-    </ul>
-</div>
+    <h2 i18n-data="dictionary~Push &#38; Merge in Git"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Push changes"></strong></li>
+            <div class='code'><code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~Merge a branch into current branch"></strong></li>
+            <div class='code'><code class="shell">git merge &#60;BRANCHNAME&#62;</code></div>
+        </ul>
+    </div>
 
-<h2 i18n-data="dictionary~Deleting Remotes and Branches in Git"></h2>
-<div class="blue-border-box">
-    <ul class="no-list-style">
-        <li><strong i18n-data="dictionary~Delete a local branch"></strong></li>
-        <div class='code'><code class="shell">git branch -D &#60;BRANCHNAME&#62;</code></div>
-        <li><strong i18n-data="dictionary~Delete a remote branch"></strong></li>
-        <div class='code'><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></div>
-    </ul>
+    <h2 i18n-data="dictionary~Deleting Remotes and Branches in Git"></h2>
+    <div class="blue-border-box">
+        <ul class="no-list-style">
+            <li><strong i18n-data="dictionary~Delete a local branch"></strong></li>
+            <div class='code'><code class="shell">git branch -D &#60;BRANCHNAME&#62;</code></div>
+            <li><strong i18n-data="dictionary~Delete a remote branch"></strong></li>
+            <div class='code'><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></div>
+        </ul>
+    </div>
 </div>
