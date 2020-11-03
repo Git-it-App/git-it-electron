@@ -177,6 +177,11 @@ gre7-border.border-box code {
 
 /* CODE STYLES
    -------------------------------------------------------------------------- */
+   /* TODO needs some Cleanup, to have similar styling accros challenges and no doubled classes here! */
+
+div.code {
+  padding-bottom: 4px;
+}
 
 code {
   font-size: 0.8em;
