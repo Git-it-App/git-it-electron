@@ -8,8 +8,11 @@ on:
 
 jobs:
   extract:
-    name: Block on unextracted Changes
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['14']
+    name: Block on unextracted Changes (Node ${{ matrix.node }})
 
     steps:
       - name: Checkout Repository
@@ -18,7 +21,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: ${{ matrix.node }}
 
       - name: Install dependencies
         run: npm ci
