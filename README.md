@@ -1,6 +1,8 @@
 # Git-it (Desktop App)
 
-[![Build Status](https://travis-ci.org/Git-it-App/git-it-electron.svg?branch=main)](https://travis-ci.org/Git-it-App/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Translations missing](https://img.shields.io/badge/translations-missing%3A_fr_es_ja_ko_pt_uk_zh-critical)](https://www.transifex.com/git-it/git-it-electron)
+![Build](https://github.com/Git-it-App/git-it-electron/workflows/Build%20App/badge.svg)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Translations missing](https://img.shields.io/badge/translations-missing%3A_fr_es_ja_ko_pt_uk_zh-critical)](https://www.transifex.com/git-it/git-it-electron)
 
 ![The app](assets/screenshots/app.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
