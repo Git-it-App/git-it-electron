@@ -1,5 +1,25 @@
 # Changelog
 
+## Version 5.1.0 (2020-11-04)
+### Enhancements
+- Supporting Right-to-Left languages now ([#152](https://github.com/Git-it-App/git-it-electron/pull/152)) (Thanks, [@akamfoad](https://github.com/akamfoad) for your support here!)
+- New, complete Kurdish Translation! (Thanks, [@akamfoad](https://github.com/akamfoad)!)
+- Storing Verify-Results, so beeing able to reload and translate them afterwards ([#119](https://github.com/Git-it-App/git-it-electron/pull/119))
+- Store separate Verify-Directories where different ([#114](https://github.com/Git-it-App/git-it-electron/pull/114))
+- Moved the repository to the new Git-it-App Organisation ([#112](https://github.com/Git-it-App/git-it-electron/pull/112))
+- Removed portable Git, on Windows now using System-Git, too. ([#108](https://github.com/Git-it-App/git-it-electron/pull/108))
+- Some large Code-Cleanup ([#99](https://github.com/Git-it-App/git-it-electron/pull/99))
+
+### Fixes
+- Update Spinkit and fix spinner ([#156](https://github.com/Git-it-App/git-it-electron/pull/156))
+- Build index like other page-files ([#155](https://github.com/Git-it-App/git-it-electron/pull/155))
+- Moving currentChallenge to Header-Meta ([#113](https://github.com/Git-it-App/git-it-electron/pull/113))
+- Clarify Handlebars-Files by changing file-extensions ([#109](https://github.com/Git-it-App/git-it-electron/pull/109))
+- Updated link to interactive Tutorial ([#103](https://github.com/Git-it-App/git-it-electron/pull/103))
+- Translation updates (Thanks, [@Ther3tyle](https://github.com/Ther3tyle)(Korean)!)
+- Updated dependencies
+
+
 ## Version 5.0.0 (2020-09-23)
 **Most interesting changes since v4.4.0:**
 ### Enhancements
