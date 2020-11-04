@@ -5,10 +5,10 @@ const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
-const ipcMain = electron.ipcMain
-const dialog = electron.dialog
 
 const { i18nInit } = require('./lib/i18nInit.js')
+const { registerIpcHandlers } = require('./lib/ipcMainHandlers.js')
+
 const darwinTemplate = require('./menus/darwin-menu.js')
 const otherTemplate = require('./menus/other-menu.js')
 
@@ -44,6 +44,7 @@ app.on('ready', () => {
   initUserData()
   i18nInit(buildMenus, mainWindow)
   buildMenus()
+  registerIpcHandlers(mainWindow, userDataPath)
 
   // Debugging-Settings if required
   checkDebugSettings()
@@ -58,42 +59,6 @@ app.on('ready', () => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
-  }
-})
-
-/*
- * Provide userDataPath to Renderer (resp. to lib/user-data.js)
- */
-ipcMain.on('getUserDataPath', event => {
-  event.returnValue = userDataPath
-})
-
-/*
- * Select-Directory Window if called
- */
-ipcMain.on('dialog-selectDir', event => {
-  const path = dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] })
-  if (path) {
-    event.sender.send('confirm-selectDir', path[0])
-  }
-})
-
-/*
- * ClearAll Dialog
- */
-ipcMain.on('dialog-clearAll', event => {
-  const dialogOptions = {
-    type: 'info',
-    title: global.i18n.t('Confirm Clearing Statuses'),
-    message: global.i18n.t('Are you sure you want to clear the status for every challenge?'),
-    buttons: [global.i18n.t('Yes'), global.i18n.t('No')],
-    defaultId: 0,
-    cancelId: 1
-  }
-
-  const resp = dialog.showMessageBoxSync(dialogOptions)
-  if (resp === 0) {
-    event.sender.send('confirm-clearAll')
   }
 })
 
