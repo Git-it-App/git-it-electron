@@ -2,3 +2,14 @@
  * All the Git-it Styling
  */
 
+/*****************************
+ * Index Page
+ *****************************/
+.index-page {
+  .octicon__trash {
+    width: 18px;
+    height: 18px;
+    background-color: var(--blue_light);
+    vertical-align: middle;
+  }
+}

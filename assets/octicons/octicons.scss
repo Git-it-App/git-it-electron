@@ -1,0 +1,34 @@
+/*
+ * Just a small wrapper, picking the octicons used in Git-it.
+ * Most octicons are adapted a bit to fill the full svg-size.
+ * Octicons are provided by GitHub Inc. under MIT-License
+ * Ref. https://github.com/primer/octicons
+ */
+
+.octicon {
+  -webkit-mask-size: cover;
+  display: inline-block;
+  /* Just some default size and color */
+  width: 20px;
+  height: 20px;
+  background: black;
+
+  &__trash {
+    @extend .octicon;
+    -webkit-mask-image: url('../../assets/octicons/trash.svg');
+  }
+
+  &__reply {
+    @extend .octicon;
+    -webkit-mask-image: url('../../assets/octicons/reply.svg');
+
+    &--right{
+      @extend .octicon__reply;
+      transform: rotate(180deg);
+    }
+    &--left {
+      @extend .octicon__reply;
+      transform: rotate3d(1, 0, 0, 180deg);
+    }
+  }
+}
