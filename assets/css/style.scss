@@ -3,6 +3,66 @@
  */
 
 /*****************************
+ * Sidebar
+ *****************************/
+.sidebar {
+  width: 26%;
+  position: fixed;
+  height: 100%;
+
+  h3 {
+    padding-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 8px 0;
+    padding: 0;
+
+    &__item {
+      padding-bottom: 0;
+
+      &.current {
+        background-color: var(--blue_light);
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        padding: 3px 0px 3px 20px;
+        display: block;
+        text-transform: capitalize;
+        font-size: .8em;
+      }
+
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--blue);
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        margin-right: 4px;
+      }
+      &.complete .status-dot {
+        // Replace with octicon__dotFill
+        -webkit-mask-image: url('../../assets/octicons/dot-fill.svg')
+      }
+
+      .current-arrow {
+        height: 11px;
+        width: 11px;
+        background-color: white;
+        float: right;
+        margin: 10px 2px; // Centering height of 11px within 31px;
+      }
+    }
+  }
+}
+
+/*****************************
  * Footer
  *****************************/
 .footer {

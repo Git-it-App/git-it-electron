@@ -31,4 +31,19 @@
       transform: rotate3d(1, 0, 0, 180deg);
     }
   }
+
+  &__triangleRight {
+    @extend .octicon;
+    -webkit-mask-image: url('../../assets/octicons/triangle-right.svg')
+  }
+
+  &__dot {
+    @extend .octicon;
+    -webkit-mask-image: url('../../assets/octicons/dot.svg')
+  }
+
+  &__dotFill {
+    @extend .octicon;
+    -webkit-mask-image: url('../../assets/octicons/dot-fill.svg')
+  }
 }
