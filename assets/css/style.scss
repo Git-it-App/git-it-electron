@@ -3,6 +3,19 @@
  */
 
 /*****************************
+ * RTL-Languages
+ *****************************/
+.rtl {
+  direction: rtl;
+
+  // Code Elements should stay ltr
+  .code {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+/*****************************
  * Verify-Box
  *****************************/
 .verify {
