@@ -243,11 +243,107 @@
 /*****************************
  * Index Page
  *****************************/
-.index-page {
-  .octicon__trash {
-    width: 18px;
-    height: 18px;
-    background-color: var(--blue_light);
-    vertical-align: middle;
+.pgIndex {
+  &__progress {
+    margin: 20px 0;
+    color: var(--blue);
+    user-select: none;
+    display: flex;
+    line-height: 1.3em;
+
+    &__box {
+      border: 1px solid var(--blue);
+      padding: 10px 14px;
+      display: inline;
+
+      &--left {
+        @extend .pgIndex__progress__box;
+        border-radius: 2px 0 0 2px;
+
+        [class~="rtl"] & {
+          border-radius: 0 2px 2px 0;
+        }
+      }
+
+      &--middle {
+        @extend .pgIndex__progress__box;
+        margin-left: -1px;
+        z-index: 1; // Border above &--right
+
+        [class~="rtl"] & {
+           margin-left: 0;
+           margin-right: -1px;
+        }
+      }
+
+      &--right {
+        @extend .pgIndex__progress__box;
+        border-radius: 0 2px 2px 0;
+        margin-left: -1px;
+        border-color: var(--blue_light);
+        cursor: pointer;
+
+        [class~="rtl"] & {
+          border-radius: 2px 0 0 2px;
+          margin-left: 0;
+          margin-right: -1px;
+        }
+
+        .octicon__trash {
+          width: 18px;
+          height: 18px;
+          background-color: var(--blue_light);
+          vertical-align: middle;
+        }
+
+        &:hover {
+          border-color: var(--blue);
+          .octicon__trash {
+            background-color: var(--blue);
+          }
+        }
+      }
+    }
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--blue);
+
+      &.complete {
+        // Replace with octicon__dotFill
+        -webkit-mask-image: url('../../assets/octicons/dot-fill.svg')
+      }
+    }
+  }
+
+  &__section {
+    margin: 40px 0 0 0;
+
+    &__btn {
+      padding: 10px;
+      margin: 9px 0;
+      font-size: .8em;
+      border-radius: 2px;
+      color: white;
+
+      &--primary {
+        @extend .pgIndex__section__btn;
+        background: var(--blue);
+
+        &:hover {
+          background: var(--blue_dark);
+        }
+      }
+
+      &--secondary {
+        @extend .pgIndex__section__btn;
+        background: var(--blue_light);
+
+        &:hover{
+          background: var(--blue_light-hover);
+        }
+      }
+    }
   }
 }
