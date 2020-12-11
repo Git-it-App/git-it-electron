@@ -46,7 +46,7 @@
     "electron": "^11.0.5",
     "electron-packager": "^15.2.0",
     "handlebars": "^4.7.6",
-    "i18next-parser": "^3.3.0",
+    "i18next-parser": "^3.5.0",
     "rimraf": "^3.0.2",
     "standard": "^16.0.3"
   },
