@@ -16,6 +16,41 @@
 }
 
 /*****************************
+ * Code Elements
+ *****************************/
+.code {
+  // Code Elements always stay direction ltr -> set in class .rtl.code
+  padding-bottom: 3px;
+}
+
+code {
+  font-size: 0.8em;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
+  white-space: nowrap;
+  background: var(--white_darker);
+  padding: 6px 6px 3px 6px;
+  border-radius: 2px;
+
+  &.comment {
+    background: none;
+    padding-left: 12px;
+  }
+
+  &.shell::before {
+    content: "$ ";
+    color: var(--grey_light);
+  }
+}
+
+.box--border--blue code {
+  background-color: var(--blue_lightest);
+  color: var(--blue_grey);
+}
+.box--solid--light code {
+  background-color: var(--white_darkest);
+}
+
+/*****************************
  * Boxes
  *****************************/
 .box {
@@ -77,12 +112,6 @@
       &:before {
         color: var(--blue);
       }
-
-      code {
-        background-color: var(--blue_lightest);
-        color: var(--blue_grey);
-      }
-
     }
 
     &--grey {
