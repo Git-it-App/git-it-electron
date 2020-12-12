@@ -14,9 +14,11 @@
   <body>
     {{{ header }}}
 
-    <div class="wrapper" id="challenge-body">
-      {{{ sidebar }}}
-      <div id="wrapper__content" class="challenge-content">
+    <div class="wrapper--challenge">
+      <div class="wrapper--challenge__sidebar">
+        {{{ sidebar }}}
+      </div>
+      <div id="wrapper__content" class="wrapper--challenge__content">
         {{{ body }}}
         {{{ footer }}}
       </div>

@@ -79,6 +79,38 @@ ul.no-list-style {
 }
 
 /*****************************
+ * Wrappers
+ *****************************/
+.wrapper {
+  margin-top: 60px;
+
+  &--page {
+    @extend .wrapper;
+    max-width: 600px;
+    margin: 60px auto 0;
+    padding: 24px;
+  }
+
+  &--challenge {
+    @extend .wrapper;
+    display: flex;
+
+    &__sidebar {
+      min-width: 26%;
+
+      .sidebar {
+        position: fixed;
+        min-width: 26%;
+      }
+    }
+
+    &__content {
+      padding: 26px;
+    }
+  }
+}
+
+/*****************************
  * RTL-Languages
  *****************************/
 .rtl {
@@ -333,10 +365,6 @@ code {
  * Sidebar
  *****************************/
 .sidebar {
-  width: 26%;
-  position: fixed;
-  height: 100%;
-
   h3 {
     padding-left: 10px;
     margin-bottom: 8px;
