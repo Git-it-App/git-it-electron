@@ -5,6 +5,73 @@
 /*****************************
  * Commons
  *****************************/
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  color: var(--grey_darker);
+  background-color: var(--white);
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+
+  &-thumb {
+    background-color: var(--grey_light);
+    border-radius: 5px;
+  }
+  &-scrollbar-button {
+    display: none;
+  }
+}
+
+div, header, select, a {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--blue-hover);
+  }
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+img {
+  margin: 30px 0 18px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 8px 14px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  border: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.inline-tip {
+  font-style: italic;
+  font-size: .85em;
+  padding-left: 10px;
+
+  em {
+    font-style: normal;
+  }
+}
+
 ul.no-list-style {
   list-style: none;
   margin: 20px 0 0 0;
