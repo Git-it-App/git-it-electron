@@ -16,15 +16,94 @@
 }
 
 /*****************************
+ * Boxes
+ *****************************/
+.box {
+  border-radius: 2px;
+  margin: 34px 0;
+  padding: 24px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &--solid {
+    @extend .box;
+
+    h2 {
+      margin-top: 40px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &--light {
+      @extend .box--solid;
+      background-color: var(--blue_lightest);
+      color: var(--blue_grey);
+    }
+  }
+
+  &--border {
+    @extend .box;
+    border: 1px solid;
+    padding-top: 10px;
+
+    &:before {
+      background-color: white;
+      font-weight: bold;
+      font-size: 1.4em;
+      // White 'border'
+      padding: 0 8px;
+      margin-left: -8px;
+      // Positioning
+      float: left;
+      margin-top: -26px;
+    }
+
+    &.box--notitle {
+      margin-top: auto;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &--blue {
+      @extend .box--border;
+      border-color: var(--blue_lighter);
+
+      &:before {
+        color: var(--blue);
+      }
+
+      code {
+        background-color: var(--blue_lightest);
+        color: var(--blue_grey);
+      }
+
+    }
+
+    &--grey {
+      @extend .box--border;
+      border-color: var(--grey);
+
+      &::before {
+        color: var(--grey_darker);
+      }
+    }
+  }
+}
+
+/*****************************
  * Verify-Box
  *****************************/
 .verify {
   &__box {
-    padding: 24px;
-    margin-bottom: 34px;
+    @extend .box--solid;
     background-color: var(--blue);
     color: white;
-    border-radius: 2px;
   }
 
   &__button {
@@ -319,6 +398,10 @@
 
   &__section {
     margin: 40px 0 0 0;
+
+    .box--solid--light h3 {
+      margin: 0;
+    }
 
     &__btn {
       padding: 10px;

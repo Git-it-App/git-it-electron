@@ -1,8 +1,8 @@
-<div id="challenge-desc" class="chal-goal blue-border border-box">
+<div id="challenge-desc" class="box--border--blue box--goal">
     <p i18n-data="ch07~Add a branch, locally, to your forked repository to work on your changes."></p>
 </div>
 
-<div class="chal-background light-blue solid-box">
+<div class="box--solid--light">
     <h2 i18n-data="ch07~Branches"></h2>
     <p i18n-type="standard_html"
         i18n-data="ch07~Git repositories use branches to isolate work when needed. It's common practice when working on a project or with others on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This way you can do your work while the main, commonly named 'master', branch stays stable. When the work on your branch is finished you merge it back into the 'master' master branch."></p>
@@ -25,11 +25,10 @@
         i18n-options='{
             "lnk_pages": "http://pages.github.com"
         }'></p>
-
     <div class='code'><code>http://githubusername.github.io/repositoryname</code></div>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch07~Create a branch"></h3>
     <p i18n-data="ch07~When you create a branch, Git copies everything from the current branch you're on and places it in the branch you've requested be made."></p>
 
@@ -53,7 +52,7 @@
     <div class='code'><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></div>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch07~Step: Create a new file"></h3>
     <p i18n-data="ch07~Back in your text editor:"></p>
     <ul>
@@ -72,7 +71,7 @@
     </ul>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch07~Check-in"></h3>
     <p i18n-data="ch07~Go through the steps for checking in a project: "></p>
 
@@ -87,7 +86,7 @@
 
 {{{ verify_directory_button }}}
 
-<div class="chal-no-pass grey-border border-box">
+<div class="box--border--grey box--fail">
     <h4 i18n-data="ch07~Permission denied...error: 403"></h4>
     <p i18n-type="standard_html"
         i18n-data="ch07~You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing to the original 'jlord/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's address on GitHub. To check and see what your remotes are and where they point run {/cde/}git remote -v{/cde_e/}. You should have 'upstream' pointing to 'jlord/patchwork' and 'origin' pointing to 'yourusername/patchwork'."></p>
@@ -115,7 +114,7 @@
     <p i18n-data="ch07~When you've made your updates, verify again!"></p>
 </div>
 
-<div class="chal-tip grey-border border-box">
+<div class="box--border--grey box--tip">
     <ul class="no-list-style">
         <li><strong i18n-data="ch07~You can create and switch to a branch in one line"></strong></li>
         <div class='code'><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></div>
