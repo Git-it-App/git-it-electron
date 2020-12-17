@@ -1,8 +1,8 @@
-<div id="challenge-desc" class="chal-goal blue-border border-box">
+<div id="challenge-desc" class="box--border--blue box--goal">
     <p i18n-data="ch05~Connect your local repository to a remote one and push changes to it."></p>
 </div>
 
-<div class="chal-background light-blue solid-box">
+<div class="box--solid--light">
     <h2 i18n-data="ch05~Remotes"></h2>
 
     <p i18n-type="standard_html"
@@ -16,7 +16,7 @@
          width="100%">
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch05~Create a Remote Repository"></h3>
     <p i18n-type="standard_html"
         i18n-data="ch05~You want to sync your {/str/}local{/str_e/} version with one stored on GitHub.com. First create a new {/str/}remote{/str_e/} repository on GitHub.com."></p>
@@ -35,7 +35,7 @@
     </ul>
 </div>
 
-<div class="chal-background light-blue solid-box">
+<div class="box--solid--light">
     <h2 i18n-data="ch05~Readmes, .gitignores and Licenses"></h2>
     <p i18n-data="ch05~These are common files in open source projects so to make starting a new project easier, GitHub provides an option for creating them for you."></p>
     <p i18n-type="standard_html"
@@ -49,7 +49,7 @@
         }'></p>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch05~Connect your Local to your Remote"></h3>
     <p i18n-data="ch05~Now you've got an empty repository started on GitHub.com. At the top you'll see 'Quick Setup', make sure the 'HTTPS' button is selected and copy the address—this is the address of your repository on GitHub's servers."></p>
 
@@ -61,17 +61,17 @@
 
     <p i18n-type="standard_html"
         i18n-data="ch05~Your {/str/}local{/str_e/} repository now knows where your {/str/}remote{/str_e/} repository, named 'origin', lives on GitHub's servers. Think of it as adding a name and address on speed dial—now when you need to send something there, you can."></p>
-
-    <blockquote>
-        <p><strong i18n-data="ch05~Windows Users:"></strong></p>
-        <p i18n-type="standard_html"
-            i18n-data="ch05~If you have {/str/}GitHub Desktop{/str_e/} on your computer, a remote named 'origin' is automatically created in your local repository. In that case, you'll just need to tell it what URL to associate with 'origin'. Use this command instead of the 'add' one above:"></p>
-
-        <div class='code'><code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code></div>
-    </blockquote>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--grey box--tip">
+    <p><strong i18n-data="ch05~Windows Users:"></strong></p>
+    <p i18n-type="standard_html"
+        i18n-data="ch05~If you have {/str/}GitHub Desktop{/str_e/} on your computer, a remote named 'origin' is automatically created in your local repository. In that case, you'll just need to tell it what URL to associate with 'origin'. Use this command instead of the 'add' one above:"></p>
+
+    <div class='code'><code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code></div>
+</div>
+
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch05~Push Work to your Remote"></h3>
     <p i18n-type="standard_html"
         i18n-data="ch05~Next you want to {/str/}push{/str_e/} (send) everything you've done locally to your remote repository on GitHub. This is something you'll do often so that your remote version is up to date and matching the state of your local version."></p>
@@ -88,17 +88,27 @@
 
 {{{ verify_directory_button }}}
 
-<div class="chal-tip grey-border border-box">
+<div class="box--border--grey box--tip">
     <ul class="no-list-style">
-        <li><strong i18n-data="ch05~Add remote connections"></strong></li>
-        <div class='code'><code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code></div>
-        <li><strong i18n-data="ch05~Set a URL to a remote"></strong></li>
-        <div class='code'><code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code></div>
-        <li><strong i18n-data="ch05~Pull in changes"></strong></li>
-        <div class='code'><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></div>
-        <li><strong i18n-data="ch05~View remote addresses"></strong></li>
-        <div class='code'><code class="shell">git remote -v</code></div>
-        <li><strong i18n-data="ch05~Push changes"></strong></li>
-        <div class='code'><code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code></div>
+        <li>
+            <strong i18n-data="ch05~Add remote connections"></strong>
+            <div class='code'><code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch05~Set a URL to a remote"></strong>
+            <div class='code'><code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch05~Pull in changes"></strong>
+            <div class='code'><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch05~View remote addresses"></strong>
+            <div class='code'><code class="shell">git remote -v</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch05~Push changes"></strong>
+            <div class='code'><code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code></div>
+        </li>
     </ul>
 </div>

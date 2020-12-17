@@ -1,27 +1,27 @@
-<div class="page-wrapper index-page content">
-    <div class="progress-circles border-group-container full-width">
-        <span class="border-group-left" i18n-data="index~Challenges completed:"></span>
-        <span class="border-group-middle">
-            <a href="../challenges/get_git.html"><div class="progress-circle" title="Get Git"></div></a>
-            <a href="../challenges/repository.html"><div class="progress-circle" title="Repository"></div></a>
-            <a href="../challenges/commit_to_it.html"><div class="progress-circle" title="Commit to it"></div></a>
-            <a href="../challenges/githubbin.html"><div class="progress-circle" title="GitHubbin"></div></a>
-            <a href="../challenges/remote_control.html"><div class="progress-circle" title="Remote Control"></div></a>
-            <a href="../challenges/forks_and_clones.html"><div class="progress-circle" title="Forks and Clones"></div></a>
-            <a href="../challenges/branches_arent_just_for_birds.html"><div class="progress-circle" title="Branches"></div></a>
-            <a href="../challenges/its_a_small_world.html"><div class="progress-circle" title="It's a small world"></div></a>
-            <a href="../challenges/pull_never_out_of_date.html"><div class="progress-circle" title="Pull, never out of date"></div></a>
-            <a href="../challenges/requesting_you_pull_please.html"><div class="progress-circle" title="Requesting you pull please"></div></a>
-            <a href="../challenges/merge_tada.html"><div class="progress-circle" title="Merge, tada!"></div></a>
-        </span>
-        <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
+<div class="pgIndex">
+    <div class="pgIndex__progress">
+        <span class="pgIndex__progress__box--left" i18n-data="index~Challenges completed:"></span>
+        <div class="pgIndex__progress__box--middle">
+            <a href="../challenges/get_git.html" class="octicon__dot pgIndex__progress__dot" title="Get Git"></a>
+            <a href="../challenges/repository.html" class="octicon__dot pgIndex__progress__dot" title="Repository"></a>
+            <a href="../challenges/commit_to_it.html" class="octicon__dot pgIndex__progress__dot" title="Commit to it"></a>
+            <a href="../challenges/githubbin.html" class="octicon__dot pgIndex__progress__dot" title="GitHubbin"></a>
+            <a href="../challenges/remote_control.html" class="octicon__dot pgIndex__progress__dot" title="Remote Control"></a>
+            <a href="../challenges/forks_and_clones.html" class="octicon__dot pgIndex__progress__dot" title="Forks and Clones"></a>
+            <a href="../challenges/branches_arent_just_for_birds.html" class="octicon__dot pgIndex__progress__dot" title="Branches"></a>
+            <a href="../challenges/its_a_small_world.html" class="octicon__dot pgIndex__progress__dot" title="It's a small world"></a>
+            <a href="../challenges/pull_never_out_of_date.html" class="octicon__dot pgIndex__progress__dot" title="Pull, never out of date"></a>
+            <a href="../challenges/requesting_you_pull_please.html" class="octicon__dot pgIndex__progress__dot" title="Requesting you pull please"></a>
+            <a href="../challenges/merge_tada.html" class="octicon__dot pgIndex__progress__dot" title="Merge, tada!"></a>
+        </div>
+        <div class="pgIndex__progress__box--right js__clearAllChallenges" title="Clear status"><span class="octicon__trash"></span></div>
     </div>
 
-    <div id="index-section-start">
+    <div id="pgIndex__section--start" class="pgIndex__section">
         <h1 i18n-data="index~Welcome!"></h1>
         <p i18n-data="index~Git-it teaches the basics of using Git and GitHub. These basics aren't merely beginner Git and GitHub skills, they are the commands and steps you'll use over and over as in your awesome social coding + version controlled future."></p>
 
-        <div class="chal-background light-blue solid-box">
+        <div class="box--solid--light">
             <h3 i18n-data="index~But Wait – There's More!"></h3>
             <p i18n-type="standard_html" i18n-data="index~You can also complete Git-it in several other languages, just select the language you want from the menu in the upper left."></p>
 
@@ -35,27 +35,25 @@
                 }'></p>
         </div>
 
-        <a href="../challenges/get_git.html" id="get-started">
-            <button class="btn-primary" i18n-data="index~Start challenge one!"></button>
+        <a href="../challenges/get_git.html">
+            <button class="pgIndex__section__btn--primary" i18n-data="index~Start challenge one!"></button>
         </a>
     </div>
 
-    <div id="index-section-wip">
+    <div id="pgIndex__section--wip" class="pgIndex__section">
         <h1 i18n-data="index~On your way!"></h1>
-            <p i18n-data="index~You're making progress, keep going and pick up where you left off."></p>
-            <a id="pickup-button">
-                <button class="btn-primary" i18n-data="index~Pick up where you left off!"></button>
-            </a>
+        <p i18n-data="index~You're making progress, keep going and pick up where you left off."></p>
+        <a id="pgIndex__pickupButton">
+            <button class="pgIndex__section__btn--primary" i18n-data="index~Pick up where you left off!"></button>
+        </a>
     </div>
 
-    <div id="index-section-finished">
+    <div id="pgIndex__section--finished" class="pgIndex__section">
         <h1 i18n-data="index~Congratulations!"></h1>
-            <p i18n-data="index~You finished the challenges and are primed for social coding—so what's next?"></p>
-            <a href="resources.html">
-                <button class="btn-primary" i18n-data="index~Ideas for beginner projects"></button>
-            </a>
-            <button class="btn-secondary js-clear-all-challenges" i18n-data="index~Clear and start over"></button>
+        <p i18n-data="index~You finished the challenges and are primed for social coding—so what's next?"></p>
+        <a href="resources.html">
+            <button class="pgIndex__section__btn--primary" i18n-data="index~Ideas for beginner projects"></button>
+        </a>
+        <button class="pgIndex__section__btn--secondary js__clearAllChallenges" i18n-data="index~Clear and start over"></button>
     </div>
 </div>
-
-<script src="../../lib/index-challenge-handler.js"></script>

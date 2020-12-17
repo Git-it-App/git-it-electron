@@ -1,0 +1,10 @@
+/*
+ * Style-Root to collect the various scss-files.
+ * This file is given to the sass-compiler.
+ */
+
+@import '../css/variables.scss';
+@import '../fonts/fonts.scss';
+@import '../octicons/octicons.scss';
+@import '../css/sk-bounce.scss';
+@import './style.scss';

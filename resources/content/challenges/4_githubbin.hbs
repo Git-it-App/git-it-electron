@@ -1,8 +1,8 @@
-<div id="challenge-desc" class="chal-goal blue-border border-box">
+<div id="challenge-desc" class="box--border--blue box--goal">
     <p i18n-data="ch04~Create a GitHub account and add your username to your Git config."></p>
 </div>
 
-<div class="chal-background light-blue solid-box">
+<div class="box--solid--light">
     <h2 i18n-data="ch04~Working Better, Together"></h2>
 
     <p i18n-data="ch04~The repository you've created so far is just on your computer, which is handy, but makes it pretty hard to share and work on with others. No worries, that's what GitHub is for!"></p>
@@ -10,7 +10,7 @@
     <p i18n-data="ch04~GitHub is a website that allows people everywhere to upload what they're working on with Git so that everyone can easily work together on the same project. GitHub which acts as the central repository for you and everyone else to share. You push your changes to it and pull down changes from others."></p>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch04~Create a GitHub Account"></h3>
 
     <p i18n-type="standard_html"
@@ -20,7 +20,7 @@
         }'></p>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch04~Add GitHub username to Git"></h3>
     <p i18n-type="standard_html"
         i18n-data="ch04~Add your GitHub username to your Git configuration. We'll do this just for the sake of Git-it{/smc/} it makes it easier to verify the upcoming challenges. Save it exactly as you created it on GitHub and {/str/}capitalize where capitalized{/str_e/}. Note, you don't need to enter the {/dqm/}{/lt/}{/dqm/} and {/dqm/}{/gt/}{/dqm/}."></p>
@@ -29,17 +29,17 @@
     <div class='code'><code class="shell">git config --global user.username &#60;UserName&#62;</code></div>
 
     <p i18n-data="ch04~You can double check what you have set in your Git config by typing:"></p>
-    <div class='code'><code>git config --global user.username</code></div>
+    <div class='code'><code class="shell">git config --global user.username</code></div>
 </div>
 
 {{{ verify_button }}}
 
-<div class="chal-tip grey-border border-box">
+<div class="box--border--grey box--tip">
     <p i18n-type="standard_html"
         i18n-data="ch04~Make sure you type {/cde/}user.username{/cde_e/} above and not {/cde/}user.name{/cde_e/}, which would override the name you set in the first challenge and leave you with no username property! If you found you did that, it's ok, just repeat the step in the first challenge to add your name and then complete the step above."></p>
 </div>
 
-<div class="chal-no-pass grey-border border-box">
+<div class="box--border--grey box--fail">
     <h4 i18n-data="ch04~GitHub & Git config usernames do not match"></h4>
 
     <p i18n-type="standard_html" i18n-data="ch04~A common error is not having your GitHub username match the case of the one you set with {/cde/}git config{/cde_e/}. For instance, 'JLord' isn't the same as 'jlord'"></p>

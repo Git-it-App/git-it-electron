@@ -1,8 +1,8 @@
-<div id="challenge-desc" class="chal-goal blue-border border-box">
+<div id="challenge-desc" class="box--border--blue box--goal">
     <p i18n-data="ch06~Fork a project from GitHub.com and clone it locally."></p>
 </div>
 
-<div class="chal-background light-blue solid-box">
+<div class="box--solid--light">
     <h2 i18n-data="ch06~Forks"></h2>
     <p i18n-data="ch06~So far you have made a project locally and pushed it to GitHub, but that's only half the fun! The other half is working with other people and other projects."></p>
 
@@ -17,7 +17,7 @@
          width="100%">
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch06~Fork the Patchwork Repository"></h3>
     <p i18n-type="standard_html"
         i18n-data="ch06~The project we'll work with is at {/lnk_patchwork/}github.com/jlord/patchwork{/lnk_e/}. Go to that page and click the 'Fork' button at the top right. Once the forking animation is complete, you have a copy on your account. Copy your fork's HTTP URL from the address bar in your browser, this is the address of your fork on GitHub's servers."
@@ -27,7 +27,7 @@
     <!-- TODO write address for user here -->
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch06~Clone Your Fork Locally"></h3>
     <p i18n-data="ch06~Now, in terminal, you'll clone the repository onto your computer. It will automatically create a new folder for the repository so there is no need to create one yourself. But make sure you aren't cloning it inside of another Git repository folder!"></p>
 
@@ -48,7 +48,7 @@
         i18n-data="ch06~Now you've got a copy of the repository on your computer and it is automatically connected to the remote repository (your forked copy) on your GitHub account. Type {/cde/}git remote -v{/cde_e/} to see that the address to the fork is already set up."></p>
 </div>
 
-<div class="chal-step blue-border border-box">
+<div class="box--border--blue box--step">
     <h3 i18n-data="ch06~Connect to the Original Repository"></h3>
 
     <p i18n-type="standard_html"
@@ -67,13 +67,19 @@
 
 {{{ verify_directory_button }}}
 
-<div class="chal-tip grey-border border-box">
+<div class="box--border--grey box--tip">
     <ul class="no-list-style">
-        <li><strong i18n-data="ch06~Add a remote"></strong></li>
-        <div class='code'><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
-        <li><strong i18n-data="ch06~Change a remote URL"></strong></li>
-        <div class='code'><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
-        <li><strong i18n-data="ch06~View remote connections"></strong></li>
-        <div class='code'><code class="shell">git remote -v</code></div>
+        <li>
+            <strong i18n-data="ch06~Add a remote"></strong>
+            <div class='code'><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch06~Change a remote URL"></strong>
+            <div class='code'><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></div>
+        </li>
+        <li>
+            <strong i18n-data="ch06~View remote connections"></strong>
+            <div class='code'><code class="shell">git remote -v</code></div>
+        </li>
     </ul>
 </div>

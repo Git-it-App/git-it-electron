@@ -1,0 +1,565 @@
+/*
+ * All the Git-it Styling
+ */
+
+/*****************************
+ * Commons
+ *****************************/
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  color: var(--grey_darker);
+  background-color: var(--white);
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+
+  &-thumb {
+    background-color: var(--grey_light);
+    border-radius: 5px;
+  }
+  &-scrollbar-button {
+    display: none;
+  }
+}
+
+div, header, select, a {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--blue-hover);
+  }
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+img {
+  margin: 30px 0 18px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 8px 14px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  border: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.inline-tip {
+  font-style: italic;
+  font-size: .85em;
+  padding-left: 10px;
+
+  em {
+    font-style: normal;
+  }
+}
+
+ul.no-list-style {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+/*****************************
+ * Wrappers
+ *****************************/
+.wrapper {
+  margin-top: 60px;
+
+  &--page {
+    @extend .wrapper;
+    max-width: 600px;
+    margin: 60px auto 0;
+    padding: 24px;
+  }
+
+  &--challenge {
+    @extend .wrapper;
+    display: flex;
+
+    &__sidebar {
+      min-width: 26%;
+
+      .sidebar {
+        position: fixed;
+        min-width: 26%;
+      }
+    }
+
+    &__content {
+      padding: 26px;
+    }
+  }
+}
+
+/*****************************
+ * RTL-Languages
+ *****************************/
+.rtl {
+  direction: rtl;
+
+  // Code Elements should stay ltr
+  .code {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+/*****************************
+ * Code Elements
+ *****************************/
+.code {
+  // Code Elements always stay direction ltr -> set in class .rtl.code
+  padding-bottom: 3px;
+}
+
+code {
+  font-size: 0.8em;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
+  white-space: nowrap;
+  background: var(--white_darker);
+  padding: 6px 6px 3px 6px;
+  border-radius: 2px;
+
+  &.comment {
+    background: none;
+    padding-left: 12px;
+  }
+
+  &.shell::before {
+    content: "$ ";
+    color: var(--grey_light);
+  }
+}
+
+.box--border--blue code {
+  background-color: var(--blue_lightest);
+  color: var(--blue_grey);
+}
+.box--solid--light code {
+  background-color: var(--white_darkest);
+}
+
+/*****************************
+ * Boxes
+ *****************************/
+.box {
+  border-radius: 2px;
+  margin: 34px 0;
+  padding: 24px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &--solid {
+    @extend .box;
+
+    h2 {
+      margin-top: 40px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &--light {
+      @extend .box--solid;
+      background-color: var(--blue_lightest);
+      color: var(--blue_grey);
+    }
+  }
+
+  &--border {
+    @extend .box;
+    border: 1px solid;
+    padding-top: 10px;
+
+    &:before {
+      background-color: white;
+      font-weight: bold;
+      font-size: 1.4em;
+      // White 'border'
+      padding: 0 8px;
+      margin-left: -8px;
+      // Positioning
+      float: left;
+      margin-top: -26px;
+    }
+
+    &.box--notitle {
+      margin-top: auto;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &--blue {
+      @extend .box--border;
+      border-color: var(--blue_lighter);
+
+      &:before {
+        color: var(--blue);
+      }
+    }
+
+    &--grey {
+      @extend .box--border;
+      border-color: var(--grey);
+
+      &::before {
+        color: var(--grey_darker);
+      }
+    }
+  }
+}
+
+/*****************************
+ * Verify-Box
+ *****************************/
+.verify {
+  &__box {
+    @extend .box--solid;
+    background-color: var(--blue);
+    color: white;
+  }
+
+  &__button {
+    background-color: white;
+    color: var(--blue);
+    border-radius: 2px;
+
+    &:hover {
+      background-color: var(--white-hover);
+    }
+    &:disabled {
+      background-color: var(--blue_dark);
+    }
+  }
+
+  &__spinner {
+    display: none; // Activated via JS.
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+
+    [class~="rtl"] & {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__dir-text {
+    padding: 6px 10px;
+    font-size: 13px;
+    color: var(--blue_light);
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: none; // Activated via JS.
+    list-style: none;
+    padding-left: 0;
+
+    &__elem--fail:before {
+      content: '✗ ';
+    }
+
+    &__elem--pass:before {
+      content: '✔︎ ';
+    }
+  }
+}
+
+/*****************************
+ * Header
+ *****************************/
+.header {
+  height: 59px; // Due to 1px Border
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  background-color: var(--white_dark);
+  border-bottom: 1px solid var(--white_darkest);
+
+  &__lang {
+    height: 36px;
+    width: 170px;
+    margin: 0 auto 0 20px;
+
+    select {
+      height: 100%;
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid var(--blue_light);
+      border-radius: 3px;
+      color: var(--blue);
+      background: none;
+      appearance: none;
+
+      &:focus {
+        outline-color: var(--blue_light);
+      }
+    }
+
+    // Dropdown arrow
+    &:after {
+      content: "";
+      border: 5px solid transparent;
+      border-top-color: var(--grey_light);
+      position: relative;
+      right: 20px;
+      top: 18.5px;
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    position: absolute;
+
+    &__gitit {
+      display: inline-block;
+      padding: 4px 10px;
+      font-weight: 900;
+
+      &:hover {
+        background: var(--blue-hover);
+        color: white;
+        border-radius: 2px;
+      }
+    }
+
+    &__title {
+      text-transform: capitalize;
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--blue-hover);
+      display: inline-block;
+    }
+  }
+}
+
+/*****************************
+ * Sidebar
+ *****************************/
+.sidebar {
+  h3 {
+    padding-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 8px 0;
+    padding: 0;
+
+    &__item {
+      padding-bottom: 0;
+
+      &.current {
+        background-color: var(--blue_light);
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        padding: 3px 0px 3px 20px;
+        display: block;
+        text-transform: capitalize;
+        font-size: .8em;
+      }
+
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--blue);
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        margin-right: 4px;
+      }
+      &.complete .status-dot {
+        // Replace with octicon__dotFill
+        -webkit-mask-image: url('../../assets/octicons/dot-fill.svg')
+      }
+
+      .current-arrow {
+        height: 11px;
+        width: 11px;
+        background-color: white;
+        float: right;
+        margin: 10px 2px; // Centering height of 11px within 31px;
+      }
+    }
+  }
+}
+
+/*****************************
+ * Footer
+ *****************************/
+.footer {
+  overflow: auto;
+
+  &__left {
+    float: left;
+  }
+  &__right {
+    float: right;
+    text-align: -webkit-right;
+  }
+
+  &__link{
+    font-size: 12px;
+    text-transform: uppercase;
+
+    .octicon__reply {
+      width: 16px;
+      height: 16px;
+      background-color: var(--blue);
+      display: block;
+    }
+
+    &:hover {
+      color: var(--blue-hover);
+      .octicon__reply {
+        background-color: var(--blue-hover);
+        //************************ TODO: there's a flickering when hovering between octicon and link-text
+      }
+    }
+  }
+}
+
+/*****************************
+ * Index Page
+ *****************************/
+.pgIndex {
+  &__progress {
+    margin: 20px 0;
+    color: var(--blue);
+    user-select: none;
+    display: flex;
+    line-height: 1.3em;
+
+    &__box {
+      border: 1px solid var(--blue);
+      padding: 10px 14px;
+      display: inline;
+
+      &--left {
+        @extend .pgIndex__progress__box;
+        border-radius: 2px 0 0 2px;
+
+        [class~="rtl"] & {
+          border-radius: 0 2px 2px 0;
+        }
+      }
+
+      &--middle {
+        @extend .pgIndex__progress__box;
+        margin-left: -1px;
+        z-index: 1; // Border above &--right
+
+        [class~="rtl"] & {
+           margin-left: 0;
+           margin-right: -1px;
+        }
+      }
+
+      &--right {
+        @extend .pgIndex__progress__box;
+        border-radius: 0 2px 2px 0;
+        margin-left: -1px;
+        border-color: var(--blue_light);
+        cursor: pointer;
+
+        [class~="rtl"] & {
+          border-radius: 2px 0 0 2px;
+          margin-left: 0;
+          margin-right: -1px;
+        }
+
+        .octicon__trash {
+          width: 18px;
+          height: 18px;
+          background-color: var(--blue_light);
+          vertical-align: middle;
+        }
+
+        &:hover {
+          border-color: var(--blue);
+          .octicon__trash {
+            background-color: var(--blue);
+          }
+        }
+      }
+    }
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--blue);
+
+      &.complete {
+        // Replace with octicon__dotFill
+        -webkit-mask-image: url('../../assets/octicons/dot-fill.svg')
+      }
+    }
+  }
+
+  &__section {
+    margin: 40px 0 0 0;
+
+    .box--solid--light h3 {
+      margin: 0;
+    }
+
+    &__btn {
+      padding: 10px;
+      margin: 9px 0;
+      font-size: .8em;
+      border-radius: 2px;
+      color: white;
+
+      &--primary {
+        @extend .pgIndex__section__btn;
+        background: var(--blue);
+
+        &:hover {
+          background: var(--blue_dark);
+        }
+      }
+
+      &--secondary {
+        @extend .pgIndex__section__btn;
+        background: var(--blue_light);
+
+        &:hover{
+          background: var(--blue_light-hover);
+        }
+      }
+    }
+  }
+}

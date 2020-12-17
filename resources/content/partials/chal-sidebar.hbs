@@ -1,12 +1,15 @@
-<div id="challenge-sidebar" class="sidebar">
-    <ul class="list-of-challenges">
-        <h3 i18n-data="Challenges"></h3>
+<div class="sidebar">
+    <h3 i18n-data="Challenges"></h3>
+    <ul class="sidebar__list">
         {{#each allChallenges}}
-        <li>
-            <a id="sidebar-{{ this.shortName }}" data-id="{{ @index }}" href="{{ this.shortName }}.html"
-               class="challenge-item{{#if this.currentChallenge}} current{{/if }}">
-                <div class="current-arrow">▶️</div>
+        <li id="sidebar__list__item--{{ this.shortName }}"
+            class="sidebar__list__item {{#if this.currentChallenge}} current{{/if}}">
+            <a href="{{ this.shortName }}.html">
+                <span class="octicon__dot status-dot"></span>
                 {{ this.titleName }}
+                {{#if this.currentChallenge}}
+                    <span class="octicon__triangleRight current-arrow"></span>
+                {{/if}}
             </a>
         </li>
         {{/each}}
