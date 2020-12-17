@@ -27,8 +27,8 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     minWidth: 800,
     minHeight: 600,
-    width: 980,
-    height: 760,
+    width: 1100,
+    height: 850,
     title: 'Git-it',
     icon: GititIcon,
     webPreferences: {
