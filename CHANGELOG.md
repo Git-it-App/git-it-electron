@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 5.1.1 (2020-12-18)
+### Fixes
+- Show better error if no username configured ([#179](https://github.com/Git-it-App/git-it-electron/pull/179))
+- Fix image sizes ([#177](https://github.com/Git-it-App/git-it-electron/pull/177))
+- Slightly enlarge default window ([#176](https://github.com/Git-it-App/git-it-electron/pull/176))
+- Fix translation insertion ([#175](https://github.com/Git-it-App/git-it-electron/pull/175))
+- Refactor CSS using sass - slight UI changes ([#171](https://github.com/Git-it-App/git-it-electron/pull/171))
+- Don't enable verify, if selectedDir is empty ([#165](https://github.com/Git-it-App/git-it-electron/pull/165))
+- Fix Build-Badge ([#159](https://github.com/Git-it-App/git-it-electron/pull/159))
+- Move to Github Actions ([#158](https://github.com/Git-it-App/git-it-electron/pull/158))
+- Move ipc-Handlers from main to specific file ([#157](https://github.com/Git-it-App/git-it-electron/pull/157))
+- Updated dependencies
+
+
 ## Version 5.1.0 (2020-11-04)
 ### Enhancements
 - Supporting Right-to-Left languages now ([#152](https://github.com/Git-it-App/git-it-electron/pull/152)) (Thanks, [@akamfoad](https://github.com/akamfoad) for your support here!)
