@@ -45,7 +45,10 @@ li {
 }
 
 img {
-  margin: 30px 0 18px;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  margin: 30px auto 18px;
   border-radius: 2px;
 }
 
