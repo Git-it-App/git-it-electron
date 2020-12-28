@@ -52,7 +52,7 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "i18next": "^19.8.4",
     "i18next-fs-backend": "^1.0.7"
   }
