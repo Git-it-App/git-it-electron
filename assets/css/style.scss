@@ -44,14 +44,6 @@ li {
   padding-bottom: 4px;
 }
 
-img {
-  width: 100%;
-  max-width: 850px;
-  display: flex;
-  margin: 30px auto 18px;
-  border-radius: 2px;
-}
-
 button {
   padding: 8px 14px;
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
@@ -79,6 +71,34 @@ ul.no-list-style {
   list-style: none;
   margin: 20px 0 0 0;
   padding: 0;
+}
+
+/*****************************
+ * Figures/Images
+ *****************************/
+figure {
+  max-width: 850px;
+  margin: 30px auto 18px;
+
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 2px;
+
+    &.img_repos {
+      width: 50%;
+    }
+    &.img_pullrequest {
+      width: 65%;
+    }
+  }
+
+  figcaption {
+    margin: 10px;
+    font-style: italic;
+    font-size: .85em;
+  }
 }
 
 /*****************************
