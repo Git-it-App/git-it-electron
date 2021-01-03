@@ -22,6 +22,8 @@
   "No name found.": "No name found.",
   "Email Added!": "Email Added!",
   "No email found.": "No email found.",
+  "Default branch is set to main!": "Default branch is set to main!",
+  "The default branch is not set to main.": "The default branch is not set to main.",
   "No username found.": "No username found.",
   "Username added to Git config!": "Username added to Git config!",
   "You're on GitHub!": "You're on GitHub!",
