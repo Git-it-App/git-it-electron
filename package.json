@@ -54,6 +54,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "i18next": "^19.8.9",
-    "i18next-fs-backend": "^1.0.8"
+    "i18next-fs-backend": "^1.1.0"
   }
 }
