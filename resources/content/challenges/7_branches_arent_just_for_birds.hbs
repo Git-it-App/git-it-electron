@@ -5,7 +5,7 @@
 <div class="box--solid--light">
     <h2 i18n-data="ch07~Branches"></h2>
     <p i18n-type="standard_html"
-        i18n-data="ch07~Git repositories use branches to isolate work when needed. It's common practice when working on a project or with others on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This way you can do your work while the main, commonly named 'master', branch stays stable. When the work on your branch is finished you merge it back into the 'master' master branch."></p>
+        i18n-data="ch07~Git repositories use branches to isolate work when needed. It is common practice when working together on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This allows different changes to be developed on separate branches without interfering with each other. When the work on your branch is finished, you merge your changes back into the main branch (commonly named 'master'). This main branch thus always contains a stable version of the project."></p>
 
     <figure>
         <img class="img_branches" src="../../assets/imgs/branches.png"
@@ -30,8 +30,6 @@
 
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch07~Create a branch"></h3>
-    <p i18n-data="ch07~When you create a branch, Git copies everything from the current branch you're on and places it in the branch you've requested be made."></p>
-
     <p i18n-type="standard_html"
         i18n-data="ch07~While still inside of your local 'patchwork' repository, type {/cde/}git status{/cde_e/} to see what branch you're currently on. Git should reply that you're on the 'gh-pages' branch."></p>
 
@@ -44,7 +42,7 @@
 
     <div class='code'><code class="shell">git branch &#60;BRANCHNAME&#62;</code></div>
 
-    <p i18n-data="ch07~Now you have a branch with a new name that is identical to 'gh-pages'."></p>
+    <p i18n-data="ch07~Now you have a new branch that is identical to 'gh-pages' but has a new name."></p>
 
     <p i18n-type="standard_html"
         i18n-data="ch07~To go into that branch and work on it you {/str/}checkout{/str_e/} a branch. Go on your new branch:"></p>
@@ -73,7 +71,7 @@
 
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch07~Check-in"></h3>
-    <p i18n-data="ch07~Go through the steps for checking in a project: "></p>
+    <p i18n-data="ch07~You already know the steps for checking in your changes: "></p>
 
     <div class='code'><code class="shell">git status</code></div>
     <div class='code'><code class="shell">git add &#60;contributors/FILENAME&#62;</code></div>
