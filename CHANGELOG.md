@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 5.2.0 (2021-04-15)
+### Enhancements
+- Translateable images ([#185](https://github.com/Git-it-App/git-it-electron/pull/185))
+
+### Fixes
+- Fix branching description ([#221](https://github.com/Git-it-App/git-it-electron/pull/200))
+- Small Readme Changes ([#200](https://github.com/Git-it-App/git-it-electron/pull/200))
+- Small Text changes ([#186](https://github.com/Git-it-App/git-it-electron/pull/186))
+- Translation updates
+- Dependency updates
+
+
 ## Version 5.1.1 (2020-12-18)
 ### Fixes
 - Show better error if no username configured ([#179](https://github.com/Git-it-App/git-it-electron/pull/179))
