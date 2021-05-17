@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2
-        if: github.ref == 'refs/heads/master' &&
+        if: github.ref == 'refs/heads/main' &&
             (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
         with:
           target: minor
