@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ridedott/merge-me-action@v2
-        # if: github.ref == 'refs/heads/main' &&
-        #     (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
+        if: github.ref == 'refs/heads/main' && github.event.workflow_run.conclusion == 'success' &&
+            (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
         with:
           GITHUB_TOKEN: ${{ secrets.DEPENDABOT_MERGE }}
           PRESET: DEPENDABOT_MINOR
