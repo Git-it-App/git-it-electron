@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 5.2.1 (2021-05-17)
+### Fixes
+- Translation updates for Kurdish ([@akamfoad](https://github.com/akamfoad))
+- Dependency updates
+
+
 ## Version 5.2.0 (2021-04-15)
 ### Enhancements
 - Translateable images ([#185](https://github.com/Git-it-App/git-it-electron/pull/185))
