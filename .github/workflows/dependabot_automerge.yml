@@ -1,13 +1,16 @@
 name: Dependabot Auto-Merge
-on: pull_request_target
+on:
+  check_suite:
+    types:
+      - completed
 
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
-        if: github.ref == 'refs/heads/main' &&
-            (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
+      - uses: ridedott/merge-me-action@v2
+        # if: github.ref == 'refs/heads/main' &&
+        #     (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
         with:
-          target: minor
-          github-token: ${{ secrets.DEPENDABOT_MERGE }}
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_MERGE }}
+          PRESET: DEPENDABOT_MINOR
