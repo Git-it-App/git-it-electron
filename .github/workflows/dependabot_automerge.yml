@@ -1,8 +1,15 @@
 name: Dependabot Auto-Merge
 on:
-  check_suite:
+  workflow_run:
     types:
       - completed
+    workflows:
+      # List all required workflow names here.
+      - 'Build App'
+      - 'CodeQL'
+      - 'Fixup-check'
+      - 'i18n Extract'
+      - 'Standard Lint'
 
 jobs:
   auto-merge:
@@ -14,3 +21,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.DEPENDABOT_MERGE }}
           PRESET: DEPENDABOT_MINOR
+          MERGE_METHOD: MERGE
