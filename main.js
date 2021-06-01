@@ -33,7 +33,8 @@ app.on('ready', () => {
     icon: GititIcon,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule: true
+      enableRemoteModule: true,
+      contextIsolation: false
     }
   })
   mainWindow.on('closed', function winClosed () {
