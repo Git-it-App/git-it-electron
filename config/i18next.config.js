@@ -25,6 +25,23 @@ const usedNamespaces = [
   'ch01', 'ch02', 'ch03', 'ch04', 'ch05', 'ch06', 'ch07', 'ch08', 'ch09', 'ch10', 'ch11'
 ]
 
+// defaultOptions for interpolation
+const i18nDefaultOptions = {
+  cde: '<code>',
+  cde_e: '</code>',
+  em: '<em>',
+  em_e: '</em>',
+  lnk_e: '</a>',
+  str: '<strong>',
+  str_e: '</strong>',
+
+  // Simple Text, no HTML-Content
+  dqm: '"', // double quotation mark
+  gt: '>',
+  lt: '<',
+  smc: ';' // semicolon
+}
+
 const i18nextConfig = {
   // debug: true,
 
@@ -55,3 +72,4 @@ const i18nextConfig = {
 
 exports.i18nextConfig = i18nextConfig
 exports.appLanguages = appLanguages
+exports.i18nDefaultOptions = i18nDefaultOptions
