@@ -33,7 +33,6 @@ app.on('ready', () => {
     icon: GititIcon,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule: true,
       contextIsolation: false
     }
   })

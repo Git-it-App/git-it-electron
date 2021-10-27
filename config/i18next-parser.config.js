@@ -46,7 +46,7 @@ module.exports = {
     //   mjs: ['JavascriptLexer'],
     js: [{
       lexer: 'JavascriptLexer',
-      functions: ['t', 'addToVerifyList'], // Array of functions to match
+      functions: ['t', 'translate', 'addToVerifyList'], // Array of functions to match
     }],
   //   ts: ['JavascriptLexer'],
   //   jsx: ['JsxLexer'],
