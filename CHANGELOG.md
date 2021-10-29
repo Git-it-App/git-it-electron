@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 5.2.2 (2021-10-29)
+### Enhancements
+- Remove electron remote module [\#318](https://github.com/Git-it-App/git-it-electron/pull/318) ([jotoeri](https://github.com/jotoeri))
+
+### Fixes
+- Small Translation update for Korean ([@Ther3tyle](https://github.com/Ther3tyle))
+- Dependency updates, bumping electron to v15
+
+
 ## Version 5.2.1 (2021-05-17)
 ### Fixes
 - Translation updates for Kurdish ([@akamfoad](https://github.com/akamfoad))
