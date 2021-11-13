@@ -73,6 +73,32 @@
     <div class='code'><code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code></div>
 </div>
 
+<div class="box--solid--light">
+    <h2 i18n-data="ch05~Personal Access Tokens"></h2>
+    <p i18n-type="standard_html"
+        i18n-data="ch05~On the next step you will need to authenticate yourself towards GitHub. GitHub does not accept simple passwords for this, but requires to use a {/str/}Personal Access Token (PAT){/str_e/}. This might feel a bit cumbersome but is meant to be a security feature. Access-tokens are like strong passwords that can be scoped, be set to expire or also just be deactivated manually once compromised."></p>
+
+    <p i18n-type="standard_html"
+        i18n-data="ch05~Depending on your git installation there might be alternative methods for authentication available (e.g. via Browser). If not, you will need to create a PAT and use this one as your password, when prompted."></p>
+</div>
+
+<div class="box--border--grey box--tip">
+    <p><strong i18n-data="ch05~To generate a new Personal Access Token:"></strong></p>
+    <ul>
+        <li i18n-type="standard_html"
+            i18n-data="ch05~Open {/lnk_pat/}Github - Personal access tokens{/lnk_e/} and click on 'Generate new token'."
+            i18n-options='{
+                "lnk_pat": "https://github.com/settings/tokens"
+            }'></li>
+        <li i18n-data="ch05~Add a note to identify your token."></li>
+        <li i18n-data="ch05~Best set some expiration."></li>
+        <li i18n-type="standard_html"
+            i18n-data="ch05~Select the scope {/cde/}public_repo{/cde_e/}. This suffices for what we will be doing here."></li>
+        <li i18n-data="ch05~Generate the token, then copy and store it in a safe location. Keep in mind it should be handled like a password."></li>
+        <li i18n-data="ch05~Use it when beeing asked for a password."></li>
+    </ul>
+</div>
+
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch05~Push Work to your Remote"></h3>
     <p i18n-type="standard_html"
