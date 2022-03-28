@@ -43,7 +43,7 @@
     "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/"
   },
   "devDependencies": {
-    "electron": "^15.3.7",
+    "electron": "^17.2.0",
     "electron-packager": "^15.4.0",
     "handlebars": "^4.7.7",
     "i18next-parser": "^5.4.0",
