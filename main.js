@@ -105,33 +105,29 @@ function buildMenus () {
  *   usage: NODE_ENV=debug
  */
 function checkDebugSettings () {
-  const debugArguments = ['--none', '--some', '--all']
-
-  // Preset challenges
-  if (process.argv[2] && debugArguments.includes(process.argv[2])) {
+  if (process.argv.includes('--debug')) {
     const userData = JSON.parse(fs.readFileSync(userDataFile))
 
-    if (process.argv[2] === '--none') {
+    // Preset challenges
+    if (process.argv.includes('--none')) {
       Object.keys(userData).forEach(challenge => {
         userData[challenge].challengeComplete = false
       })
     }
-    if (process.argv[2] === '--some') {
+    if (process.argv.includes('--some')) {
       Object.keys(userData).forEach((challenge, index) => {
         userData[challenge].challengeComplete = index < 6
       })
     }
-    if (process.argv[2] === '--all') {
+    if (process.argv.includes('--all')) {
       Object.keys(userData).forEach(challenge => {
         userData[challenge].challengeComplete = true
       })
     }
 
     fs.writeFileSync(userDataFile, JSON.stringify(userData, null, 2))
-  }
 
-  // Show devtools
-  if (process.env.NODE_ENV === 'debug') {
+    // Show devtools
     mainWindow.maximize()
     mainWindow.webContents.openDevTools()
   }
