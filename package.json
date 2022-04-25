@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "electron": "^18.0.4",
-    "electron-packager": "^15.4.0",
+    "electron-packager": "^15.5.1",
     "handlebars": "^4.7.7",
     "i18next-parser": "^6.3.0",
     "rimraf": "^3.0.2",
