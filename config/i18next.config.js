@@ -8,15 +8,9 @@
 const appLanguages = {
   'en-US': { name: 'English' },
   'de-DE': { name: 'Deutsch' },
-  'es-ES': { name: 'Español' },
-  'fr-FR': { name: 'Français' },
-  'ja-JP': { name: '日本語' },
   'ko-KR': { name: '한국어' },
   'ku':    { name: 'کوردی', direction: 'rtl' },
   'pl-PL': { name: 'Polski' },
-  'pt-BR': { name: 'Português Brasileiro' },
-  'uk-UA': { name: 'Українська' },
-  'zh-TW': { name: '中文(臺灣)' },
 }
 const appLanguageKeys = Object.keys(appLanguages)
 
