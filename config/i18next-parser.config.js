@@ -11,9 +11,6 @@ module.exports = {
   /* Default namespace used in your i18next config */
   defaultNamespace: 'common',
 
-  /* Default value to give to empty keys */
-  // defaultValue: '',
-
   /* Indentation of the catalog files */
   indentation: 2,
 
@@ -85,27 +82,11 @@ module.exports = {
    */
   sort: false,
 
-  /* Whether to ignore default values. */
-  // skipDefaultValues: false,
-
-  /* Whether to use the keys as the default value; ex. "Hello": "Hello", "World": "World"
-   * This option takes precedence over the `defaultValue` and `skipDefaultValues` options
-   */
-  useKeysAsDefaultValue: true,
-
   /* Display info about the parsing including some stats */
   verbose: true,
 
-  /*
-   * If you wish to customize the value output the value as an object, you can set your own format.
-   * ${defaultValue} is the default value you set in your translation function.
-   * Any other custom property will be automatically extracted.
-   *
-   * Example:
-   * {
-   *   message: "${defaultValue}",
-   *   description: "${maxLength}", // t('my-key', {maxLength: 150})
-   * }
-   */
-  // customValueTemplate: null
+  // Set Key as default value
+  defaultValue: (locale, namespace, key, value) => {
+    return key;
+  }
 }
