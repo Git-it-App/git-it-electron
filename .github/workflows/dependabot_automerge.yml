@@ -1,24 +1,18 @@
 name: Dependabot Auto-Merge
+
 on:
-  workflow_run:
-    types:
-      - completed
-    workflows:
-      # List all required workflow names here.
-      - 'Build App'
-      - 'CodeQL'
-      - 'Fixup-check'
-      - 'i18n Extract'
-      - 'Standard Lint'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
     steps:
-      - uses: ridedott/merge-me-action@v2
-        if: github.ref == 'refs/heads/main' && github.event.workflow_run.conclusion == 'success' &&
-            (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]')
+      - uses: fastify/github-action-merge-dependabot@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_MERGE }}
-          PRESET: DEPENDABOT_MINOR
-          MERGE_METHOD: MERGE
+          target: minor
