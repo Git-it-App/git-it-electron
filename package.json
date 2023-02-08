@@ -36,7 +36,7 @@
     "lint": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "lint:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
-    "build": "rimraf built/* && node lib/build/build-challenges.js && node lib/build/build-pages.js && node lib/build/build-css.js",
+    "build": "rimraf built && node lib/build/build-challenges.js && node lib/build/build-pages.js && node lib/build/build-css.js",
     "pack": "npm run build && npm run pack-mac && npm run pack-lin && npm run pack-win",
     "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/",
     "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/",
@@ -47,7 +47,7 @@
     "electron-packager": "^17.1.1",
     "handlebars": "^4.7.7",
     "i18next-parser": "^7.6.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.1.2",
     "sass": "^1.58.0",
     "standard": "^17.0.0"
   },
