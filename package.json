@@ -47,7 +47,7 @@
     "electron-packager": "^17.1.1",
     "handlebars": "^4.7.7",
     "i18next-parser": "^8.3.0",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.1",
     "sass": "^1.64.1",
     "standard": "^17.1.0"
   },
