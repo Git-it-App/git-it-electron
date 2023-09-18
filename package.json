@@ -48,7 +48,7 @@
     "handlebars": "^4.7.8",
     "i18next-parser": "^8.7.0",
     "rimraf": "^5.0.1",
-    "sass": "^1.66.1",
+    "sass": "^1.67.0",
     "standard": "^17.1.0"
   },
   "dependencies": {
