@@ -1,26 +1,59 @@
 /**
  * This file contains some variables for common design
- * Trying to use more or less BEM-Model, using only one dash or lodash respectively
+ * Trying to use more or less BEM-Model
  */
 
 :root {
-  --blue: #0087ff;
-  --blue-hover: #4babff;
-  --blue_light: #88ccff;
-  --blue_light-hover: #66bdff;
-  --blue_lighter: #badfff;
-  --blue_lightest: #eaf6ff;
-  --blue_dark: #007ae6;
-  --blue_grey: #4f6375;
+  --app-background: #ffffff;
+  --background-separator: #e0e0e0;
+  --header: #fafafa;
+  --header__subtitle: #3da4ff;
+  --text: #5a5a5a;
+  --scrollbar: #e8e8e8;
 
-  --grey_darker: #5a5a5a;
-  //--grey_dark: #808080;
-  --grey: #999999;
-  --grey_light: #a6a6a6;
+  --main-blue: #0087ff;
+  --main-blue--hover: #3da4ff;
+  --main-blue__text: #ffffff;
+  --light-blue: #88ccff;
+  --light-blue--hover: #66bdff;
 
-  --white_darkest: #e0e0e0;
-  --white_darker: #f0f0f0;
-  --white_dark: #fafafa;
-  --white: #ffffff;
-  --white-hover: #cce7ff;
+  --solidbox__background: #eaf6ff;
+  --solidbox__text: #4f6375;
+  --solidbox--codebox__background: #c7e7ff;
+  --solidbox--codebox__shell-sign: #8f9aa2;
+
+  --borderbox--grey__border: #999999;
+  --borderbox--grey__title: #5a5a5a;
+
+  --verifybox__button--hover: #ebf6ff;
+  --verifybox__button--disabled: #007ae6;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: #1b1b1b;
+    --background-separator: #282c36;
+    --header: #191919;
+    --header__subtitle: #3da4ff;
+    --text: #c0c0c0;
+    --scrollbar: #323232;
+
+    --main-blue: #0064bd;
+    --main-blue--hover: #007ae6;
+    --main-blue__text: #cfcfcf;
+    --light-blue: #003564;
+    --light-blue--hover: #00417a;
+
+    --solidbox__background: #282c36;
+    --solidbox__text: var(--text);
+    --solidbox--codebox__background: #50586c;
+    --solidbox--codebox__shell-sign: #8f9aa2;
+
+    --borderbox--grey__border: #999999;
+    --borderbox--grey__title: #5a5a5a;
+
+    --verifybox__button--hover: #e6e6e6;
+    --verifybox__button--disabled: #007ae6;
+  }
 }
