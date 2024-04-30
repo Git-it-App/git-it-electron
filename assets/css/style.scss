@@ -239,7 +239,7 @@ code {
 
     &--blue {
       @extend .box--border;
-      border-color: var(--blue_lighter);
+      border-color: var(--main-blue--light);
 
       &:before {
         color: var(--main-blue);
