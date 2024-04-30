@@ -22,6 +22,9 @@
 //  --white_dark: #fafafa;
   --white-hover: #cce7ff;
 
+
+
+  
   --app-background: #ffffff;
   --header: #fafafa;
   --background-separator: #e0e0e0;
@@ -38,24 +41,6 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-//    --blue-hover: #4babff;
-//    --blue_light: #88ccff;
-//    --blue_light-hover: #66bdff;
-//    --blue_lighter: #badfff;
-//    --blue_lightest: #eaf6ff;
-//    --blue_dark: #007ae6;
-//    --blue_grey: #4f6375;
-
-
-//    --grey_darker: #cfcfcf;
-//    --grey: #999999;
-//    --grey_light: #a6a6a6;
-
-//    --white_darkest: #303030;
-//    --white_darker: #252526;
-//    --white_dark: #202022;
-//    --white-hover: #cce7ff;
-
     --app-background: #1b1b1d;
     --header: #191919;
     --background-separator: #282C36;

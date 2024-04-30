@@ -218,7 +218,7 @@ code {
     padding-top: 10px;
 
     &:before {
-      background-color: white;
+      background-color: var(--app-background);
       font-weight: bold;
       font-size: 1.4em;
       // White 'border'
