@@ -16,6 +16,12 @@
   --sk-color: #E0E0E0;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sk-color: #000000;
+  }
+}
+
 /* Implementation */
 .sk-bounce {
   width: var(--sk-size);
