@@ -21,6 +21,7 @@ const usedNamespaces = [
 
 // defaultOptions for interpolation
 const i18nDefaultOptions = {
+  br: '<br>',
   cde: '<code>',
   cde_e: '</code>',
   em: '<em>',
