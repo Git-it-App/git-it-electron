@@ -19,7 +19,7 @@ body {
   height: 5px;
 
   &-thumb {
-    background-color: var(--grey_light);
+    background-color: var(--scrollbar);
     border-radius: 5px;
   }
   &-scrollbar-button {
@@ -159,7 +159,8 @@ code {
   font-size: 0.8em;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
   white-space: nowrap;
-  background: var(--white_darker);
+  background: var(--solidbox-background);
+  color: var(--solidbox-text);
   padding: 6px 6px 3px 6px;
   border-radius: 2px;
 
@@ -170,23 +171,19 @@ code {
 
   &.shell::before {
     content: "$ ";
-    color: var(--grey_light);
+    color: var(--codebox-shell-sign);
   }
 }
 
-.box--border--blue code {
-  background-color: var(--solidbox-background);
-  color: var(--solidbox-text);
-}
 .box--solid--light code {
-  background-color: var(--white_darkest);
+  background-color: var(--solidbox-codebox-background);
 }
 
 /*****************************
  * Boxes
  *****************************/
 .box {
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 34px 0;
   padding: 24px;
 
