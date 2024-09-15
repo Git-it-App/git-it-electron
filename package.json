@@ -26,13 +26,17 @@
     "desktop"
   ],
   "main": "main.js",
+  "//": {
+    "--no-sandbox": "The --no-sandbox option is temporarily used to fix the SUID sandbox issue on newer linux distributions. To be checked and removed again."
+  },
   "scripts": {
+    
     "prestart": "npm run build",
-    "start": "electron .",
-    "debug": "npm run build && electron . -- --debug",
-    "debug:none": "npm run build && electron . -- --debug --none",
-    "debug:some": "npm run build && electron . -- --debug --some",
-    "debug:all": "npm run build && electron . -- --debug --all",
+    "start": "electron --no-sandbox .",
+    "debug": "npm run build && electron --no-sandbox . -- --debug",
+    "debug:none": "npm run build && electron --no-sandbox . -- --debug --none",
+    "debug:some": "npm run build && electron --no-sandbox . -- --debug --some",
+    "debug:all": "npm run build && electron --no-sandbox . -- --debug --all",
     "lint": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "lint:fix": "standard --fix lib/*.js lib/verify/*.js menus/*.js main.js",
     "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
