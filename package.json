@@ -53,7 +53,7 @@
     "i18next-parser": "^9.0.2",
     "rimraf": "^6.0.1",
     "sass": "^1.78.0",
-    "standard": "^17.1.0"
+    "standard": "^17.1.2"
   },
   "dependencies": {
     "axios": "^1.7.7",
