@@ -6,9 +6,10 @@
         </select>
     </div>
     <div class="header__text">
-        <a class="header__text__gitit" href="../pages/index.html">
-            Git-it
-        </a>
-        <span class="header__text__title">{{ pageTitle }}</span>
+        <span class="header__text__gitit">Git-it</span>
+        {{#if pageTitle}}
+            <span class="header__text__gitit">|</span>
+            <span class="header__text__title">{{ pageTitle }}</span>
+        {{/if}}
     </div>
 </header>

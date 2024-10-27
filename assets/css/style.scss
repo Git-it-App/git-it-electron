@@ -326,14 +326,13 @@ code {
   border-bottom: 1px solid var(--background-separator);
 
   &__lang {
-    height: 36px;
-    width: 170px;
-    margin: 0 auto 0 20px;
+    min-width: 26%;
 
     select {
-      height: 100%;
-      width: 100%;
+      height: 36px;
+      width: 170px;
       padding: 5px 10px;
+      margin: 0 20px;
       background-color: var(--header);
       border: 1px solid var(--light-blue);
       border-radius: 3px;
@@ -346,21 +345,22 @@ code {
   }
 
   &__text {
-    position: absolute;
+    margin: auto;
 
     &__gitit {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 8px;
       color: var(--main-blue);
       font-weight: 900;
     }
 
     &__title {
-      text-transform: capitalize;
+      display: inline-block;
+      padding: 4px 8px;
+      color: var(--header__subtitle);
       font-size: 19px;
       font-weight: 800;
-      color: var(--header__subtitle);
-      display: inline-block;
+      text-transform: capitalize;
     }
   }
 }
