@@ -6,13 +6,13 @@ module.exports = function (mainWindow, i18n) {
       label: i18n.t('menu~&File'),
       submenu: [
         {
-          label: i18n.t('menu~&Quit'),
+          label: i18n.t('menu~Quit'),
           role: 'quit'
         }
       ]
     },
     {
-      label: i18n.t('menu~View'),
+      label: i18n.t('menu~&View'),
       submenu: [
         {
           label: i18n.t('menu~Reload'),
@@ -36,7 +36,7 @@ module.exports = function (mainWindow, i18n) {
       ]
     },
     {
-      label: i18n.t('menu~Window'),
+      label: i18n.t('menu~&Window'),
       submenu: [
         {
           label: i18n.t('menu~Home'),
@@ -62,7 +62,7 @@ module.exports = function (mainWindow, i18n) {
       ]
     },
     {
-      label: i18n.t('menu~Help'),
+      label: i18n.t('menu~&Help'),
       submenu: [
         {
           label: i18n.t('menu~App Repository'),
