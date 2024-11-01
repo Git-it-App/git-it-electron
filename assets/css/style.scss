@@ -86,10 +86,10 @@ figure {
     margin: auto;
     border-radius: 2px;
 
-    &.img_repos {
+    &#img_repos {
       width: 50%;
     }
-    &.img_pullrequest {
+    &#img_pullrequest {
       width: 65%;
     }
   }
