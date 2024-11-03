@@ -23,7 +23,11 @@
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch04~Add GitHub username to Git"></h3>
     <p i18n-type="standard_html"
-        i18n-data="ch04~Add your GitHub username to your Git configuration. We'll do this just for the sake of Git-it{/smc/} it makes it easier to verify the upcoming challenges. Save it exactly as you created it on GitHub and {/str/}capitalize where capitalized{/str_e/}. Note, you don't need to enter the {/dqm/}{/lt/}{/dqm/} and {/dqm/}{/gt/}{/dqm/}."></p>
+        i18n-data="ch04~Add your GitHub username to your Git configuration. We'll do this just for the sake of Git-it{/smc/} it makes it easier to verify the upcoming challenges. Save it exactly as you created it on GitHub and {/str/}capitalize where capitalized{/str_e/}. Note, you don't need to enter the {/lt-sign/} and {/gt-sign/}."
+        i18n-options='{
+                "lt-sign": "\"<\"",
+                "gt-sign": "\">\""
+            }'></p>
 
     <p i18n-data="ch04~Add your GitHub username to your Git configuration:"></p>
     <div class='code'><code class="shell">git config --global user.username &#60;UserName&#62;</code></div>
