@@ -1,3 +1,4 @@
+const { nativeTheme } = require('electron')
 const path = require('path')
 
 module.exports = function (mainWindow, i18n) {
@@ -25,6 +26,19 @@ module.exports = function (mainWindow, i18n) {
         {
           label: i18n.t('menu~Minimize'),
           role: 'minimize'
+        },
+        {
+          label: i18n.t('menu~Use Dark Theme'),
+          type: 'checkbox',
+          accelerator: 'Ctrl+D',
+          checked: nativeTheme.shouldUseDarkColors,
+          click: event => {
+            if (event.checked) {
+              nativeTheme.themeSource = 'dark'
+            } else {
+              nativeTheme.themeSource = 'light'
+            }
+          }
         },
         {
           type: 'separator'

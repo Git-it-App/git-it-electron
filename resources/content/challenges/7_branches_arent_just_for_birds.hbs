@@ -8,8 +8,11 @@
         i18n-data="ch07~Git repositories use branches to isolate work when needed. It is common practice when working together on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This allows different changes to be developed on separate branches without interfering with each other. When the work on your branch is finished, you merge your changes back into the main branch (commonly named 'master'). This main branch thus always contains a stable version of the project."></p>
 
     <figure>
-        <img id="img_branches" src="../../assets/imgs/branches.png"
-            alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too.">
+        <picture>
+            <source srcset="../../assets/imgs/branches--cs-dark.png" media="(prefers-color-scheme: dark)">
+            <img id="img_branches" src="../../assets/imgs/branches.png"
+                alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too.">
+        </picture>
         <figcaption i18n-type="standard_html" i18n-data="ch07~The diagram illustrates how you can branch off of your 'master' branch (the straight black line in the middle), do your work on a branch (dots illustrate commits) and then merge those changes back into 'master'. You can even branch off of a branch if you need to, the 'master' branch doesn't have to be the base."></figcaption>
     </figure>
 

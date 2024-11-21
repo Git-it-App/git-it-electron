@@ -9,8 +9,8 @@ body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   font-size: 1.1em;
   line-height: 1.8em;
-  color: var(--grey_darker);
-  background-color: var(--white);
+  color: var(--text);
+  background-color: var(--app-background);
   margin: 0;
 }
 
@@ -19,7 +19,7 @@ body {
   height: 5px;
 
   &-thumb {
-    background-color: var(--grey_light);
+    background-color: var(--scrollbar);
     border-radius: 5px;
   }
   &-scrollbar-button {
@@ -32,11 +32,11 @@ div, header, select, a {
 }
 
 a {
-  color: var(--blue);
+  color: var(--main-blue);
   text-decoration: none;
 
   &:hover {
-    color: var(--blue-hover);
+    color: var(--main-blue--hover);
   }
 }
 
@@ -159,7 +159,8 @@ code {
   font-size: 0.8em;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
   white-space: nowrap;
-  background: var(--white_darker);
+  background: var(--solidbox__background);
+  color: var(--solidbox__text);
   padding: 6px 6px 3px 6px;
   border-radius: 2px;
 
@@ -170,16 +171,12 @@ code {
 
   &.shell::before {
     content: "$ ";
-    color: var(--grey_light);
+    color: var(--solidbox--codebox__shell-sign);
   }
 }
 
-.box--border--blue code {
-  background-color: var(--blue_lightest);
-  color: var(--blue_grey);
-}
 .box--solid--light code {
-  background-color: var(--white_darkest);
+  background-color: var(--solidbox--codebox__background);
 }
 
 /*****************************
@@ -207,8 +204,8 @@ code {
 
     &--light {
       @extend .box--solid;
-      background-color: var(--blue_lightest);
-      color: var(--blue_grey);
+      background-color: var(--solidbox__background);
+      color: var(--solidbox__text);
     }
   }
 
@@ -218,7 +215,7 @@ code {
     padding-top: 10px;
 
     &:before {
-      background-color: white;
+      background-color: var(--app-background);
       font-weight: bold;
       font-size: 1.4em;
       // White 'border'
@@ -239,19 +236,19 @@ code {
 
     &--blue {
       @extend .box--border;
-      border-color: var(--blue_lighter);
+      border-color: var(--light-blue);
 
       &:before {
-        color: var(--blue);
+        color: var(--main-blue);
       }
     }
 
     &--grey {
       @extend .box--border;
-      border-color: var(--grey);
+      border-color: var(--borderbox--grey__border);
 
       &::before {
-        color: var(--grey_darker);
+        color: var(--borderbox--grey__title);
       }
     }
   }
@@ -263,20 +260,20 @@ code {
 .verify {
   &__box {
     @extend .box--solid;
-    background-color: var(--blue);
-    color: white;
+    background-color: var(--main-blue);
+    color: var(--main-blue__text);
   }
 
   &__button {
-    background-color: white;
-    color: var(--blue);
+    background-color: var(--main-blue__text);
+    color: var(--main-blue);
     border-radius: 2px;
 
     &:hover {
-      background-color: var(--white-hover);
+      background-color: var(--verifybox__button--hover);
     }
     &:disabled {
-      background-color: var(--blue_dark);
+      background-color: var(--verifybox__button--disabled);
     }
   }
 
@@ -293,7 +290,7 @@ code {
   &__dir-text {
     padding: 6px 10px;
     font-size: 13px;
-    color: var(--blue_light);
+    color: var(--main-blue__text);
     white-space: nowrap;
   }
 
@@ -325,62 +322,45 @@ code {
   display: flex;
   justify-content: center;
   font-size: 20px;
-  background-color: var(--white_dark);
-  border-bottom: 1px solid var(--white_darkest);
+  background-color: var(--header);
+  border-bottom: 1px solid var(--background-separator);
 
   &__lang {
-    height: 36px;
-    width: 170px;
-    margin: 0 auto 0 20px;
+    min-width: 26%;
 
     select {
-      height: 100%;
-      width: 100%;
+      height: 36px;
+      width: 170px;
       padding: 5px 10px;
-      border: 1px solid var(--blue_light);
+      margin: 0 20px;
+      background-color: var(--header);
+      border: 1px solid var(--light-blue);
       border-radius: 3px;
-      color: var(--blue);
-      background: none;
-      appearance: none;
+      color: var(--main-blue);
 
       &:focus {
-        outline-color: var(--blue_light);
+        outline-color: var(--light-blue);
       }
-    }
-
-    // Dropdown arrow
-    &:after {
-      content: "";
-      border: 5px solid transparent;
-      border-top-color: var(--grey_light);
-      position: relative;
-      right: 20px;
-      top: 18.5px;
-      pointer-events: none;
     }
   }
 
   &__text {
-    position: absolute;
+    margin: auto;
 
     &__gitit {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 8px;
+      color: var(--main-blue);
       font-weight: 900;
-
-      &:hover {
-        background: var(--blue-hover);
-        color: white;
-        border-radius: 2px;
-      }
     }
 
     &__title {
-      text-transform: capitalize;
+      display: inline-block;
+      padding: 4px 8px;
+      color: var(--header__subtitle);
       font-size: 19px;
       font-weight: 800;
-      color: var(--blue-hover);
-      display: inline-block;
+      text-transform: capitalize;
     }
   }
 }
@@ -403,7 +383,7 @@ code {
       padding-bottom: 0;
 
       &.current {
-        background-color: var(--blue_light);
+        background-color: var(--light-blue);
         a {
           color: white;
         }
@@ -419,7 +399,7 @@ code {
       .status-dot {
         width: 10px;
         height: 10px;
-        background-color: var(--blue);
+        background-color: var(--main-blue);
         vertical-align: middle;
         position: relative;
         top: -1px;
@@ -462,14 +442,14 @@ code {
     .octicon__reply {
       width: 16px;
       height: 16px;
-      background-color: var(--blue);
+      background-color: var(--main-blue);
       display: block;
     }
 
     &:hover {
-      color: var(--blue-hover);
+      color: var(--main-blue--hover);
       .octicon__reply {
-        background-color: var(--blue-hover);
+        background-color: var(--main-blue--hover);
         //************************ TODO: there's a flickering when hovering between octicon and link-text
       }
     }
@@ -482,13 +462,13 @@ code {
 .pgIndex {
   &__progress {
     margin: 20px 0;
-    color: var(--blue);
+    color: var(--main-blue);
     user-select: none;
     display: flex;
     line-height: 1.3em;
 
     &__box {
-      border: 1px solid var(--blue);
+      border: 1px solid var(--main-blue);
       padding: 10px 14px;
       display: inline;
 
@@ -516,7 +496,7 @@ code {
         @extend .pgIndex__progress__box;
         border-radius: 0 2px 2px 0;
         margin-left: -1px;
-        border-color: var(--blue_light);
+        border-color: var(--light-blue);
         cursor: pointer;
 
         [class~="rtl"] & {
@@ -528,14 +508,14 @@ code {
         .octicon__trash {
           width: 18px;
           height: 18px;
-          background-color: var(--blue_light);
+          background-color: var(--light-blue);
           vertical-align: middle;
         }
 
         &:hover {
-          border-color: var(--blue);
+          border-color: var(--main-blue);
           .octicon__trash {
-            background-color: var(--blue);
+            background-color: var(--main-blue);
           }
         }
       }
@@ -544,7 +524,7 @@ code {
     &__dot {
       width: 10px;
       height: 10px;
-      background-color: var(--blue);
+      background-color: var(--main-blue);
 
       &.complete {
         // Replace with octicon__dotFill
@@ -565,23 +545,23 @@ code {
       margin: 9px 0;
       font-size: .8em;
       border-radius: 2px;
-      color: white;
+      color: var(--main-blue__text);
 
       &--primary {
         @extend .pgIndex__section__btn;
-        background: var(--blue);
+        background: var(--main-blue);
 
         &:hover {
-          background: var(--blue_dark);
+          background: var(--main-blue--hover);
         }
       }
 
       &--secondary {
         @extend .pgIndex__section__btn;
-        background: var(--blue_light);
+        background: var(--light-blue);
 
         &:hover{
-          background: var(--blue_light-hover);
+          background: var(--light-blue--hover);
         }
       }
     }
