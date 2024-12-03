@@ -25,7 +25,7 @@
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch06~Fork the Patchwork Repository"></h3>
     <p i18n-type="standard_html"
-        i18n-data="ch06~The project we'll work with is at {/lnk_patchwork/}github.com/jlord/patchwork{/lnk_e/}. Go to that page and click the 'Fork' button at the top right. Once the forking animation is complete, you have a copy on your account. Copy your fork's HTTP URL from the address bar in your browser, this is the address of your fork on GitHub's servers."
+        i18n-data="ch06~The project we'll work with is at {/lnk_patchwork/}github.com/jlord/patchwork{/lnk_e/}. Go to that page and click the 'Fork' button at the top right. Then create the fork. Once the forking animation is complete, you have a copy on your account. Copy your fork's HTTP URL from the address bar in your browser, this is the address of your fork on GitHub's servers."
         i18n-options='{
             "lnk_patchwork": "https://github.com/jlord/patchwork"
         }'></p>
@@ -62,12 +62,12 @@
             "lnk_patchwork": "https://github.com/jlord/patchwork"
         }'></p>
 
-    <p i18n-data="ch06~You can name this remote connection anything you want, but typically people use the name 'upstream'{/smc/} let's use that for this."></p>
+    <p i18n-data="ch06~You can name this remote connection anything you want, but typically people use the name 'upstream'{/smc/}. So let's use that for now."></p>
 
     <div class='code'><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></div>
 
     <p i18n-type="standard_html"
-        i18n-data="ch06~To be sure you have the correct remotes set up, type {/cde/}git remote -v{/cde_e/} to list out the addresses you have stored. {/str/}You should have an 'origin' remote with your fork's address and then an 'upstream' remote with the address to the original, the URL noted above in this step.{/str_e/}"></p>
+        i18n-data="ch06~To be sure you have the correct remotes set up, type {/cde/}git remote -v{/cde_e/} to list out the addresses you have stored. {/str/}You should have an 'origin' remote with your fork's address and then an 'upstream' remote with the address to the original repository and the URL noted above in this step.{/str_e/}"></p>
 </div>
 
 {{{ verify_directory_button }}}
