@@ -5,15 +5,15 @@
 <div class="box--solid--light">
     <h2 i18n-data="ch07~Branches"></h2>
     <p i18n-type="standard_html"
-        i18n-data="ch07~Git repositories use branches to isolate work when needed. It is common practice when working together on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This allows different changes to be developed on separate branches without interfering with each other. When the work on your branch is finished, you merge your changes back into the main branch (commonly named 'master'). This main branch thus always contains a stable version of the project."></p>
+        i18n-data="ch07~Git repositories use branches to isolate changes when needed. It is common practice when working together on a project to create a {/str/}branch{/str_e/} to keep your working changes in. This allows different changes to be developed on separate branches without interfering with each other. Only when the work on your branch is finished, you merge your changes back into the main branch. The main branch thus always contains a stable version of the project."></p>
 
     <figure>
         <picture>
             <source srcset="../../assets/imgs/branches--cs-dark.png" media="(prefers-color-scheme: dark)">
             <img id="img_branches" src="../../assets/imgs/branches.png"
-                alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too.">
+                alt="A diagram showing a horizontal line, representing the main-branch, with another line branching off the top and later re-joining the original. Another line branches off the main-branch line from below and yet another branch branches off of that. Both of these meet back up with the original main line, too.">
         </picture>
-        <figcaption i18n-type="standard_html" i18n-data="ch07~The diagram illustrates how you can branch off of your 'master' branch (the straight black line in the middle), do your work on a branch (dots illustrate commits) and then merge those changes back into 'master'. You can even branch off of a branch if you need to, the 'master' branch doesn't have to be the base."></figcaption>
+        <figcaption i18n-type="standard_html" i18n-data="ch07~The diagram illustrates how you can branch off of your 'main' branch (the straight black line in the middle), do your work on a branch (dots illustrate commits) and then merge those changes back into 'main'. You can even branch off of a branch if you need to, the main-branch doesn't have to be the base."></figcaption>
     </figure>
 
     <p i18n-type="standard_html"
@@ -24,11 +24,15 @@
 
     <h2 i18n-data="ch07~GitHub Pages"></h2>
     <p i18n-type="standard_html"
-        i18n-data="ch07~GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is called {/lnk_pages/}GitHub Pages{/lnk_e/}. Since the project you forked creates a website, its main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website files can be found, live online, using this pattern for the URL:"
+        i18n-data="ch07~GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is called {/lnk_pages/}GitHub Pages{/lnk_e/}. Since the project you forked creates a website, its main branch is named 'gh-pages' instead of 'main'. All repositories that have a 'gh-pages' branch with website files can be found, live online, using this pattern for the URL:"
         i18n-options='{
             "lnk_pages": "http://pages.github.com"
         }'></p>
     <div class='code'><code>http://githubusername.github.io/repositoryname</code></div>
+
+    <h2 i18n-data="ch07~'Main' or 'Master'?"></h2>
+    <p i18n-type="standard_html"
+        i18n-data="ch07~You've heard about the git 'master' branch, but now we are just talking about 'main'? Well, here's a quick note on the history:{/br/} Since the early days of Git, the default branch created by {/cde/}git init{/cde_e/} was named 'master'. As a result, many projects used this branch as their main branch to contain the (stable) state of the project. In the year 2020 with the new rise of the Black Lives Matter movement in the US, the tech community became more aware of the historical significance of the master/slave designation and the harm these namings could still do to some people. Some projects started renaming their 'master' branches to other names, more and more companies joined in, and also GitHub changed its initial branch name to 'main'. The Git project itself up to day has not yet made the breaking change of renaming the default branch name, but has introduced an option to set it as a preference in the Git config. You set this config value to 'main' in the first challenge. You could set the default branch name to whatever you want and you'll probably still read about old 'master' branches. But 'main' nowadays is a very common term to use as name for the main branch of a project."></p>
 </div>
 
 <div class="box--border--blue box--step">

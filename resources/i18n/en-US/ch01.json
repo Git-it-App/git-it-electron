@@ -19,6 +19,7 @@
   "Next, configure Git so it knows to associate your work to you:": "Next, configure Git so it knows to associate your work to you:",
   "Set your name:": "Set your name:",
   "Now set your email:": "Now set your email:",
+  "Let us add one more common configuration in order to use the 'main' branch as the default branch. You'll learn more about this in the challenge {/dqm/}Branches Aren't Just For Birds{/dqm/}:": "Let us add one more common configuration in order to use the 'main' branch as the default branch. You'll learn more about this in the challenge {/dqm/}Branches Aren't Just For Birds{/dqm/}:",
   "You're done with your first challenge! Click the 'Verify' button to check the challenge.": "You're done with your first challenge! Click the 'Verify' button to check the challenge.",
   "Dollar Signs in Code Documentation": "Dollar Signs in Code Documentation",
   "Dollar signs {/cde/}${/cde_e/} are often used in programming documentation to signify that the line is {/str/}command line{/str_e/} code (see the code snippets above). You don't actually type the {/cde/}${/cde_e/} in though, only type what comes after.": "Dollar signs {/cde/}${/cde_e/} are often used in programming documentation to signify that the line is {/str/}command line{/str_e/} code (see the code snippets above). You don't actually type the {/cde/}${/cde_e/} in though, only type what comes after."
