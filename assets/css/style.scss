@@ -440,17 +440,21 @@ code {
     text-transform: capitalize;
 
     .octicon__reply {
-      width: 16px;
-      height: 16px;
-      background-color: var(--main-blue);
-      display: block;
+      &--right, &--left {
+        width: 16px;
+        height: 16px;
+        background-color: var(--main-blue);
+        display: block;
+      }
     }
 
     &:hover {
       color: var(--main-blue--hover);
       .octicon__reply {
-        background-color: var(--main-blue--hover);
-        //************************ TODO: there's a flickering when hovering between octicon and link-text
+        &--right, &--left {
+          background-color: var(--main-blue--hover);
+          //************************ TODO: there's a flickering when hovering between octicon and link-text
+        }
       }
     }
   }
