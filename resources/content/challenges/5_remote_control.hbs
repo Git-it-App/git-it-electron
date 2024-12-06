@@ -9,7 +9,7 @@
         i18n-data="ch05~When you put something on GitHub that copy lives on one of GitHub's servers. This makes it a {/str/}remote{/str_e/} repository because it is not on your computer, but on a server, {/dqm/}remote{/dqm/} and somewhere else. By {/str/}pushing{/str_e/} your {/str/}local{/str_e/} (on your computer) changes to it, you keep it up to date."></p>
 
     <p i18n-type="standard_html"
-        i18n-data="ch05~Others can always then get the latest from your project by {/str/}pulling{/str_e/} your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing access to your computer where your local copy is stored."></p>
+        i18n-data="ch05~Others can then get the latest changes of the project by {/str/}pulling{/str_e/} your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing access to your personal computer and your locally stored copy of the project."></p>
 
     <figure>
         <picture>
@@ -17,7 +17,7 @@
             <img id="img_remotes" src="../../assets/imgs/remotes.png"
                 alt="A diagram showing a central server holding a repository. Two computers, on either side, are connecting to the server.">
         </picture>
-        <figcaption i18n-type="standard_html" i18n-data="ch05~The illustration shows a server (e.g. by GitHub), holding the {/str/}remote{/str_e/} repository and two computers, each of them holding a {/str/}local{/str_e/} copy of the repository. You can either access and edit the remote repository with your browser or edit the repository locally and tell your computer (on {/str/}terminal{/str_e/}) to talk to the server."></figcaption>
+        <figcaption i18n-type="standard_html" i18n-data="ch05~The illustration shows a server (e.g. by GitHub) holding the {/str/}remote{/str_e/} repository as well as two computers, each of them holding a {/str/}local{/str_e/} copy of the repository. You can either access and edit the remote repository with your browser or edit the repository locally and tell your computer (on {/str/}terminal{/str_e/}) to talk to the server."></figcaption>
     </figure>
 </div>
 
@@ -34,7 +34,7 @@
             }'></li>
         <li i18n-data="ch05~Give it a name that matches your local repository's name, 'hello-world', and a short description."></li>
         <li i18n-data="ch05~Make it public. This means it'll be listed on your public profile."></li>
-        <li i18n-data="ch05~Don't initialize with a README because we already have a file, locally, named 'readme.txt'. This is a helper option from GitHub if you hadn't already made it."></li>
+        <li i18n-data="ch05~Don't initialize with a README, because we already have a local file named 'readme.txt'. This is a helper option from GitHub if you hadn't already created it."></li>
         <li i18n-data="ch05~Don't initialize with '.gitignore' or a license, we won't use them in this tutorial."></li>
         <li i18n-data="ch05~Click create repository!"></li>
     </ul>
@@ -56,10 +56,10 @@
 
 <div class="box--border--blue box--step">
     <h3 i18n-data="ch05~Connect your Local to your Remote"></h3>
-    <p i18n-data="ch05~Now you've got an empty repository started on GitHub.com. At the top you'll see 'Quick Setup', make sure the 'HTTPS' button is selected and copy the address—this is the address of your repository on GitHub's servers."></p>
+    <p i18n-data="ch05~Now you've got an empty repository started on GitHub.com. At the top you'll see the section 'Quick Setup'. Make sure the 'HTTPS' button is selected and copy the address. This is the address of your repository on GitHub's servers."></p>
 
     <p i18n-type="standard_html"
-        i18n-data="ch05~Back in your terminal, and inside of the 'hello-world' folder that you initialized as a Git repository in the earlier challenge, you want to tell Git to remember the address of the remote version on GitHub's servers. You can have multiple remotes so each requires a name. The primary remote is typically named {/cde/}origin{/cde_e/}."></p>
+        i18n-data="ch05~Back in your terminal, and inside of the 'hello-world' folder that you initialized as a Git repository, you want to tell Git to remember the address of the remote version on GitHub's servers. You can have multiple remotes so each requires a unique name. The primary remote is typically named {/cde/}origin{/cde_e/}."></p>
 
     <p i18n-data="ch05~To add a remote named 'origin' to your repository:"></p>
     <div class='code'><code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code></div>
@@ -89,7 +89,7 @@
     <p><strong i18n-data="ch05~To generate a new Personal Access Token:"></strong></p>
     <ul>
         <li i18n-type="standard_html"
-            i18n-data="ch05~Open {/lnk_pat/}Github - Personal access tokens{/lnk_e/} and click on 'Generate new token'."
+            i18n-data="ch05~Open {/lnk_pat/}Github - Personal access tokens{/lnk_e/} and click on 'Generate new token'. For now, choose the 'classic' way of generating the token."
             i18n-options='{
                 "lnk_pat": "https://github.com/settings/tokens"
             }'></li>
@@ -130,16 +130,12 @@
             <div class='code'><code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code></div>
         </li>
         <li>
-            <strong i18n-data="ch05~Pull in changes"></strong>
-            <div class='code'><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></div>
+            <strong i18n-data="ch05~Push changes"></strong>
+            <div class='code'><code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code></div>
         </li>
         <li>
             <strong i18n-data="ch05~View remote addresses"></strong>
             <div class='code'><code class="shell">git remote -v</code></div>
-        </li>
-        <li>
-            <strong i18n-data="ch05~Push changes"></strong>
-            <div class='code'><code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code></div>
         </li>
     </ul>
 </div>
