@@ -16,11 +16,21 @@
         <figcaption i18n-type="standard_html" i18n-data="ch07~The diagram illustrates how you can branch off of your 'main' branch (the straight line in the middle), do your work on a branch (dots illustrate commits) and then merge those changes back into 'main'. You can even branch off of a branch if you need to, the main-branch doesn't have to be the base."></figcaption>
     </figure>
 
+    <h2 i18n-data="ch07~The Git(Hub)-Workflow"></h2>
     <p i18n-type="standard_html"
-        i18n-data="ch07~For a great visualization on how branches work in a project, see this GitHub Guide: {/lnk_guide/}guides.github.com/overviews/flow{/lnk_e/}"
-        i18n-options='{
-            "lnk_guide": "http://guides.github.com/overviews/flow/"
-        }'></p>
+        i18n-data="ch07~To make things clearer, let us write down the typical workflow for integrating a feature into a project:"></p>
+        <ul>
+            <li i18n-type="standard_html"
+                i18n-data="ch07~{/str/}Update the main branch:{/str_e/} Before starting with a change, make sure you will be working on the most recent version of the project."></li>
+            <li i18n-type="standard_html"
+                i18n-data="ch07~{/str/}Create a branch:{/str_e/} Create your own branch where you can safely work on your changes."></li>
+            <li i18n-type="standard_html"
+                i18n-data="ch07~{/str/}Make your changes:{/str_e/} Go ahead! Implement your feature, experiment a bit and test it. Create commits at any time you want to store a part of your change on the branch."></li>
+            <li i18n-type="standard_html"
+                i18n-data="ch07~{/str/}Create a Pull-Request:{/str_e/} Once your change is ready you can show your work to other project members. Let them discuss and review your code. If they have ideas on how to improve your feature, you can still implement these ideas on your branch. We will soon learn more about Pull-Requests."></li>
+            <li i18n-type="standard_html"
+                i18n-data="ch07~{/str/}Merge it:{/str_e/} Once everybody is happy to add the new feature to the project, you can merge your branch into the main branch. Now your feature is a built-in part of the project. We'll see that soon, too!"></li>
+        </ul>
 
     <h2 i18n-data="ch07~GitHub Pages"></h2>
     <p i18n-type="standard_html"
