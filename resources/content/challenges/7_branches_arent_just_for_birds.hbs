@@ -71,16 +71,16 @@
     <h3 i18n-data="ch07~Step: Create a new file"></h3>
     <p i18n-data="ch07~Back in your text editor:"></p>
     <ul>
-        <li i18n-data="ch07~Create a new file named {/filename_add/}, where 'username' is your username. For instance, {/filename_jlord/}."
+        <li i18n-data="ch07~Create a new file named {/filename_add/} in the 'contributors' folder of the repository. Once more, the term 'username' should be replaced by your own username. For instance, {/filename_jlord/}."
             i18n-options='{
                 "filename_add": "\"add-username.txt\"",
                 "filename_jlord": "\"add-jlord.txt\""
             }'></li>
         <li i18n-data="ch07~Then, just write your GitHub username in it, that's it and that's all. For instance, I'd type 'jlord'."></li>
         <li i18n-type="standard_html"
-            i18n-data="ch07~Save this file in the 'contributors' folder in Patchwork: {/str/}{/filepath/}{/str_e/}"
+            i18n-data="ch07~Make sure the file is just in that first level folder of the repository: {/br/} {/str/}{/filepath/}{/str_e/}"
             i18n-options='{
-                "filepath": "Patchwork/contributors/add-username.txt"
+                "filepath": "./contributors/add-username.txt"
             }'></li>
         <li i18n-data="ch07~Next, check in your changes (see below)."></li>
     </ul>
