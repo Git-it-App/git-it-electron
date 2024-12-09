@@ -107,11 +107,16 @@ function buildMenus () {
 function checkDebugSettings () {
   if (process.argv.includes('--debug')) {
     const userData = JSON.parse(fs.readFileSync(userDataFile))
+    const savedDir = JSON.parse(fs.readFileSync(savedDirFile))
 
     // Preset challenges
     if (process.argv.includes('--none')) {
       Object.keys(userData).forEach(challenge => {
         userData[challenge].challengeComplete = false
+        userData[challenge].verifyList = []
+      })
+      Object.keys(savedDir).forEach(directory => {
+        savedDir[directory] = ''
       })
     }
     if (process.argv.includes('--some')) {
@@ -126,6 +131,7 @@ function checkDebugSettings () {
     }
 
     fs.writeFileSync(userDataFile, JSON.stringify(userData, null, 2))
+    fs.writeFileSync(savedDirFile, JSON.stringify(savedDir, null, 2))
 
     // Show devtools
     mainWindow.maximize()
