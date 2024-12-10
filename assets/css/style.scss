@@ -262,6 +262,10 @@ code {
     @extend .box--solid;
     background-color: var(--main-blue);
     color: var(--main-blue__text);
+
+    h4 {
+      margin-top: 0;
+    }
   }
 
   &__button {
