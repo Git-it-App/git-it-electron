@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const URL = require('url').URL
 
 const electron = require('electron')
 const app = electron.app
@@ -51,6 +52,20 @@ app.on('ready', () => {
 
   // Open Index-page
   mainWindow.loadFile(path.normalize(path.join(__dirname, 'built', 'pages', 'index.html')))
+})
+
+/*
+ * Limit navigation within app to internal links
+ */
+app.on('web-contents-created', (event, contents) => {
+  contents.on('will-navigate', (event, navigationUrl) => {
+    const parsedUrl = new URL(navigationUrl)
+
+    // Origin null for app-internal links
+    if (parsedUrl.origin !== 'null') {
+      event.preventDefault()
+    }
+  })
 })
 
 /*
