@@ -8,6 +8,7 @@
   "Check Git version": "Überprüfe die Git-Version",
   "Set your name": "Speichere deinen Namen",
   "Set your email": "Speichere deine Email-Adresse",
+  "Set the default branch name to 'main'": "Setze den Standard Branch als 'main' fest.",
   "Set your Github account (case sensitive)": "Speichere deinen GitHub Account (Groß- & Kleinschreibung beachten!)",
   "Git Basics": "Git Grundlagen",
   "Turn Git on for a folder": "Initialisiere Git in einem Ordner",
