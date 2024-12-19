@@ -9,6 +9,7 @@
   "Reload": "Neu laden",
   "Full Screen": "Vollbild",
   "Minimize": "Minimieren",
+  "Use Dark Theme": "Dunkles Erscheinungsbild nutzen",
   "Bring All to Front": "Alles in den Vordergrund",
   "Toggle Developer Tools": "Entwicklertools de-/aktivieren",
   "Window": "Fenster",
@@ -20,5 +21,7 @@
   "Open Issue": "Problem melden",
   "About App": "Über die App",
   "&File": "&Datei",
-  "&Quit": "&Beenden"
+  "&View": "&Ansicht",
+  "&Window": "&Fenster",
+  "&Help": "&Hilfe"
 }
