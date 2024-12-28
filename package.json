@@ -45,23 +45,6 @@
     "pack-lin": "electron-forge make --platform=linux",
     "pack-win": "electron-forge make --platform=win32"
   },
-  "devDependencies": {
-    "@electron-forge/cli": "^7.6.0",
-    "@electron-forge/maker-zip": "^7.6.0",
-    "electron": "^33.2.1",
-    "electron-packager": "^17.1.2",
-    "handlebars": "^4.7.8",
-    "i18next-parser": "^9.0.2",
-    "rimraf": "^6.0.1",
-    "sass": "^1.83.0",
-    "standard": "^17.1.2"
-  },
-  "dependencies": {
-    "axios": "^1.7.9",
-    "i18next": "^24.2.0",
-    "i18next-fs-backend": "^2.6.0"
-  },
-
   "config": {
     "forge": {
       "packagerConfig": {
@@ -93,5 +76,21 @@
         }
       ]
     }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "electron": "^33.2.1",
+    "electron-packager": "^17.1.2",
+    "handlebars": "^4.7.8",
+    "i18next-parser": "^9.0.2",
+    "rimraf": "^6.0.1",
+    "sass": "^1.83.0",
+    "standard": "^17.1.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "i18next": "^24.2.0",
+    "i18next-fs-backend": "^2.6.0"
   }
 }
