@@ -1,7 +1,7 @@
 {
   "name": "git-it-electron",
   "productName": "Git-it",
-  "version": "5.2.2",
+  "version": "6.0.0",
   "description": "An open source desktop app for learning Git and GitHub",
   "author": "Jessica Lord",
   "contributors": [
@@ -30,7 +30,6 @@
     "--no-sandbox": "The --no-sandbox option is temporarily used to fix the SUID sandbox issue on newer linux distributions. To be checked and removed again."
   },
   "scripts": {
-    
     "prestart": "npm run build",
     "start": "electron --no-sandbox .",
     "debug": "npm run build && electron --no-sandbox . -- --debug",

@@ -1,5 +1,41 @@
 # Changelog
 
+## Version 6.0.0 (2024-12-28)
+
+([Full Changelog](https://github.com/Git-it-App/git-it-electron/compare/v5.2.2...6.0.0))
+
+### Enhancements
+- Add Title to verify-Boxes ([\#765](https://github.com/Git-it-App/git-it-electron/pull/765))
+- Include Git workflow ([\#757](https://github.com/Git-it-App/git-it-electron/pull/757))
+- Add SSH-Auth to What next ([\#758](https://github.com/Git-it-App/git-it-electron/pull/758))
+- Use main as default branch ([\#187](https://github.com/Git-it-App/git-it-electron/pull/187))
+- Implement Dark mode ([\#660](https://github.com/Git-it-App/git-it-electron/pull/660))
+- Include PAT Info ([\#382](https://github.com/Git-it-App/git-it-electron/pull/382))
+
+### Fixed
+- Remove Github Desktop Remote Hint ([\#767](https://github.com/Git-it-App/git-it-electron/pull/767))
+- Fix pull request typos ([\#766](https://github.com/Git-it-App/git-it-electron/pull/766))
+- Update collaborators flow ([\#759](https://github.com/Git-it-App/git-it-electron/pull/759))
+- Fix dqm insertion ([\#742](https://github.com/Git-it-App/git-it-electron/pull/742))
+- Fix shortcuts ([\#739](https://github.com/Git-it-App/git-it-electron/pull/739))
+- Restore language env for verification ([\#626](https://github.com/Git-it-App/git-it-electron/pull/626))
+- Catch path not found ([\#384](https://github.com/Git-it-App/git-it-electron/pull/384))
+
+### Merged
+- Fix security issues ([\#770](https://github.com/Git-it-App/git-it-electron/pull/770))
+- Improve Folder-Description a bit ([\#763](https://github.com/Git-it-App/git-it-electron/pull/763))
+- Improve debug helper ([\#764](https://github.com/Git-it-App/git-it-electron/pull/764))
+- Move sass imports to use ([\#756](https://github.com/Git-it-App/git-it-electron/pull/756))
+- Fix/small changes ([\#755](https://github.com/Git-it-App/git-it-electron/pull/755))
+- Small changes ([\#741](https://github.com/Git-it-App/git-it-electron/pull/741))
+- Increase Border Radius ([\#740](https://github.com/Git-it-App/git-it-electron/pull/740))
+- Identify Images by IDs, not classes ([\#738](https://github.com/Git-it-App/git-it-electron/pull/738))
+- Temporary Sandbox fix ([\#719](https://github.com/Git-it-App/git-it-electron/pull/719))
+- Evolve CSS Build ([\#671](https://github.com/Git-it-App/git-it-electron/pull/671))
+- Try fixing dependabot automerge ([\#499](https://github.com/Git-it-App/git-it-electron/pull/499))
+- Small code cleanup ([\#377](https://github.com/Git-it-App/git-it-electron/pull/377))
+
+
 ## Version 5.2.2 (2021-10-29)
 ### Enhancements
 - Remove electron remote module [\#318](https://github.com/Git-it-App/git-it-electron/pull/318) ([jotoeri](https://github.com/jotoeri))
