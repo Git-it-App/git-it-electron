@@ -46,6 +46,8 @@
     "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
     "electron": "^33.2.1",
     "electron-packager": "^17.1.2",
     "handlebars": "^4.7.8",
@@ -58,5 +60,40 @@
     "axios": "^1.7.9",
     "i18next": "^24.2.0",
     "i18next-fs-backend": "^2.6.0"
+  },
+
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "overwrite": true,
+        "extraResources": [
+          "resources/i18n/"
+        ],
+        "ignore": [
+          ".github",
+          "resources"
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": ["darwin", "linux", "win32"],
+          "config": {
+            "outputDir": "./out",
+            "directory": "./out",
+            "appName": "Git-it",
+            "darwin": {
+              "icon": "assets/git-it.icns"
+            },
+            "linux": {
+              "icon": "assets/git-it.png"
+            },
+            "win32": {
+              "icon": "assets/git-it.ico"
+            }
+          }
+        }
+      ]
+    }
   }
 }
