@@ -31,7 +31,7 @@
   },
   "scripts": {
     "prestart": "npm run build",
-    "start": "electron --no-sandbox .",
+    "start": "electron .",
     "debug": "npm run build && electron --no-sandbox . -- --debug",
     "debug:none": "npm run build && electron --no-sandbox . -- --debug --none",
     "debug:some": "npm run build && electron --no-sandbox . -- --debug --some",
@@ -41,9 +41,9 @@
     "i18n:extract": "i18next -c ./config/i18next-parser.config.js",
     "build": "rimraf built && node lib/build/build-challenges.js && node lib/build/build-pages.js && node lib/build/build-css.js",
     "pack": "npm run build && npm run pack-mac && npm run pack-lin && npm run pack-win",
-    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/",
-    "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/",
-    "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --out=out --extraResource=resources/i18n/ --ignore=.github/ --ignore=resources/"
+    "pack-mac": "electron-forge make --platform=darwin",
+    "pack-lin": "electron-forge make --platform=linux",
+    "pack-win": "electron-forge make --platform=win32"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.0",
@@ -66,8 +66,8 @@
     "forge": {
       "packagerConfig": {
         "overwrite": true,
-        "extraResources": [
-          "resources/i18n/"
+        "extraResource": [
+          "resources/i18n"
         ],
         "ignore": [
           ".github",
@@ -79,8 +79,6 @@
           "name": "@electron-forge/maker-zip",
           "platforms": ["darwin", "linux", "win32"],
           "config": {
-            "outputDir": "./out",
-            "directory": "./out",
             "appName": "Git-it",
             "darwin": {
               "icon": "assets/git-it.icns"
