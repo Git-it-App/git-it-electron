@@ -1,0 +1,18 @@
+git:
+  filters:
+    - filter_type: dir
+      # all supported i18n types: https://docs.transifex.com/formats
+      file_format: KEYVALUEJSON
+      source_language: en-US
+      source_file_dir: 'resources/i18n/en-US'
+      source_file_extension: json
+      # path expression to translation files, must contain <lang> placeholder
+      translation_files_expression: 'resources/i18n/<lang>'
+  settings:
+    pr_branch_name: translations/tx_update_<br_unique_id>
+    # Transifex uses Lodash to separate Country and language, i18next wants simple dash
+    language_mapping:
+        de_DE: de-DE
+        ko_KR: ko-KR
+        pl_PL: pl-PL
+        it_IT: it-IT
