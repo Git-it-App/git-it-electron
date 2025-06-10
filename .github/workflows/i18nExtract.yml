@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['20']
+        node: ['24']
     name: Block on unextracted Changes (Node ${{ matrix.node }})
 
     steps:
