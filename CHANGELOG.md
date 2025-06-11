@@ -1,9 +1,16 @@
 # Changelog
 
+## Version 6.0.1 (2025-06-11)
+[Full Changelog](https://github.com/Git-it-App/git-it-electron/compare/v6.0.0...v6.0.1)
+### Merged
+- Build with electron-forge [\#838](https://github.com/Git-it-App/git-it-electron/pull/838)
+- Slightly bias header right side [\#836](https://github.com/Git-it-App/git-it-electron/pull/836)
+- Copy transifex configuration into repository [\#786](https://github.com/Git-it-App/git-it-electron/pull/786)
+- Dependency updates
+
+
 ## Version 6.0.0 (2024-12-28)
-
-([Full Changelog](https://github.com/Git-it-App/git-it-electron/compare/v5.2.2...6.0.0))
-
+([Full Changelog](https://github.com/Git-it-App/git-it-electron/compare/v5.2.2...v6.0.0))
 ### Enhancements
 - Add Title to verify-Boxes ([\#765](https://github.com/Git-it-App/git-it-electron/pull/765))
 - Include Git workflow ([\#757](https://github.com/Git-it-App/git-it-electron/pull/757))
