@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         node: ['24']
-    name: Run build script (Node ${{ matrix.node }})
+    name: Run build via forge packager (Node ${{ matrix.node }}, ubuntu-latest)
 
     steps:
       - name: Checkout Repository
@@ -27,4 +27,4 @@ jobs:
         run: npm ci
 
       - name: Build App
-        run: npm run build
+        run: npm run package
